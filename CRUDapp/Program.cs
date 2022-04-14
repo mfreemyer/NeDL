@@ -80,13 +80,30 @@ namespace CRUDapp
             else if (userChoiceString=="S" || userChoiceString=="s")
             {
                 Console.WriteLine("In the S/s area");
+                File.WriteAllLines("names.txt", nameArray);
             }
 
             // to do: else if the option is a C or c then add a name to the array (if there's room)
 
                 else if (userChoiceString=="C" || userChoiceString=="c")
             {
-                Console.WriteLine("In the C/c area");
+                bool contains = false;
+                for (int i = 0; i < nameArray.Length; i++)
+                {
+                    if(nameArray[i] == "")
+                    {
+                        contains = true;
+                        //get name update from user
+                        Console.WriteLine("What name do you want to add?");
+                        string newName = Console.ReadLine();
+                        nameArray[i] = newName;
+                        Console.WriteLine("The name has been added. ");
+                    }
+                }
+                if(contains == false)
+                {
+                    Console.WriteLine("There is no room left in the array.");
+                }
             }
 
             // to do: else if the option is an R or r then print the array
@@ -104,10 +121,27 @@ namespace CRUDapp
             else if (userChoiceString=="U" || userChoiceString=="u")
             {
                 Console.WriteLine("In the U/u area");
+                Console.WriteLine("What name do you want to update?");
+                string whichName = Console.ReadLine();
+
+                bool contains = false;
+                for (int i = 0; i < nameArray.Length; i++)
+                {
+                    if(whichName == nameArray[i])
+                    {
+                        contains = true;
+                        //get name update from user
+                        Console.WriteLine("Please enter the updated name.");
+                        string nameUpdate = Console.ReadLine();
+                        nameArray[i] = nameUpdate;
+                        Console.WriteLine("The name '" + whichName + "' has been updated to '" + nameUpdate + "'");
+                    }
+
+                }
+                Console.WriteLine("This name is not in the list.");
             }
 
             // to do: else if the option is a D or d then delete the name in the array (if it's there)
-            ////prompt user for name and then overwrite it with blank (if i'm understanding correctly)
             else if (userChoiceString=="D" || userChoiceString=="d")
             {
                 Console.WriteLine("In the D/d area");
@@ -121,23 +155,12 @@ namespace CRUDapp
                     {
                         contains = true;
                         nameArray[i] = "";
-                        Console.WriteLine("The name -- " + nameToDelete + " -- has been deleted from the array.");
-                        Console.WriteLine("The new array is as follows: ");
+                        Console.WriteLine("The name '" + nameToDelete + "' has been deleted from the array.");
                     }
                 }
-                if(contains == true)
-                {
-                    //printing array here to test if name was deleted from array
-                    for (int index =0; index < 10; index++)
-                    {
-                        Console.WriteLine(nameArray[index]);
-                    }
-    
-                }
-                else
-                {
-                    Console.WriteLine("This name is not in the list.");
-                }
+
+                Console.WriteLine("This name is not in the list.");
+
             }
 
             // to do: else if the option is a Q or q then quit the program
@@ -154,4 +177,3 @@ namespace CRUDapp
     } // ends main
   } // end class
 } // ends namespace
-
