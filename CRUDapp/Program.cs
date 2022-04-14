@@ -56,6 +56,7 @@ namespace CRUDapp
 
             // to do: if the option is L or l then load the text file (names.txt) into the array of strings (nameArray)
             // change 
+            // another change
 
            if (userChoiceString=="L" || userChoiceString=="l")
             {
