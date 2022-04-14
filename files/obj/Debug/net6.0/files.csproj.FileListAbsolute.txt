@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\files.exe
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\files.deps.json
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\files.runtimeconfig.json
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\files.dll
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\ref\files.dll
+C:\Users\MFreemyer\desktop\NeDL\files\bin\Debug\net6.0\files.pdb
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.AssemblyInfo.cs
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.dll
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\ref\files.dll
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.pdb
+C:\Users\MFreemyer\desktop\NeDL\files\obj\Debug\net6.0\files.genruntimeconfig.cache

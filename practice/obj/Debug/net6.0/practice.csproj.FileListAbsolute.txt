@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\practice.exe
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\practice.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\practice.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\practice.dll
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\ref\practice.dll
+C:\Users\MFreemyer\Desktop\NeDL\practice\bin\Debug\net6.0\practice.pdb
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.dll
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\ref\practice.dll
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.pdb
+C:\Users\MFreemyer\Desktop\NeDL\practice\obj\Debug\net6.0\practice.genruntimeconfig.cache

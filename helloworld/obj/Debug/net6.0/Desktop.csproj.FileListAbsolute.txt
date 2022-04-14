@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\Desktop.exe
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\Desktop.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\Desktop.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\Desktop.dll
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\ref\Desktop.dll
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\bin\Debug\net6.0\Desktop.pdb
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.dll
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\ref\Desktop.dll
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.pdb
+C:\Users\MFreemyer\Desktop\NeDL\helloworld\obj\Debug\net6.0\Desktop.genruntimeconfig.cache
