@@ -73,6 +73,34 @@ namespace ccpw2
             //TO DO: S -- Save the user's list of restaurants (no blank lines in data file)
 
             //TO DO: C -- Add a restaurant and rating (make sure user provides both, also handle "file full" case)
+            //figure out how not to keep asking for new ratings, do validation for rating, 
+            else if (userChoiceString=="C" || userChoiceString=="c")
+            {
+              bool contains = false;
+              for (int i = 0; i < nameArray.Length; i++)
+              {
+                if(nameArray[i] == null)
+                {
+                  contains = true;
+                  //get name update from user
+                  Console.WriteLine("Please enter the name of the restaurant you want to add.");
+                  string newName = Console.ReadLine();
+                  nameArray[i] = newName;
+                  //add rate array here
+                  Console.WriteLine("Please enter a rating between 1 and 5.");
+                  string newRating = Console.ReadLine();
+                  nameArray[i] = newRating;
+                  Console.WriteLine("The restaurant review has been added.");
+                }
+
+              }
+
+              if(contains == false)
+              {
+                Console.WriteLine("The list is full.");
+              }
+
+            }
 
             //TO DO: R -- Read/Print a list of all the restaurants and their ratings (no blank lines, handle "nothing in list" case)
             else if (userChoiceString=="R" || userChoiceString=="r")
