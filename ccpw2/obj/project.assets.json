@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\practice\\practice.csproj",
-      "projectName": "practice",
-      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\practice\\practice.csproj",
+      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw2\\ccpw2.csproj",
+      "projectName": "ccpw2",
+      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw2\\ccpw2.csproj",
       "packagesPath": "C:\\Users\\MFreemyer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\practice\\obj\\",
+      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MFreemyer\\AppData\\Roaming\\NuGet\\NuGet.Config",

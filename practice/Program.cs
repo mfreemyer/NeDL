@@ -1,25 +1,27 @@
-﻿using System;
-using System.Linq;
+﻿using System; 
 
-class StringToFloat {
-  static void Main(string[] args) {
-    string[] myArray = {
-      "a",
-      "b",
-      "c",
-      "d",
-      "e"
-    };
-    Console.WriteLine("Array before deletion");
-    foreach(string value in myArray) {
-      Console.WriteLine(value);
-    }
-    int indexToRemove = 3;
-    myArray = myArray.Where((source, index) =>index != indexToRemove).ToArray();
-    Console.WriteLine("Array after deletion");
+namespace Practice
 
-    foreach(string value in myArray) {
-      Console.WriteLine(value);
-    }
-  }
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        //Read the lines
+        string[] lines = System.IO.File.ReadAllLines(@"food.txt");
+
+        //Create the list
+        List<string[]> grid = new List<string[]>();
+
+        //Populate the list
+        foreach (var line in lines) grid.Add(line.Split(','));
+
+        //You can still access it like your 2D array:
+        Console.WriteLine(grid[1][1]); //prints "orange"
+        }
+    } 
+
 }
+
+    
