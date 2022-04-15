@@ -11,7 +11,8 @@ namespace ccpw2
       // declare variables
       bool userChoice;
       string userChoiceString;
-      string[,] resRevArray = new string[25,2];
+      string[] nameArray = new string[25];
+      string[] rateArray = new string[25];
 
       // repeat main looop
       do
@@ -52,14 +53,18 @@ namespace ccpw2
             if (userChoiceString=="O" || userChoiceString=="o")
             {
                 int index = 0; //index for my array
-                using (StreamReader sr = File.OpenText("RestaurantReviews"))
+                using (StreamReader sr = File.OpenText("RestaurantReviews.txt"))
                 {
-                    string s = "";
+                    string rName = "";
+                    string rRate = "";
                     Console.WriteLine("Restaurant Reviews: ");
-                    while ((s = sr.ReadLine()) != null)
+                    while ((rName = sr.ReadLine()) != null)
                     {
-                        Console.WriteLine(s);
-                        resRevArray[index, index] = s; //need to figure out how to properly do this since double array
+                        Console.WriteLine(rName);
+                        nameArray[index] = rName; 
+                        rRate = sr.ReadLine();
+                        Console.WriteLine(rRate);
+                        rateArray[index] = rRate;
                         index = index + 1;
                     }
                 }
