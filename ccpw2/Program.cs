@@ -74,7 +74,16 @@ namespace ccpw2
 
             //TO DO: C -- Add a restaurant and rating (make sure user provides both, also handle "file full" case)
 
-            //TO DO: R -- Print a list of all the restaurants and their ratings (no blank lines, handle "nothing in list" case)
+            //TO DO: R -- Read/Print a list of all the restaurants and their ratings (no blank lines, handle "nothing in list" case)
+            else if (userChoiceString=="R" || userChoiceString=="r")
+            {
+              for (int index = 0; index < nameArray.Length; index++)
+              {
+                Console.WriteLine(nameArray[index]);
+                Console.WriteLine(rateArray[index]);
+              }
+
+            }
 
             //to do: U -- (optional) Update the rating for a restaurant
 
