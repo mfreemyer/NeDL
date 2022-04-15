@@ -71,6 +71,14 @@ namespace ccpw2
             }
 
             //TO DO: S -- Save the user's list of restaurants (no blank lines in data file)
+            //NOT SAVING CORRECTLY -- overwrites nameArray with rateArray. 
+            //figure out how not to fill in a bunch of blank lines
+            else if (userChoiceString=="S" || userChoiceString=="s")
+            {
+              File.WriteAllLines("RestaurantReviews.txt", nameArray);
+              File.WriteAllLines("RestaurantReviews.txt", rateArray);
+              Console.WriteLine("Your updates have been saved.");
+            }
 
             //TO DO: C -- Add a restaurant and rating (make sure user provides both, also handle "file full" case)
             //figure out how not to keep asking for new ratings, do validation for rating, 
@@ -79,17 +87,17 @@ namespace ccpw2
               bool contains = false;
               for (int i = 0; i < nameArray.Length; i++)
               {
-                if(nameArray[i] == null)
+                if((nameArray[i] == null) && (contains == false))
                 {
                   contains = true;
-                  //get name update from user
+                  //get new name from user
                   Console.WriteLine("Please enter the name of the restaurant you want to add.");
                   string newName = Console.ReadLine();
                   nameArray[i] = newName;
-                  //add rate array here
+                  //get new rate from user
                   Console.WriteLine("Please enter a rating between 1 and 5.");
                   string newRating = Console.ReadLine();
-                  nameArray[i] = newRating;
+                  rateArray[i] = newRating;
                   Console.WriteLine("The restaurant review has been added.");
                 }
 
