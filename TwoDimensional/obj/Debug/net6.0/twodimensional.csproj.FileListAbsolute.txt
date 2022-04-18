@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\twodimensional.exe
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\twodimensional.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\twodimensional.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\twodimensional.dll
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\ref\twodimensional.dll
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\bin\Debug\net6.0\twodimensional.pdb
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.dll
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\ref\twodimensional.dll
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.pdb
+C:\Users\MFreemyer\Desktop\NeDL\twodimensional\obj\Debug\net6.0\twodimensional.genruntimeconfig.cache

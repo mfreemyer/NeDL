@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\OOPPractice.exe
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\OOPPractice.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\OOPPractice.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\OOPPractice.dll
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\ref\OOPPractice.dll
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\bin\Debug\net6.0\OOPPractice.pdb
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.dll
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\ref\OOPPractice.dll
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.pdb
+C:\Users\MFreemyer\Desktop\NeDL\OOPPractice\obj\Debug\net6.0\OOPPractice.genruntimeconfig.cache
