@@ -13,6 +13,7 @@ namespace ccpw2
       string userChoiceString;
       string[] nameArray = new string[25];
       string[] rateArray = new string[25];
+      string[] nameRateArray = new string[50];
 
       // repeat main looop
       do
@@ -75,13 +76,22 @@ namespace ccpw2
             //figure out how not to fill in a bunch of blank lines
             else if (userChoiceString=="S" || userChoiceString=="s")
             {
-              File.WriteAllLines("RestaurantReviews.txt", nameArray);
-              File.WriteAllLines("RestaurantReviews.txt", rateArray);
+              int index = 0;
+              using (StreamWriter sw = new StreamWriter("RestaurantReviews.txt"))
+              {
+                  //string rName = "";
+                  //string rRate = "";
+                  for (index = 0; index < nameArray.Length; index++)
+                  {
+                      sw.WriteLine(nameArray[index]);
+                      sw.WriteLine(rateArray[index]);
+                  }
+              }
               Console.WriteLine("Your updates have been saved.");
             }
 
             //TO DO: C -- Add a restaurant and rating (make sure user provides both, also handle "file full" case)
-            //figure out how not to keep asking for new ratings, do validation for rating, 
+            //do validation for rating, 
             else if (userChoiceString=="C" || userChoiceString=="c")
             {
               bool contains = false;

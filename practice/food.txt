@@ -1,4 +1,8 @@
 raspberries
+1
 blueberries
+2
 banana
+3
 blackberries
+4
