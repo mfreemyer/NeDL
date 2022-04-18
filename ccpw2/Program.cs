@@ -72,17 +72,21 @@ namespace ccpw2
             }
 
             //TO DO: S -- Save the user's list of restaurants (no blank lines in data file)
-            //NOT SAVING CORRECTLY -- overwrites nameArray with rateArray. 
-            //figure out how not to fill in a bunch of blank lines
+            // functions, but adds blank lines to end
             else if (userChoiceString=="S" || userChoiceString=="s")
             {
               int index = 0;
               using (StreamWriter sw = new StreamWriter("RestaurantReviews.txt"))
               {
+                  
                   for (index = 0; index < nameArray.Length; index++)
                   {
-                      sw.WriteLine(nameArray[index]);
-                      sw.WriteLine(rateArray[index]);
+                      if((nameArray[index] != null))
+                      {
+                          sw.WriteLine(nameArray[index]);
+                          sw.WriteLine(rateArray[index]);
+                      }
+
                   }
               }
               Console.WriteLine("Your updates have been saved.");
@@ -93,19 +97,19 @@ namespace ccpw2
             else if (userChoiceString=="C" || userChoiceString=="c")
             {
               bool contains = false;
-              for (int i = 0; i < nameArray.Length; i++)
+              for (int index = 0; index < nameArray.Length; index++)
               {
-                if((nameArray[i] == null) && (contains == false))
+                if((nameArray[index] == null) && (contains == false))
                 {
                   contains = true;
                   //get new name from user
                   Console.WriteLine("Please enter the name of the restaurant you want to add.");
                   string newName = Console.ReadLine();
-                  nameArray[i] = newName;
+                  nameArray[index] = newName;
                   //get new rate from user
                   Console.WriteLine("Please enter a rating between 1 and 5.");
                   string newRating = Console.ReadLine();
-                  rateArray[i] = newRating;
+                  rateArray[index] = newRating;
                   Console.WriteLine("The restaurant review has been added.");
                 }
 
