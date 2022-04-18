@@ -127,8 +127,11 @@ namespace ccpw2
             {
               for (int index = 0; index < nameArray.Length; index++)
               {
-                Console.WriteLine(nameArray[index]);
-                Console.WriteLine(rateArray[index]);
+                if((nameArray[index] != null))
+                {
+                    Console.WriteLine(nameArray[index]);
+                    Console.WriteLine(rateArray[index]);
+                }
               }
 
             }
