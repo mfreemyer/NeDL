@@ -141,7 +141,6 @@ namespace ccpw2
             //to do: D -- (optional) Delete a restaurant
 
             //TO DO: Q -- Quit the program
-
       } while (!(userChoiceString=="Q") && !(userChoiceString=="q")); //ends 'repeat main loop'
 
     } // ends main
