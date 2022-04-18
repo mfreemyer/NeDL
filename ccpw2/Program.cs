@@ -79,8 +79,6 @@ namespace ccpw2
               int index = 0;
               using (StreamWriter sw = new StreamWriter("RestaurantReviews.txt"))
               {
-                  //string rName = "";
-                  //string rRate = "";
                   for (index = 0; index < nameArray.Length; index++)
                   {
                       sw.WriteLine(nameArray[index]);
