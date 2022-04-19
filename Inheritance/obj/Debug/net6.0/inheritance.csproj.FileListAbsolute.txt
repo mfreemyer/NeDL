@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\inheritance.exe
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\inheritance.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\inheritance.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\inheritance.dll
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\ref\inheritance.dll
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\bin\Debug\net6.0\inheritance.pdb
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.dll
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\ref\inheritance.dll
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.pdb
+C:\Users\MFreemyer\Desktop\NeDL\inheritance\obj\Debug\net6.0\inheritance.genruntimeconfig.cache
