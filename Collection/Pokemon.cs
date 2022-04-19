@@ -7,22 +7,26 @@ namespace Collection
     {
 
         // Three pieces of data are being stored for each object. 
+        // PName is the Pokemon name. To show the difference in how values can be stored, PName is an instance variable.
+        // PType is the pokemon type and PWeight is the weight.  
+        // To show the difference in how values can be stored, PType and PWeight are automatic properties
 
         
         // This is the instance variable so it must be declared. It's private so only methods of the object can access it.
         private string PName; // Pokemon name
 
         // This is an automatic property variable. 
-        // Why does it yell at me when I try to create the get and set methods here? 
+        // NEED TO BETTER UNDERSTAND WHAT'S HAPPENING HERE WITH THE GET AND SET.
+        // are set and get pre-created methods? if so, why aren't they capitalized?
         public string PType // property 
-            { get; set; }
+            { set; get; }
 
         // This is an automatic property variable. 
         public double PWeight; // proprery
             
 
         
-        // This is the default constructor when no values are being passed.
+        // This is the default constructor when no values are being passed. 
         public Pokemon ()
         {
             PName = null;
@@ -39,7 +43,7 @@ namespace Collection
         }
 
 
-        // Since PName is not defined as a prperty, I need to create the get and set methods for it.
+        // Since PName is not defined as a property, I need to create the get and set methods for it.
         public string GetName()
         {
             return PName;
@@ -52,7 +56,7 @@ namespace Collection
 
 
         // This overrides ToString so an object can be printed out with the WriteLine.
-        // ** I need to look into this. Don't understand this part. 
+        // NEED TO GET A BETTER UNDERSTANDING OF THIS. IS THIS A PRECREATED METHOD?
         public override string ToString()
         {
             return "Pokemon Name: " + PName + "  | Type: " + PType + "  | Weight: " + PWeight + " lbs.";
