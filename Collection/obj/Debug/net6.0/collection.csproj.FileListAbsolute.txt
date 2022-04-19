@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\collection.exe
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\collection.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\collection.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\collection.dll
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\ref\collection.dll
+C:\Users\MFreemyer\Desktop\NeDL\collection\bin\Debug\net6.0\collection.pdb
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.dll
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\ref\collection.dll
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.pdb
+C:\Users\MFreemyer\Desktop\NeDL\collection\obj\Debug\net6.0\collection.genruntimeconfig.cache

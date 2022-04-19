@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\alecoop.exe
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\alecoop.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\alecoop.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\alecoop.dll
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\ref\alecoop.dll
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\bin\Debug\net6.0\alecoop.pdb
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.dll
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\ref\alecoop.dll
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.pdb
+C:\Users\MFreemyer\Desktop\NeDL\alecoop\obj\Debug\net6.0\alecoop.genruntimeconfig.cache
