@@ -69,7 +69,7 @@ namespace Inheritance
             return PType;
         }
 
-        public void SetPType (string newPType)
+        public virtual void SetPType (string newPType)
         {
             PType = newPType;
         }
