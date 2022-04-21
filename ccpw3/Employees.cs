@@ -6,23 +6,29 @@ namespace ccpw3
     class Employees // base class (parent)
     {
         private string fName;
-        protected string lName;
-        protected string emplType; // not working as char yet. come back and figure this out. 
+        private string lName;
+        private char emplType; 
+        protected float bonus;
+
+
+
 
         // default constructor when no values are being passed
         public Employees ()
         {
             fName = null;
             lName = null;
-            emplType = null;
+            emplType = '?';
+            bonus = 0.00F;
         }
 
         // constructor for when values are passed
-        public Employees (string newFName, string newLName, string newEmplType) //update newEmplType back to char once figured out.
+        public Employees (string newFName, string newLName, char newEmplType, float newBonus) //update newEmplType back to char once figured out.
         {
             fName = newFName;
             lName = newLName;
             emplType = newEmplType;
+            bonus = newBonus;
         }
 
         // since fName, lName and emplType aren't defined as properties, create the get and set methods for them.
@@ -50,14 +56,27 @@ namespace ccpw3
 
 
         // emplType get, set
-        public string GetEmplType()
+        public char GetEmplType()
         {
             return emplType;
         }
 
-        public void SetEmplType (string newEmplType)
+        public void SetEmplType (char newEmplType)
         {
             emplType = newEmplType;
+        }
+
+
+        // bonus get, set
+        public float GetBonus()
+        {
+            return bonus;
+        }
+
+        // polymorphism attempt
+        public virtual void SetBonus (float newBonus)
+        {
+            bonus = newBonus;
         }
 
 
@@ -66,7 +85,6 @@ namespace ccpw3
         {
             return fName + " " + lName + "  Employee Type: " + emplType;
         }
-
 
 
     }

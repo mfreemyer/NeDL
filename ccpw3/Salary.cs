@@ -5,7 +5,6 @@ namespace ccpw3
 
     class Salary : Employees  // derived class (child)
     {
-        public string emplType;
         public int salary;
 
 
@@ -39,7 +38,6 @@ namespace ccpw3
         {
             return "Annual Salary: $" + salary;
         }
-
 
     }
 }

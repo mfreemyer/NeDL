@@ -5,16 +5,17 @@ namespace ccpw3
 
     class Hourly : Employees // derived class (child)
     {
-        public string emplType;
         public float hRate;
+        //public float bonus = ;
+        
 
 
         // default constructor for when no values are being passed
         public Hourly ()
         {
             hRate = 0.00F;
-
         }
+        
 
         // constructor for when values are passed
         public Hourly (float newHRate) 
@@ -34,11 +35,25 @@ namespace ccpw3
             hRate = newHRate;
         }
 
+        
         // ToString
         public override string ToString()
         {
             return "Hourly Rate: $" + hRate;
         }
+
+        // bonus get, set 
+        public float GetBonus()
+        {
+            return bonus;
+        }
+
+        // polymorphism attempt
+        public override void SetBonus (float newBonus)
+        {
+            bonus = newBonus;
+        }
+
 
     }
 }
