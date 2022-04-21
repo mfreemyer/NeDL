@@ -17,7 +17,7 @@ sActivities */
         {
             FName = null;
             LName = null;
-            PType = "Student";
+            //PType = "Student";
             sGrade = null;
             sTeacher = null;
             sActivities = null;
@@ -29,19 +29,19 @@ sActivities */
         {
             FName = newFName;
             LName = newLName;
-            PType = newPType;
+            //PType = newPType;
             sGrade = newSGrade;
             sTeacher = newSTeacher;
             sActivities = newSActivities;
 
         }
 
-        // polymorphism attempt
+        // polymorphism attempt -- not working. keep working on this. 
         public string GetPType()
         {return PType;}
 
         public override void SetPType (string newPType)
-        {sGrade = newPType;}
+        {PType = "Student";}
 
 
         // Since sGrade, sTeacher and sActivities aren't defined as properties, I need to create the get and set methods for them.

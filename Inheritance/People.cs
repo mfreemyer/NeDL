@@ -29,7 +29,7 @@ namespace Inheritance
         }
 
 
-        // Since FName, LName and Pronouns aren't defined as properties, I need to create the get and set methods for them.
+        // Since variables aren't defined as properties, I need to create the get and set methods for them.
         public string GetFName()
         {
             return FName;
