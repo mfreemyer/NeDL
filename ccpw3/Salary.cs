@@ -3,12 +3,9 @@
 namespace ccpw3
 {
 
-    class Program
+    class Salary
     {
+        
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello NeDL!");
-        }
     }
 }

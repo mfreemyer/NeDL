@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace ccpw3
+namespace ClassTemplate
 {
 
-    class People
+    class MainClass
     {
         
 

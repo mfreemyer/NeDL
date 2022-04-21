@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ccpw3.exe
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ccpw3.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ccpw3.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ccpw3.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ref\ccpw3.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\bin\Debug\net6.0\ccpw3.pdb
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ref\ccpw3.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.pdb
+C:\Users\MFreemyer\Desktop\NeDL\ccpw3\obj\Debug\net6.0\ccpw3.genruntimeconfig.cache
