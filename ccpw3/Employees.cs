@@ -37,6 +37,30 @@ namespace ccpw3
         }
 
 
+        // lName get, set
+        public string GetLName()
+        {
+            return lName;
+        }
+
+        public void SetLName (string newLName)
+        {
+            lName = newLName;
+        }
+
+
+        // emplType get, set
+        public string GetEmplType()
+        {
+            return emplType;
+        }
+
+        public void SetEmplType (string newEmplType)
+        {
+            emplType = newEmplType;
+        }
+
+
         // ToString
         public override string ToString()
         {
