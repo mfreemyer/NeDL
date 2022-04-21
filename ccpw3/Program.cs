@@ -8,7 +8,12 @@ namespace ccpw3
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello NeDL!");
+            Employees  objFName = new Employees();
+
+            objFName.SetFName("Maggie");
+
+            Console.WriteLine("First Name: " + objFName.GetFName());
+
         }
     }
 }

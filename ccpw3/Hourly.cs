@@ -3,7 +3,7 @@
 namespace ccpw3
 {
 
-    class Hourly
+    class Hourly // derived class (child)
     {
         
 
