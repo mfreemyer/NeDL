@@ -61,7 +61,7 @@ namespace ccpw3
             Console.WriteLine("Employee Name: " + objFName.GetFName() + " " + objLName.GetLName());
             Console.WriteLine("Hourly Rate: $" + objHRate.GetHRate());
             Console.WriteLine("Salary: $" + objSalary.GetSalary());
-            //Console.WriteLine("Hourly Employee Bonus: $" + objBonus.GetBonus());
+            Console.WriteLine("Hourly Employee Bonus: $" + objBonus.GetBonus());
 
         }
     }
