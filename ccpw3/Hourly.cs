@@ -48,11 +48,17 @@ namespace ccpw3
             return bonus;
         }
 
-        // polymorphism attempt
+        /* // polymorphism attempt
         public override void SetBonus (float newBonus)
         {
             bonus = newBonus;
         }
+
+
+        // create bonus object
+        Hourly objBonus = new Hourly();
+        // set bonus value
+        objBonus.SetBonus(objHRate.GetHRate() * 80); */
 
 
     }

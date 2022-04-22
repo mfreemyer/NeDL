@@ -9,59 +9,78 @@ namespace ccpw3
         static void Main(string[] args)
         {
 
-            // declare and instantiate the array of employee objects
-            Employees[] employeeArray = new Employees[25];
+            // declare and instantiate the array of hourly employee objects
+            Hourly[] hourlyArray = new Hourly[25];
 
             // loop through each array element and instantiate an employee object for each
-            for (int index = 0; index < employeeArray.Length; index++)
+            for (int index = 0; index < hourlyArray.Length; index++)
             {
-                employeeArray[index] = new Employees();
+                hourlyArray[index] = new Hourly ();
             }
 
-            employeeArray[0].SetFName("Maggie");
-            employeeArray[0].SetLName("Freemyer-Ackerman");
-            employeeArray[0].SetEmplType('S');
-            //employeeArray[0].Set
-            employeeArray[2].SetFName("Rand");
-            employeeArray[2].SetLName("Ackerman");
-            employeeArray[2].SetEmplType('S');
-            employeeArray[4].SetFName("Dax");
-            employeeArray[4].SetLName("Shepard");
-            employeeArray[4].SetEmplType('H');
+            hourlyArray[0].SetFName("Maggie");
+            hourlyArray[0].SetLName("Freemyer-Ackerman");
+            hourlyArray[0].SetEmplType('S');
+            hourlyArray[0].SetHRate(20.32F);
+            hourlyArray[2].SetFName("Rand");
+            hourlyArray[2].SetLName("Ackerman");
+            hourlyArray[2].SetEmplType('S');
+            hourlyArray[4].SetFName("Dax");
+            hourlyArray[4].SetLName("Shepard");
+            hourlyArray[4].SetEmplType('H');
 
 
             // print non-null array values to test
             Console.WriteLine("Array Values:");
-            for (int index = 0; index < employeeArray.Length; index++)
+            for (int index = 0; index < hourlyArray.Length; index++)
             {
-                if (!(((employeeArray[index]).GetFName())==null))
-                Console.WriteLine(employeeArray[index]);
+                if (!(((hourlyArray[index]).GetFName())==null))
+                Console.WriteLine(hourlyArray[index]);
             }
 
 
 
 
 
-            // create objects
-            Employees  objFName = new Employees();
-            Employees objLName = new Employees();
-            Hourly objHRate = new Hourly();
-            Salary objSalary = new Salary();
-            Hourly objBonus = new Hourly();
+            // create objects for Hourly
+            Hourly  HFNameObj = new Hourly();
+            Hourly HLNameObj = new Hourly();
+            Hourly HRateObj = new Hourly();
+            //Hourly objBonus = new Hourly();
 
-            // set values
-            objFName.SetFName("Maggie");
-            objLName.SetLName("Freemyer-Ackerman");
-            objHRate.SetHRate(24.63F);
-            objSalary.SetSalary(55000);
-            objBonus.SetBonus(objHRate.GetHRate() * 80);
+            // create objects for Salary
+            Salary  SFNameObj = new Salary();
+            Salary SLNameObj = new Salary();
+            Salary SSalaryObj = new Salary();
 
+
+            // set values for Hourly
+            HFNameObj.SetFName("Maggie");
+            HLNameObj.SetLName("Freemyer-Ackerman");
+            HRateObj.SetHRate(24.63F);
+            //objBonus.SetBonus(objHRate.GetHRate() * 80);
+
+            // set values for Salary
+            SFNameObj.SetFName("Rand");
+            SLNameObj.SetLName("Ackerman");
+            SSalaryObj.SetSalary(65000);
+
+
+            //Test Hourly data
             Console.WriteLine();
-            Console.WriteLine("Test Data:");
-            Console.WriteLine("Employee Name: " + objFName.GetFName() + " " + objLName.GetLName());
-            Console.WriteLine("Hourly Rate: $" + objHRate.GetHRate());
-            Console.WriteLine("Salary: $" + objSalary.GetSalary());
-            Console.WriteLine("Hourly Employee Bonus: $" + objBonus.GetBonus());
+            Console.WriteLine("Test Data for Hourly Employees:");
+            Console.WriteLine("Employee Name: " + HFNameObj.GetFName() + " " + HLNameObj.GetLName());
+            Console.WriteLine("Hourly Rate: $" + HRateObj.GetHRate());
+            //Console.WriteLine("Salary: $" + objSalary.GetSalary());
+            //Console.WriteLine("Hourly Employee Bonus: $" + objBonus.GetBonus());
+
+            //Test Salary data
+            Console.WriteLine();
+            Console.WriteLine("Test Data for Salaried Employees:");
+            Console.WriteLine("Employee Name: " + SFNameObj.GetFName() + " " + SLNameObj.GetLName());
+            Console.WriteLine("Hourly Rate: $" + SSalaryObj.GetSalary());
+
+
 
         }
     }

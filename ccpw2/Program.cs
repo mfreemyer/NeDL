@@ -13,7 +13,7 @@ namespace ccpw2
       string userChoiceString;
       string[] nameArray = new string[25];
       string[] rateArray = new string[25];
-      string[] nameRateArray = new string[50];
+      //string[] nameRateArray = new string[50];
 
       // repeat main looop
       do
