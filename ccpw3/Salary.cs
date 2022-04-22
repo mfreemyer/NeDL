@@ -36,8 +36,12 @@ namespace ccpw3
         // ToString
         public override string ToString()
         {
-            return "Annual Salary: $" + salary;
+            return base.ToString() + "   Annual Salary: " + String.Format("${0:n}",salary);
         }
+
+
+
+
 
     }
 }

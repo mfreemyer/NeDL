@@ -35,12 +35,15 @@ namespace ccpw3
             hRate = newHRate;
         }
 
-        
-        // ToString
+
+
+
         public override string ToString()
         {
-            return "Hourly Rate: $" + hRate;
+            return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate);
         }
+
+
 
         // bonus get, set 
         public float GetBonus()

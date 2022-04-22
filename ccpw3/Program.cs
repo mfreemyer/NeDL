@@ -18,25 +18,61 @@ namespace ccpw3
                 hourlyArray[index] = new Hourly ();
             }
 
-            hourlyArray[0].SetFName("Maggie");
-            hourlyArray[0].SetLName("Freemyer-Ackerman");
-            hourlyArray[0].SetEmplType('S');
-            hourlyArray[0].SetHRate(20.32F);
-            hourlyArray[2].SetFName("Rand");
+            hourlyArray[0].SetFName("Merida");
+            hourlyArray[0].SetLName("Ackerman");
+            hourlyArray[0].SetEmplType('H');
+            hourlyArray[0].SetHRate(15.00F);
+            hourlyArray[2].SetFName("Lloyd");
             hourlyArray[2].SetLName("Ackerman");
-            hourlyArray[2].SetEmplType('S');
-            hourlyArray[4].SetFName("Dax");
-            hourlyArray[4].SetLName("Shepard");
+            hourlyArray[2].SetEmplType('H');
+            hourlyArray[4].SetFName("Macy");
+            hourlyArray[4].SetLName("Craig");
             hourlyArray[4].SetEmplType('H');
 
 
             // print non-null array values to test
-            Console.WriteLine("Array Values:");
+            Console.WriteLine();
+            Console.WriteLine("Hourly Array Values:");
             for (int index = 0; index < hourlyArray.Length; index++)
             {
                 if (!(((hourlyArray[index]).GetFName())==null))
                 Console.WriteLine(hourlyArray[index]);
             }
+
+//*****************************
+            // declare and instantiate the array of salary employee objects
+            Salary[] salaryArray = new Salary[25];
+
+            // loop through each array element and instantiate an employee object for each
+            for (int index = 0; index < salaryArray.Length; index++)
+            {
+                salaryArray[index] = new Salary ();
+            }
+
+            salaryArray[0].SetFName("Maggie");
+            salaryArray[0].SetLName("Freemyer-Ackerman");
+            salaryArray[0].SetEmplType('H');
+            salaryArray[0].SetSalary(65000);
+            salaryArray[2].SetFName("Rand");
+            salaryArray[2].SetLName("Ackerman");
+            salaryArray[2].SetEmplType('H');
+            salaryArray[2].SetSalary(65000);
+            salaryArray[4].SetFName("Doyle");
+            salaryArray[4].SetLName("Freemyer");
+            salaryArray[4].SetEmplType('S');
+            salaryArray[4].SetSalary(200000);
+
+
+            // print non-null array values to test
+            Console.WriteLine();
+            Console.WriteLine("Salary Array Values:");
+            for (int index = 0; index < hourlyArray.Length; index++)
+            {
+                if (!(((salaryArray[index]).GetFName())==null))
+                Console.WriteLine(salaryArray[index]);
+            }
+
+//*****************************
 
 
 
@@ -66,7 +102,7 @@ namespace ccpw3
             SSalaryObj.SetSalary(65000);
 
 
-            //Test Hourly data
+            /* //Test Hourly data
             Console.WriteLine();
             Console.WriteLine("Test Data for Hourly Employees:");
             Console.WriteLine("Employee Name: " + HFNameObj.GetFName() + " " + HLNameObj.GetLName());
@@ -78,7 +114,7 @@ namespace ccpw3
             Console.WriteLine();
             Console.WriteLine("Test Data for Salaried Employees:");
             Console.WriteLine("Employee Name: " + SFNameObj.GetFName() + " " + SLNameObj.GetLName());
-            Console.WriteLine("Hourly Rate: $" + SSalaryObj.GetSalary());
+            Console.WriteLine("Hourly Rate: $" + SSalaryObj.GetSalary()); */
 
 
 
