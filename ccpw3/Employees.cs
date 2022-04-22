@@ -68,7 +68,7 @@ namespace ccpw3
 
 
         // bonus get, set
-        public float GetBonus()
+        public virtual double GetBonus()
         {
             return bonus;
         }

@@ -39,17 +39,16 @@ namespace ccpw3
 
         public override string ToString()
         {
-            return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate)
-            /* + "   Bonus: " + String.Format("${0:n}",(hRate * 80)) */;
+            return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate) + "   Bonus: " + String.Format("${0:n}",(GetBonus()));
         }
 
 
 
 
-        // polymorphism attempt
-        public override void SetBonus ()
+        // polymorphism 
+        public override double GetBonus ()
         {
-            Console.WriteLine(/* hRate */ 20 * 80);
+            return hRate  * 80;
         }
 
 

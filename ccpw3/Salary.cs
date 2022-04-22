@@ -34,9 +34,9 @@ namespace ccpw3
         }
 
 
-        public override void SetBonus ()
+        public override double GetBonus ()
         {
-            Console.WriteLine(/* salary */ 65000 * .1);
+            return Convert.ToDouble(salary) * .1;
         }
 
 
@@ -45,7 +45,7 @@ namespace ccpw3
         public override string ToString()
         {
             return base.ToString() + "   Annual Salary: " + String.Format("${0:n}",salary)
-            /* + "   Bonus: " + String.Format("${0:n}",(salary * .1)) */;
+            + "   Bonus: " + String.Format("${0:n}",(GetBonus()));
         }
 
 
