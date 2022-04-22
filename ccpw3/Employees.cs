@@ -8,7 +8,7 @@ namespace ccpw3
         private string fName;
         private string lName;
         private char emplType; 
-        protected float bonus;
+        private float bonus;
 
 
 
@@ -74,16 +74,16 @@ namespace ccpw3
         }
 
         // polymorphism attempt
-        public virtual void SetBonus (float newBonus)
+        public virtual void SetBonus ()
         {
-            bonus = newBonus;
+            Console.WriteLine(0);
         }
 
 
         // ToString
         public override string ToString()
         {
-            return fName + " " + lName + "  Employee Type: " + emplType;
+            return fName + " " + lName + "  Employee Type: " + emplType; 
         }
 
 
