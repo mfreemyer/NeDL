@@ -33,12 +33,19 @@ namespace ccpw3
             salary = newSalary;
         }
 
-        // ToString
+        /* // ToString
         public override string ToString()
         {
             return base.ToString() + "   Annual Salary: " + String.Format("${0:n}",salary);
-        }
+        } */
 
+
+        // ToString
+        public override string ToString()
+        {
+            return base.ToString() + "   Annual Salary: " + String.Format("${0:n}",salary)
+            + "   Bonus: " + String.Format("${0:n}",(salary * .1));
+        }
 
 
 

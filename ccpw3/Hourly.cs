@@ -38,9 +38,17 @@ namespace ccpw3
 
 
 
-        public override string ToString()
+        /* public override string ToString()
         {
             return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate);
+        } */
+
+
+        //bonus attempt
+        public override string ToString()
+        {
+            return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate)
+            + "   Bonus: " + String.Format("${0:n}",(hRate * 80));
         }
 
 
@@ -51,14 +59,14 @@ namespace ccpw3
             return bonus;
         }
 
-        /* // polymorphism attempt
+        // polymorphism attempt
         public override void SetBonus (float newBonus)
         {
             bonus = newBonus;
         }
 
 
-        // create bonus object
+        /* // create bonus object
         Hourly objBonus = new Hourly();
         // set bonus value
         objBonus.SetBonus(objHRate.GetHRate() * 80); */
