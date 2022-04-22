@@ -17,7 +17,61 @@ namespace ccpw3
             Hourly[] hourlyArray = new Hourly[25];
             Salary[] salaryArray = new Salary[25];
 
+            // repeat main looop
+            do
+            {
 
+                //get a valid input
+                do
+                {
+                    //Menu of options
+                    Console.WriteLine("WHAT WOULD YOU LIKE TO DO?");
+                    Console.WriteLine("L: Load the employee file");
+                    Console.WriteLine("S: Save changes");
+                    Console.WriteLine("C: Create a new employee record");
+                    Console.WriteLine("R: Read/print a list of employee information");
+                    Console.WriteLine("U: Update an employee's information");
+                    Console.WriteLine("D: Delete an employee record");
+                    Console.WriteLine("Q: Quit the program");
+
+                    // get valid option from user
+                                
+                        userChoiceString = Console.ReadLine();
+                        userChoice = (userChoiceString == "L" || userChoiceString == "l" ||
+                                    userChoiceString == "S" || userChoiceString == "s" ||
+                                    userChoiceString == "C" || userChoiceString == "c" ||
+                                    userChoiceString == "R" || userChoiceString == "r" ||
+                                    userChoiceString == "U" || userChoiceString == "u" ||
+                                    userChoiceString == "D" || userChoiceString == "d" ||
+                                    userChoiceString == "Q" || userChoiceString == "q");
+
+                        if (!userChoice)
+                        {
+                            Console.WriteLine("Please enter a valid option from the list.");
+                        }
+                    
+                } while (!userChoice);
+
+
+
+            //TO DO: L -- Load the single text file into the program. 
+
+            //TO DO: S -- Store the current employee information in the text file (no blank lines in data file)
+
+            //TO DO: C -- Add a an employee (make sure user provides both, also handle "file full" case)
+
+            //TO DO: R -- Print a list of all the employees including their calculated bonus, 
+                          //{{call calculated bonus function. This will use polymorphism}}
+
+            //to do: U -- Update information for an employee
+
+            //to do: D -- Delete an employee
+
+            //TO DO: Q -- Quit the program
+                    /* else 
+                    {
+                        Console.WriteLine("Good-bye!");
+                    } */
 
 
 
@@ -92,19 +146,7 @@ namespace ccpw3
             HBonusObj.SetBonus();
             SBonusOjb.SetBonus();
 
-
-            //TO DO: O -- Load the single text file into the program. 
-            //TO DO: S -- Store the current employee information in the text file (no blank lines in data file)
-            //TO DO: C -- Add a an employee (make sure user provides both, also handle "file full" case)
-            //TO DO: R -- Print a list of all the employees including their calculated bonus, 
-                          //{{call calculated bonus function. This will use polymorphism}}
-            //to do: U -- Update information for an employee,
-            //to do: D -- Delete an employee
-            //TO DO: Q -- Quit the program
-
-
-
-
+            } while (!(userChoiceString=="Q") && !(userChoiceString=="q")); //ends 'repeat main loop'
 
         }
     }
