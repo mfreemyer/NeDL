@@ -97,11 +97,29 @@ namespace ccpw3
 
             //TO DO: S -- Store the current employee information in the text file (no blank lines in data file)
 
-            //TO DO: C -- Add a an employee (make sure user provides both, also handle "file full" case)
+            //TO DO: C -- Add a an employee (make sure user provides all info, also handle "file full" case)
+            // i think need to add another if statement to find out if hourly or salaried before asking for the rest... 
+            /* if (userChoiceString=="C" || userChoiceString=="c")
+            {
+                bool contains = false;
+                for (int index = 0; index < hourlyArray.Length; index++)
+                {
+                    if ((hourlyArray[index] == null) && (contains == false))
+                    {
+                        contains = true;
+                        //get new name from user
+                        Console.WriteLine("Please enter the new employee's first name.");
+                        Hourly.SetFName(newFName) = Console.ReadLine();
+                    }
+                }
+            } */
+
+
+
 
             //TO DO: R -- Print a list of all the employees including their calculated bonus, 
                           //{{call calculated bonus function. This will use polymorphism}}
-            if (userChoiceString=="R" || userChoiceString=="r")
+            /* else */ if (userChoiceString=="R" || userChoiceString=="r")
             {
                 // loop through each hourlyArray element and instantiate an hourly employee object for each
                 Console.WriteLine("List of employees:");
@@ -154,18 +172,6 @@ namespace ccpw3
             } while (!(userChoiceString=="Q") && !(userChoiceString=="q")); //ends 'repeat main loop'
 
 
-//*********************************************
-
-            // polymorphism/bonus -- do not yet know how to tie it in with the object for each class.
-            Employees EBonusObj = new Employees();
-            Hourly HBonusObj = new Hourly();
-            Salary SBonusOjb = new Salary();
-
-            EBonusObj.SetBonus();
-            HBonusObj.SetBonus();
-            SBonusOjb.SetBonus();
-
-//*********************************************
 
         }
     }

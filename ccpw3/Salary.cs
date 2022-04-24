@@ -5,7 +5,7 @@ namespace ccpw3
 
     class Salary : Employees  // derived class (child)
     {
-        public int salary;
+        private int salary;
 
 
         // default constructor for when no values are being passed

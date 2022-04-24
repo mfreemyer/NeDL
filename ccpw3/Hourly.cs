@@ -5,7 +5,7 @@ namespace ccpw3
 
     class Hourly : Employees // derived class (child)
     {
-        public float hRate;
+        private float hRate;
         
 
 
