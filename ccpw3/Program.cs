@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+
 
 namespace ccpw3
 {
@@ -109,35 +111,44 @@ namespace ccpw3
             // i think need to add another if statement to find out if hourly or salaried before asking for the rest... 
             if (userChoiceString=="C" || userChoiceString=="c")
             {
-                bool contains = false;
+                bool found = false;
                 for (int index = 0; index < hourlyArray.Length; index++)
                 {
-                    if ((hourlyArray[index] == null) && (contains == false))
+                    if ((((hourlyArray[index]).GetFName()) == null) && (found == false))
                     {
-                        contains = true;
+                        found = true;
                         //create object for hourly employees
                             // STUDY THIS! got help from Mark on it to create ojbect and restructure. 
-                        Hourly hourly = new Hourly(); 
+                       // Hourly hourly = new Hourly(); 
                         //get new name from user 
                         Console.WriteLine("Please enter the new employee's first name.");
                         string fName = Console.ReadLine();
-                        hourly.SetFName(fName);
+                       // hourly.SetFName(fName);
+                        
                         Console.WriteLine("Please enter the new employee's last name.");
                         string lName = Console.ReadLine();
-                        hourly.SetLName(lName);
-                        hourly.SetEmplType('H');
+                       // hourly.SetLName(lName);
+                        
+                        //hourly.SetEmplType('H');
+                        //Console.WriteLine("Please enter H or S for Employee Type.");
+                        //char emplType = char.Parse(Console.ReadLine());
+                        char emplType = 'H';
+                      //  hourly.SetEmplType(emplType);
+                        
                         Console.WriteLine("What is the employee's hourly rate?");
-                        string hRate = Console.ReadLine();
-                        hourly.SetLName(hRate);
+                        float hRate = float.Parse(Console.ReadLine());
+                       // hourly.SetHRate(hRate);
+                       // Console.WriteLine(hourly);
 
-
+                        hourlyArray[index] = new Hourly(fName, lName, emplType, 0, hRate);
+                        Console.WriteLine(index + ":" + hourlyArray[index]);
                         
                     }
                     
                     
                 }
 
-                if (contains == false)
+                if (found == false)
                 {
                     Console.WriteLine("The employee list is full.");
                 }

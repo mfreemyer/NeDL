@@ -17,7 +17,7 @@ namespace ccpw3
 
 
         // constructor for when values are passed
-        public Hourly (float newHRate) 
+        public Hourly (string newFName, string newLName, char newEmplType, float newBonus, float newHRate) : base (newFName, newLName, newEmplType, newBonus)
         {
             hRate = newHRate;
 

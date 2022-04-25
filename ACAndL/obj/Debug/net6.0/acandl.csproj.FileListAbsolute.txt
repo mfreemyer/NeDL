@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\acandl.exe
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\acandl.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\acandl.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\acandl.dll
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\ref\acandl.dll
+C:\Users\MFreemyer\Desktop\NeDL\acandl\bin\Debug\net6.0\acandl.pdb
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.dll
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\ref\acandl.dll
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.pdb
+C:\Users\MFreemyer\Desktop\NeDL\acandl\obj\Debug\net6.0\acandl.genruntimeconfig.cache
