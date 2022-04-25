@@ -48,8 +48,5 @@ namespace ccpw3
             + "   Bonus: " + String.Format("${0:n}",(GetBonus()));
         }
 
-
-
-
     }
 }

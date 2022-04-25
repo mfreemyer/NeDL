@@ -35,14 +35,10 @@ namespace ccpw3
         }
 
 
-
-
         public override string ToString()
         {
             return base.ToString() + "  Hourly Rate: " + String.Format("${0:n}",hRate) + "   Bonus: " + String.Format("${0:n}",(GetBonus()));
         }
-
-
 
 
         // polymorphism 
@@ -50,8 +46,6 @@ namespace ccpw3
         {
             return hRate  * 80;
         }
-
-
 
     }
 }

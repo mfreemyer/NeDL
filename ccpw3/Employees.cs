@@ -23,13 +23,14 @@ namespace ccpw3
         }
 
         // constructor for when values are passed
-        public Employees (string newFName, string newLName, char newEmplType, float newBonus) //update newEmplType back to char once figured out.
+        public Employees (string newFName, string newLName, char newEmplType, float newBonus) 
         {
             fName = newFName;
             lName = newLName;
             emplType = newEmplType;
             bonus = newBonus;
         }
+
 
         // since fName, lName and emplType aren't defined as properties, create the get and set methods for them.
         public string GetFName()

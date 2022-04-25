@@ -94,12 +94,21 @@ namespace ccpw3
 
 
             //TO DO: L -- Load the single text file into the program. 
+            if (userChoiceString=="L" || userChoiceString=="l")
+            {
+                Console.WriteLine("Load area");
+                /* int index = 0; 
+                using (StreamReader sr = File.OpenText("Employees.txt"))
+                {
+                    
+                } */
+            }
 
             //TO DO: S -- Store the current employee information in the text file (no blank lines in data file)
 
             //TO DO: C -- Add a an employee (make sure user provides all info, also handle "file full" case)
             // i think need to add another if statement to find out if hourly or salaried before asking for the rest... 
-            /* if (userChoiceString=="C" || userChoiceString=="c")
+            if (userChoiceString=="C" || userChoiceString=="c")
             {
                 bool contains = false;
                 for (int index = 0; index < hourlyArray.Length; index++)
@@ -107,26 +116,35 @@ namespace ccpw3
                     if ((hourlyArray[index] == null) && (contains == false))
                     {
                         contains = true;
-                        //get new name from user
+                        //get new name from user (got lots of help from Mark on this. Study it.)
+                        Hourly hourly = new Hourly(); // create object for hourly employees 
                         Console.WriteLine("Please enter the new employee's first name.");
-                        Hourly.SetFName(newFName) = Console.ReadLine();
+                        string fName = Console.ReadLine();
+                        hourly.SetFName(fName);
+                        Console.WriteLine("Please enter the new employee's last name.");
+                        string lName = Console.ReadLine();
+                        hourly.SetLName(lName);
+
+                        
                     }
                 }
-            } */
+
+                if (contains == false)
+                {
+                    Console.WriteLine("The employee list is full.");
+                }
+            }
 
 
 
 
             //TO DO: R -- Print a list of all the employees including their calculated bonus, 
                           //{{call calculated bonus function. This will use polymorphism}}
-            /* else */ if (userChoiceString=="R" || userChoiceString=="r")
+            else if (userChoiceString=="R" || userChoiceString=="r")
             {
                 // loop through each hourlyArray element and instantiate an hourly employee object for each
                 Console.WriteLine("List of employees:");
                 
-
-
-
                     // print non-null hourlyArray values to test
                     for (int index = 0; index < hourlyArray.Length; index++)
                     {
@@ -153,23 +171,10 @@ namespace ccpw3
             //to do: D -- Delete an employee
 
             //TO DO: Q -- Quit the program
-                    /* else 
-                    {
-                        Console.WriteLine("Good-bye!");
-                    } */
-
-
-
-
-
-
-
-
-
-
-
-
-            } while (!(userChoiceString=="Q") && !(userChoiceString=="q")); //ends 'repeat main loop'
+            } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
+            {
+                Console.WriteLine("Have a nice day!");
+            } //ends 'repeat main loop'
 
 
 
