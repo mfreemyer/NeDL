@@ -29,7 +29,6 @@ namespace ccpw3
                     salaryArray[index] = new Salary ();
                 }
 
-
                     hourlyArray[0].SetFName("Merida");
                     hourlyArray[0].SetLName("Ackerman");
                     hourlyArray[0].SetEmplType('H');
@@ -116,17 +115,26 @@ namespace ccpw3
                     if ((hourlyArray[index] == null) && (contains == false))
                     {
                         contains = true;
-                        //get new name from user (got lots of help from Mark on this. Study it.)
-                        Hourly hourly = new Hourly(); // create object for hourly employees 
+                        //create object for hourly employees
+                            // STUDY THIS! got help from Mark on it to create ojbect and restructure. 
+                        Hourly hourly = new Hourly(); 
+                        //get new name from user 
                         Console.WriteLine("Please enter the new employee's first name.");
                         string fName = Console.ReadLine();
                         hourly.SetFName(fName);
                         Console.WriteLine("Please enter the new employee's last name.");
                         string lName = Console.ReadLine();
                         hourly.SetLName(lName);
+                        hourly.SetEmplType('H');
+                        Console.WriteLine("What is the employee's hourly rate?");
+                        string hRate = Console.ReadLine();
+                        hourly.SetLName(hRate);
+
 
                         
                     }
+                    
+                    
                 }
 
                 if (contains == false)
