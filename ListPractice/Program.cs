@@ -3,12 +3,12 @@ using System.Collections.Generic;
 namespace ForgetCode{
 class MainClass {
   public static void Main (string[] args) {
+    List<string> userList = new List<string>();
     Console.WriteLine("Add a list item.");
-    String input = Console.ReadLine();
-    List<String> userList = new List<String>();
+    string input = Console.ReadLine();
     userList.Add(input);
     Console.WriteLine("Add another value:");
-    String inputNewUser = Console.ReadLine();
+    string inputNewUser = Console.ReadLine();
     userList.Add(inputNewUser);
     Console.WriteLine();
     Console.WriteLine("These are the values in your list:");
