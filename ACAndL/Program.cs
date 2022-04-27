@@ -65,6 +65,24 @@ namespace ACAndL
 
 
                 //TO DO: L -- Load the single text file into the program. 
+                if (userChoiceString=="L" || userChoiceString=="l")
+                {
+                    int index = 0; 
+                    using (StreamReader sr = File.OpenText("Employees.txt"))
+                    {
+
+                        string fName = "";
+                        while ((fName = sr.ReadLine()) != null)
+                        {
+                            
+
+
+                        }
+                    }
+
+                }
+
+
                 //TO DO: S -- Store the current employee information in the text file (no blank lines in data file)
                 //TO DO: C -- Add a an employee (make sure user provides both, also handle "file full" case)
                 if (userChoiceString=="C" || userChoiceString=="c")

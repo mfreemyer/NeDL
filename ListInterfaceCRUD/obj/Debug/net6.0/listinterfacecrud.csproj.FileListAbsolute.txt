@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\listinterfacecrud.exe
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\listinterfacecrud.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\listinterfacecrud.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\listinterfacecrud.dll
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\ref\listinterfacecrud.dll
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\bin\Debug\net6.0\listinterfacecrud.pdb
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.dll
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\ref\listinterfacecrud.dll
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.pdb
+C:\Users\MFreemyer\Desktop\NeDL\listinterfacecrud\obj\Debug\net6.0\listinterfacecrud.genruntimeconfig.cache
