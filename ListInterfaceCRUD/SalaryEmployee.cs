@@ -21,7 +21,7 @@ namespace ListInterfaceCRUD
         }
 
         // interface method from IRate
-        public void SetRate(double newSalary)
+        public override void SetRate(double newSalary)
         {
             salary = newSalary;
         }

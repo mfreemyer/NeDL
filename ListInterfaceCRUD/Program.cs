@@ -31,7 +31,6 @@ namespace ListInterfaceCRUD
             }
 
 //*********************************************************************************************************
-
             // add an employee (use switch to determine which object)
             Console.Write("Please enter the new employee's first name: ");
             string newFName = Console.ReadLine();
@@ -67,41 +66,72 @@ namespace ListInterfaceCRUD
             }
             
 //*********************************************************************************************************
-            
-            // restructure classes to make this work. need to include SetRate in Employee Class.
-            /* Console.Write("Please enter the first name of the employee whose pay you want to update: ");
-            string findFName = Console.ReadLine();
+            // update an employees pay rate in the hourly or salary list
             Console.Write("Please enter the first name of the employee whose pay you want to update: ");
+            string findFName = Console.ReadLine();
+            Console.Write("Please enter the last name of the employee whose pay you want to update: ");
             string findLName = Console.ReadLine();
             bool found = false;
             for (int index = 0; index < employeeList.Count; index++)
             {
                 if((employeeList[index].fName == findFName) && (employeeList[index].lName == findLName))
                 {
-                    
-                    Console.WriteLine("Employee found! " + employeeList[index].fName + employeeList[index].lName + "'s employee type is " + employeeList[index].emplType);
-                    string updatePayType = employeeList[index].emplType;
-                    switch (updatePayType)
-                    {
-                        case "S":
-                        case "s":
-                            Console.Write("What is the new pay amount?");
-                            double newPayAmount = Convert.ToDouble(Console.ReadLine());
-                            employeeList[index].SetRate(newPayAmount);
 
-                    }
-                    
+                    Console.Write("Employee found! " + employeeList[index].fName + " " + employeeList[index].lName + "'s employee type is " + employeeList[index].emplType + ". ");
+                    Console.Write(" Please enter the employee's new pay amount: ");
+                    double newPayAmount = Convert.ToDouble(Console.ReadLine());
+                    employeeList[index].SetRate(newPayAmount);
+                    found = true;
                 }
-            
+            }
+            if (found)
+            {
+                Console.WriteLine("The employee's pay was updated.");
+                foreach (Employee anEmployee in employeeList)
+                {
+                    Console.WriteLine(anEmployee);
+                }
 
-
-            } */
+            }
+            else
+            {
+                Console.WriteLine("Employee not found.");
+            }
 
 
 
 //*********************************************************************************************************
+            // delete an employee
+            Console.Write("Do you want to delete an employee? ");
+            // add an if statement here to give the option of bypassing delete. 
+            Console.Write("Please enter the first name of the employee you want to delete: ");
+            findFName = Console.ReadLine();
+            Console.Write("Please enter the last name of the employee you want to delete: ");
+            findLName = Console.ReadLine();
+            found = false;
+
+            for (int index = 0; index < employeeList.Count; index++)
+            {
+                if ((employeeList[index].fName == findFName) && (employeeList[index].lName == findLName))
+                {
+                    Console.Write("Employee --" + employeeList[index].fName + " " + employeeList[index].lName +"-- found! Are you sure you want to delete?");
+                    // add if statement here to give option to back out.
+                     
+                    employeeList.RemoveAt(index);
+
+                }
+                else
+                    Console.WriteLine("Employee not found. No one was deleted.");
+
+                // print the list to show any deletion    
+                foreach (Employee anEmployee in employeeList)
+                {
+                    Console.WriteLine(anEmployee);
+                }
+            }
 
 
-        }
+
+        } // ends main
     }
 }

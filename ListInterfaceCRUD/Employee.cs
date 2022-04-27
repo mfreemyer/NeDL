@@ -3,7 +3,7 @@
 namespace ListInterfaceCRUD
 {
 
-    class Employee 
+    class Employee : IRate
     {
         public string fName // property
             { get; set; }
@@ -34,6 +34,11 @@ namespace ListInterfaceCRUD
         public override string ToString()
         {
             return "Employee: " + fName + " " + lName + "  |  Type: " + emplType;
+        }
+
+        public virtual void SetRate(double newRate)
+        {
+
         }
 
     }

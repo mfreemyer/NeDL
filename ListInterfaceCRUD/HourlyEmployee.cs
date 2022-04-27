@@ -21,7 +21,7 @@ namespace ListInterfaceCRUD
         }
 
         // interface method from IRate
-        public void SetRate(double newRate)
+        public override void SetRate(double newRate)
         {
             hRate = newRate;
         }
