@@ -35,17 +35,18 @@ namespace ccpw4
         // deposit method
         /* *** Deposit - A deposit will include the account id and the amount of the deposit (which must be > 0). 
         All three accounts handle a deposit the same way. If the account exists, the balance is increased by the deposit amount. *** */
-        public double Deposit(double depositAmt)
+        public void Deposit(double depositAmt)
         {
-            //depositAmt = Console.ReadLine(Convert.ToDouble());
+            //depositAmt = Convert.ToDouble(Console.ReadLine());
             if (depositAmt > 0)
             {
-                return acctBal + depositAmt;
+                acctBal = acctBal + depositAmt;
+                Console.Write("The deposit has been made. The new account balance is ");
             }
             else
             {
-                Console.WriteLine("Please enter an amount greater than 0");
-                return acctBal;
+                Console.Write("Please enter an amount greater than 0. The balance has not been updated. The balance remains ");
+                //return acctBal;
             }
 
         }
