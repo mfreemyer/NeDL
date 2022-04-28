@@ -114,20 +114,49 @@ namespace ListInterfaceCRUD
             {
                 if ((employeeList[index].fName == findFName) && (employeeList[index].lName == findLName))
                 {
-                    Console.Write("Employee --" + employeeList[index].fName + " " + employeeList[index].lName +"-- found! Are you sure you want to delete?");
-                    // add if statement here to give option to back out.
-                     
+                    Console.Write("Employee --" + employeeList[index].fName + " " + employeeList[index].lName +"-- found! ");
+                    Console.Write("Are you sure you want to delete " + employeeList[index].fName + "? ");
                     employeeList.RemoveAt(index);
+                    // print the list to show any deletion    
+                    foreach (Employee anEmployee in employeeList)
+                    {
+                        Console.WriteLine(anEmployee);
+                    }
+                    
+                    // try with switch or if statement here to give option to back out.
+                    /* string confirmDelete = Console.ReadLine();
+                    switch (confirmDelete) 
+                    {
+                        case "Y":
+                        case "y":
+                        case "Yes":
+                        case "yes":
+                            employeeList.RemoveAt(index);
+                            // print the list to show any deletion    
+                            foreach (Employee anEmployee in employeeList)
+                            {
+                                Console.WriteLine(anEmployee);
+                            }
+                        break;
+                        case "N":
+                        case "n":
+                        case "No":
+                        case "no":
+                            Console.WriteLine("Got it. No one will be deleted. ");
+                        break;
+                        default:
+                            Console.WriteLine("You didn't enter a valid answer, so no one will be deleted.");
+                        break;
 
+                    } */
                 }
                 else
                     Console.WriteLine("Employee not found. No one was deleted.");
 
-                // print the list to show any deletion    
-                foreach (Employee anEmployee in employeeList)
-                {
-                    Console.WriteLine(anEmployee);
-                }
+
+
+            
+
             }
 
 
