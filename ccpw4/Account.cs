@@ -41,7 +41,7 @@ namespace ccpw4
             if (depositAmt > 0)
             {
                 acctBal = acctBal + depositAmt;
-                Console.WriteLine();
+                Console.WriteLine(); // for user friendliness in terminal
                 Console.Write("The deposit has been made. New balance: ");
             }
             else
@@ -53,7 +53,7 @@ namespace ccpw4
         }
 
         // abstract withdrawal method
-        /* public abstract double Withdrawal(); */
+        public abstract double Withdrawal();
 
 
         // to string

@@ -5,8 +5,7 @@ namespace ccpw4
 
     class CD : Account/* , IGetAnnualInt */
     // *** the CD has an annual interest rate and a penalty for early withdrawal
-    // *** A CD withdrawal is allowed but the early withdrawal penalty is applied so the
-           // balance needs to be greater than the withdrawal amount and the penalty combined.
+
     {
         // properties
         double annualCDIntRate
@@ -28,7 +27,25 @@ namespace ccpw4
 
 
         // Withdrawal method
+        // *** A CD withdrawal is allowed but the early withdrawal penalty is applied so the
+               // balance needs to be greater than the withdrawal amount and the penalty combined.
+        public override double Withdrawal()
+        {
+            double withdrawalAmt = 0;
+            if (withdrawalAmt > 0)
+            {
+                Console.WriteLine();  // for user friendliness in terminal
+                Console.Write("The funds have been withdrawn. New balance: ");
+                return acctBal = acctBal - withdrawalAmt;
+            }
+            else
+            {
+                Console.Write("Please enter an amount greater than 0. The balance has not been updated: ");
+                return acctBal;
+                
+            }
 
+        }
 
         // GetAnnualInt method
 

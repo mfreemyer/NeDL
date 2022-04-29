@@ -5,7 +5,7 @@ namespace ccpw4
 
     class Checking : Account
     // *** the checking account has an annual fee
-    // *** A checking account withdrawal is allowed but only up to 50% of the account balance.
+    
     {
         // properties
         double annualChFee
@@ -24,7 +24,24 @@ namespace ccpw4
 
 
         // Withdrawal method
+        // *** A checking account withdrawal is allowed but only up to 50% of the account balance.
+        public override double Withdrawal()
+        {
+            double withdrawalAmt = 0;
+            if (withdrawalAmt > 0)
+            {
+                Console.WriteLine();  // for user friendliness in terminal
+                Console.Write("The funds have been withdrawn. New balance: ");
+                return acctBal = acctBal - withdrawalAmt;
+            }
+            else
+            {
+                Console.Write("Please enter an amount greater than 0. The balance has not been updated: ");
+                return acctBal;
+                
+            }
 
+        }
 
         // to string
         public override string ToString()
