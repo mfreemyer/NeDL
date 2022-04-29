@@ -99,11 +99,11 @@ namespace ccpw4
                                 if (savingsAcctList[index].acctID == findAcct)
                                 {
                                     Console.Write("The savings account (" + savingsAcctList[index].acctID + ") was found!");  
-                                    Console.WriteLine("  The current balance is " + savingsAcctList[index].acctBal);
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",savingsAcctList[index].acctBal));
                                     Console.Write("Please enter the amount you'd like to deposit: ");
                                     double newDepositAmt = Convert.ToDouble(Console.ReadLine());
                                     savingsAcctList[index].Deposit(newDepositAmt);
-                                    Console.WriteLine(savingsAcctList[index].acctBal);
+                                    Console.WriteLine(String.Format("${0:n}",(savingsAcctList[index].acctBal)));
                                     Console.WriteLine();
                                     found = true;
                                 }
@@ -122,11 +122,11 @@ namespace ccpw4
                                 if (checkingAcctList[index].acctID == findAcct)
                                 {
                                     Console.Write("The checking account (" + checkingAcctList[index].acctID + ") was found!");
-                                    Console.WriteLine("  The current balance is " + checkingAcctList[index].acctBal);
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",(checkingAcctList[index].acctBal)));
                                     Console.Write("Please enter the amount you'd like to deposit: ");
                                     double newDepositAmt = Convert.ToDouble(Console.ReadLine());
                                     checkingAcctList[index].Deposit(newDepositAmt);
-                                    Console.WriteLine(checkingAcctList[index].acctBal);
+                                    Console.WriteLine(String.Format("${0:n}",(checkingAcctList[index].acctBal)));
                                     Console.WriteLine();
                                     found = true;
                                 }
@@ -145,11 +145,11 @@ namespace ccpw4
                                 if (cDAcctList[index].acctID == findAcct)
                                 {
                                     Console.Write("The CD account (" + cDAcctList[index].acctID + ") was found!");
-                                    Console.WriteLine("  The current balance is " + cDAcctList[index].acctBal);
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",(cDAcctList[index].acctBal)));
                                     Console.Write("Please enter the amount you'd like to deposit: ");
                                     double newDepositAmt = Convert.ToDouble(Console.ReadLine());
                                     cDAcctList[index].Deposit(newDepositAmt); // calling the method here
-                                    Console.WriteLine(cDAcctList[index].acctBal);
+                                    Console.WriteLine(String.Format("${0:n}",(cDAcctList[index].acctBal)));
                                     Console.WriteLine();
                                     found = true;
                                 }
@@ -167,28 +167,80 @@ namespace ccpw4
                 // -- W -- allow user to make a withdrawal from a specific account 
                 else if (userChoiceString=="W" || userChoiceString=="w")
                 {
-                    // get the savings account number from the user
-                    Console.Write("Please enter the ID for the savings account from which you want to withdraw funds: ");
-                    int findAcct = Convert.ToInt32(Console.ReadLine());
-                    bool found = false; 
-                    for (int index = 0; index < savingsAcctList.Count; index++)
+                    // get the account type from the user
+                    Console.WriteLine("From what type of account are you withdrawing funds?");
+                    Console.Write("Please enter 'S' for Savings, 'Ch' for Checking, or CD for a CD Account: ");
+                    string selectAcctType = Console.ReadLine();
+                    switch (selectAcctType)
                     {
-                        if (savingsAcctList[index].acctID == findAcct)
-                        {
-                            Console.Write("The savings account (" + savingsAcctList[index].acctID + ") was found!");  
-                            Console.WriteLine("  The current balance is " + savingsAcctList[index].acctBal);
-                            savingsAcctList[index].Withdrawal(); // calling method here
-                            Console.WriteLine(savingsAcctList[index].acctBal);
-                            Console.WriteLine();
-                            found = true;
-
-                        }
+                        case "S":
+                        case "s":
+                            Console.WriteLine(); 
+                            // get the savings account number from the user
+                            Console.Write("Please enter the ID for the savings account from which you want to withdraw funds: ");
+                            int findAcct = Convert.ToInt32(Console.ReadLine());
+                            bool found = false; 
+                            for (int index = 0; index < savingsAcctList.Count; index++)
+                            {
+                                if (savingsAcctList[index].acctID == findAcct)
+                                {
+                                    Console.Write("The savings account (" + savingsAcctList[index].acctID + ") was found!");  
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",(savingsAcctList[index].acctBal)));
+                                    savingsAcctList[index].Withdrawal(); // calling method here
+                                    Console.WriteLine(String.Format("${0:n}",(savingsAcctList[index].acctBal)));
+                                    Console.WriteLine();
+                                    found = true;
+                                }
+                            }
+                        break;
+                        case "Ch":
+                        case "CH":
+                        case "ch":
+                            Console.WriteLine(); 
+                            // get the checking account number from the user
+                            Console.Write("Please enter the ID for the checking account from which you want to withdraw funds: ");
+                            findAcct = Convert.ToInt32(Console.ReadLine());
+                            found = false; 
+                            for (int index = 0; index < checkingAcctList.Count; index++)
+                            {
+                                if (checkingAcctList[index].acctID == findAcct)
+                                {
+                                    Console.Write("The checking account (" + checkingAcctList[index].acctID + ") was found!");  
+                                    Console.WriteLine("  The current balance is " + checkingAcctList[index].acctBal);
+                                    checkingAcctList[index].Withdrawal(); // calling method here
+                                    Console.WriteLine(String.Format("${0:n}",(checkingAcctList[index].acctBal)));
+                                    Console.WriteLine();
+                                    found = true;
+                                }
+                            }
+                        break;
+                        case "CD":
+                        case "Cd":
+                        case "cd":
+                            Console.WriteLine(); 
+                            // get the checking account number from the user
+                            Console.Write("Please enter the ID for the CD account from which you want to withdraw funds: ");
+                            findAcct = Convert.ToInt32(Console.ReadLine());
+                            found = false; 
+                            for (int index = 0; index < cDAcctList.Count; index++)
+                            {
+                                if (cDAcctList[index].acctID == findAcct)
+                                {
+                                    Console.Write("The CD account (" + cDAcctList[index].acctID + ") was found!");  
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",(cDAcctList[index].acctBal)));
+                                    cDAcctList[index].Withdrawal(); // calling method here
+                                    Console.WriteLine(String.Format("${0:n}",(cDAcctList[index].acctBal)));
+                                    Console.WriteLine();
+                                    found = true;
+                                }
+                            }
+                        break;
+                        default:
+                            Console.WriteLine("The option you entered is invalid. Select 'W' for Withdrawal to try again.");
+                            // add option to try again here if time
+                        break;
                     }
-
-                    
-                    
-
-
+ 
                 } // ends user choice withdrawal section
         
             

@@ -59,7 +59,7 @@ namespace ccpw4
         // to string
         public override string ToString()
         {
-            return "Account Id: " + acctID + "  |  Balance: " + acctBal + "  |  Account Type: " + acctType;
+            return "Account Id: " + acctID + "  |  Balance: " + String.Format("${0:n}",(acctBal)) + "  |  Account Type: " + acctType;
         }
 
 

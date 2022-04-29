@@ -11,7 +11,7 @@ namespace ccpw4
         double annualCDIntRate
             { get; set; }
         
-        double earlyWPenalty // might not need this. maybe this will just be a calculation...
+        double earlyWPenalty 
             { get; set; }
 
 
@@ -31,16 +31,27 @@ namespace ccpw4
                // balance needs to be greater than the withdrawal amount and the penalty combined.
         public override double Withdrawal()
         {
-            double withdrawalAmt = 0;
+            Console.WriteLine("How much do you want to withdraw from the account?");
+            double withdrawalAmt = Convert.ToDouble(Console.ReadLine());
             if (withdrawalAmt > 0)
             {
-                Console.WriteLine();  // for user friendliness in terminal
-                Console.Write("The funds have been withdrawn. New balance: ");
-                return acctBal = acctBal - withdrawalAmt;
+                if (acctBal >= withdrawalAmt)
+                {
+                    Console.WriteLine(); // for user friendliness in terminal
+                    Console.Write("The funds have been withdrawn. New balance: ");
+                    return acctBal = acctBal - withdrawalAmt;
+                }
+                else
+                {
+                    Console.Write("Oops! The withdrawal amount cannot be greater than the account balance."); 
+                    Console.Write("  Please try again. The balance remains unchanged: ");
+                    return acctBal;
+                }
+
             }
             else
             {
-                Console.Write("Please enter an amount greater than 0. The balance has not been updated: ");
+                Console.Write("Oops! Please start over and enter an amount greater than 0. The balance has not been updated: ");
                 return acctBal;
                 
             }
@@ -54,6 +65,7 @@ namespace ccpw4
         public override string ToString()
         {
             return base.ToString() + "  |  Annual CD Interest Rate: " + annualCDIntRate;
+            // i think annualCDIntRate should be a calculation instead of a hard-coded value. 
         }
 
 
