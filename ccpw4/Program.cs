@@ -33,10 +33,10 @@ namespace ccpw4
             do
             {
 
-                //get a valid input
+                // get a valid input
                 do
                 {
-                    //Menu of options
+                    // Menu of options
                     Console.WriteLine("WHAT WOULD YOU LIKE TO DO?");
                     Console.WriteLine("L: List all of the accounts and their information");
                     Console.WriteLine("D: Make a deposit");
@@ -60,10 +60,10 @@ namespace ccpw4
 
 //*****************************************************************************************************
 
-                        // print the lists
+                        // -- L -- print the lists
                         if (userChoiceString=="L" || userChoiceString=="l")
                         {
-                            Console.WriteLine(); 
+                            Console.WriteLine(); // for user friendliness in terminal
                             foreach (Savings aSavingsAcct in savingsAcctList)
                             { Console.WriteLine(aSavingsAcct); }
                             
@@ -72,10 +72,12 @@ namespace ccpw4
 
                             foreach (CD aCDAcct in cDAcctList)
                             { Console.WriteLine(aCDAcct); }
-                            Console.WriteLine();
-                        }
+                            Console.WriteLine(); // for user friendliness in terminal
 
-                        //allow user to make a deposit into a specific account (call deposit method)
+                        } // ends print lists section
+
+
+                        // -- D -- allow user to make a deposit into a specific account (call deposit method)
                         else if (userChoiceString=="D" || userChoiceString=="d")
                         {
                             // get the account type from user
@@ -86,7 +88,7 @@ namespace ccpw4
                             {
                                 case "S":
                                 case "s":
-                                    Console.WriteLine();
+                                    Console.WriteLine(); 
                                     // get the savings account number from user and perform the deposit 
                                     Console.Write("Please enter the ID for the savings account into which you want to make a deposit: ");
                                     int findAcct = Convert.ToInt32(Console.ReadLine());
@@ -150,33 +152,28 @@ namespace ccpw4
                                     }
                                 break;
                                 default:
-                                    Console.WriteLine("Please enter a valid option.");
-                                    // add option to try again here
+                                    Console.WriteLine("The option you entered is invalid. Select 'D' for Deposit and try again.");
+                                    // add option to try again here if time
                                 break;
-
                             }
 
-                            
+                        } // ends user choice deposit section
 
 
-
-                        } // end user choice deposit section
-
-                        //allow user to make a withdrawal from a specific account 
+                        // -- W -- allow user to make a withdrawal from a specific account 
                         else if (userChoiceString=="W" || userChoiceString=="w")
                         {
                             Console.WriteLine("Zoiks! There's no code in the withdrawal section yet!!! :D ");
 
-                        }
+                        } // ends user choice withdrawal section
             
             
             
-            
-            // Q -- Quit the program
+            // -- Q -- Quit the program
             } while (!(userChoiceString=="Q") && !(userChoiceString=="q"));
             {
                 Console.WriteLine("Have a nice day!");
-            } //ends 'repeat main loop'
+            } // ends 'repeat main loop'
 
 
 
