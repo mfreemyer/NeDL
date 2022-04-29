@@ -3,7 +3,7 @@
 namespace ccpw4
 {
 
-    class Savings : Account/* , IGetAnnualInt */
+    class Savings : Account, IGetAnnualInt
     // *** the savings account has an annual interest rate
     {
         // properties
@@ -56,12 +56,17 @@ namespace ccpw4
 
 
         // GetAnnualInt method
+        public double GetAnnualInt()
+        {
+            return acctBal * sIntRate;
+
+        }
 
 
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  |  Annual Interest Rate: " + sIntRate;
+            return base.ToString() + "  |  Annual Interest Amount (based on interest rate: " + sIntRate + "): " + String.Format("${0:n}",(GetAnnualInt()));
         }
 
 

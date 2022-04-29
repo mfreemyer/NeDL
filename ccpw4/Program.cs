@@ -22,8 +22,8 @@ namespace ccpw4
             savingsAcctList.Add(new Savings (012345678, 7323.08, "S", .01));
             savingsAcctList.Add(new Savings (876543210, 10528.72, "S", .01));
             
-            checkingAcctList.Add(new Checking (123456789, 3000.05, "Ch", 2));
-            checkingAcctList.Add(new Checking (987654321, 800.17, "Ch", 2));
+            checkingAcctList.Add(new Checking (123456789, 3000.05, "Ch", 50));
+            checkingAcctList.Add(new Checking (987654321, 800.17, "Ch", 50));
 
             cDAcctList.Add(new CD (789456123, 20000.00, "CD", .1));
             cDAcctList.Add(new CD (321654987, 80.48, "CD", .1));        
