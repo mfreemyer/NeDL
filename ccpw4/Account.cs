@@ -41,6 +41,7 @@ namespace ccpw4
             if (depositAmt > 0)
             {
                 acctBal = acctBal + depositAmt;
+                Console.WriteLine();
                 Console.Write("The deposit has been made. New balance: ");
             }
             else

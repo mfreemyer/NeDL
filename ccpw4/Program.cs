@@ -63,44 +63,104 @@ namespace ccpw4
                         // print the lists
                         if (userChoiceString=="L" || userChoiceString=="l")
                         {
+                            Console.WriteLine(); 
                             foreach (Savings aSavingsAcct in savingsAcctList)
-                            {
-                                Console.WriteLine(aSavingsAcct);
-                            }
+                            { Console.WriteLine(aSavingsAcct); }
                             
                             foreach (Checking aCheckingAcct in checkingAcctList)
-                            {
-                                Console.WriteLine(aCheckingAcct);
-                            }
+                            { Console.WriteLine(aCheckingAcct); }
 
                             foreach (CD aCDAcct in cDAcctList)
-                            {
-                                Console.WriteLine(aCDAcct);
-                            }
-
+                            { Console.WriteLine(aCDAcct); }
+                            Console.WriteLine();
                         }
 
                         //allow user to make a deposit into a specific account (call deposit method)
                         else if (userChoiceString=="D" || userChoiceString=="d")
                         {
-                            Console.Write("Please enter the ID for the account into which you want to make a deposit: ");
-                            int findAcct = Convert.ToInt32(Console.ReadLine());
-                            bool found = false;
-                            for (int index = 0; index < savingsAcctList.Count; index++)
+                            // get the account type from user
+                            Console.WriteLine("What type of account are you depositing into?");
+                            Console.Write("Please enter 'S' for Savings, 'Ch' for Checking, or CD for a CD Account: ");
+                            string selectAcctType = Console.ReadLine();
+                            switch (selectAcctType)
                             {
-                                if (savingsAcctList[index].acctID == findAcct)
-                                {
-                                    Console.WriteLine("The account (" + savingsAcctList[index].acctID + ") was found.  The current balance is " + savingsAcctList[index].acctBal);
-                                    Console.Write("Please enter the amount you'd like to deposit: ");
-                                    double newDepositAmt = Convert.ToDouble(Console.ReadLine());
-                                    // Account.Deposit(newDepositAmt); 
-                                    // error CS0120: An object reference is required for the non-static field, method, or property 'Account.Deposit(double)'
-                                    savingsAcctList[index].Deposit(newDepositAmt);
-                                    Console.WriteLine(savingsAcctList[index].acctBal);
-                                    found = true;
-                                }
+                                case "S":
+                                case "s":
+                                    Console.WriteLine();
+                                    // get the savings account number from user and perform the deposit 
+                                    Console.Write("Please enter the ID for the savings account into which you want to make a deposit: ");
+                                    int findAcct = Convert.ToInt32(Console.ReadLine());
+                                    bool found = false;
+                                    for (int index = 0; index < savingsAcctList.Count; index++)
+                                    {
+                                        if (savingsAcctList[index].acctID == findAcct)
+                                        {
+                                            Console.WriteLine("The savings account (" + savingsAcctList[index].acctID + ") was found.  The current balance is " + savingsAcctList[index].acctBal);
+                                            Console.Write("Please enter the amount you'd like to deposit: ");
+                                            double newDepositAmt = Convert.ToDouble(Console.ReadLine());
+                                            savingsAcctList[index].Deposit(newDepositAmt);
+                                            Console.WriteLine(savingsAcctList[index].acctBal);
+                                            Console.WriteLine();
+                                            found = true;
+                                        }
+                                    }
+                                break;
+                                case "Ch":
+                                case "CH":
+                                case "ch":
+                                    Console.WriteLine();
+                                    // get the checking account number from user and perform the deposit 
+                                    Console.Write("Please enter the ID for the checking account into which you want to make a deposit: ");
+                                    findAcct = Convert.ToInt32(Console.ReadLine());
+                                    found = false;
+                                    for (int index = 0; index < checkingAcctList.Count; index++)
+                                    {
+                                        if (checkingAcctList[index].acctID == findAcct)
+                                        {
+                                            Console.WriteLine("The checking account (" + checkingAcctList[index].acctID + ") was found.  The current balance is " + checkingAcctList[index].acctBal);
+                                            Console.Write("Please enter the amount you'd like to deposit: ");
+                                            double newDepositAmt = Convert.ToDouble(Console.ReadLine());
+                                            checkingAcctList[index].Deposit(newDepositAmt);
+                                            Console.WriteLine(checkingAcctList[index].acctBal);
+                                            Console.WriteLine();
+                                            found = true;
+                                        }
+                                    }
+                                break; 
+                                case "CD":
+                                case "Cd":
+                                case "cd":
+                                    Console.WriteLine();
+                                    // get the CD account number from user and perform the deposit 
+                                    Console.Write("Please enter the ID for the CD account into which you want to make a deposit: ");
+                                    findAcct = Convert.ToInt32(Console.ReadLine());
+                                    found = false;
+                                    for (int index = 0; index < cDAcctList.Count; index++)
+                                    {
+                                        if (cDAcctList[index].acctID == findAcct)
+                                        {
+                                            Console.WriteLine("The CD account (" + cDAcctList[index].acctID + ") was found.  The current balance is " + cDAcctList[index].acctBal);
+                                            Console.Write("Please enter the amount you'd like to deposit: ");
+                                            double newDepositAmt = Convert.ToDouble(Console.ReadLine());
+                                            cDAcctList[index].Deposit(newDepositAmt);
+                                            Console.WriteLine(cDAcctList[index].acctBal);
+                                            Console.WriteLine();
+                                            found = true;
+                                        }
+                                    }
+                                break;
+                                default:
+                                    Console.WriteLine("Please enter a valid option.");
+                                    // add option to try again here
+                                break;
+
                             }
-                        }
+
+                            
+
+
+
+                        } // end user choice deposit section
 
                         //allow user to make a withdrawal from a specific account 
                         else if (userChoiceString=="W" || userChoiceString=="w")
