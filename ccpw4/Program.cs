@@ -14,11 +14,14 @@ namespace ccpw4
             List<CD> cDAcctList = new List<CD>();
 
             // hard code the data into the lists
-            savingsAcctList.Add(new Savings (012345678, 7323.08, "S", .1));
-            savingsAcctList.Add(new Savings (876543210, 10528.72, "S", .1));
+            savingsAcctList.Add(new Savings (012345678, 7323.08, "S", .01));
+            savingsAcctList.Add(new Savings (876543210, 10528.72, "S", .01));
             
             checkingAcctList.Add(new Checking (123456789, 3000.05, "Ch", 2));
             checkingAcctList.Add(new Checking (987654321, 800.17, "Ch", 2));
+
+            cDAcctList.Add(new CD (789456123, 20000.00, "CD", .1));
+            cDAcctList.Add(new CD (321654987, 80.48, "CD", .1));            
 
             // print the lists
             foreach (Savings aSavingsAcct in savingsAcctList)
@@ -37,6 +40,7 @@ namespace ccpw4
             }
 
             //allow user to make a deposit into a specific account (call deposit method)
+
             Console.Write("Please enter the ID for the account into which you want to make a deposit: ");
             int findAcct = Convert.ToInt32(Console.ReadLine());
             bool found = false;

@@ -12,11 +12,19 @@ namespace ccpw4
         double annualCDIntRate
             { get; set; }
         
-        double earlyWPenalty
+        double earlyWPenalty // might not need this. maybe this will just be a calculation...
             { get; set; }
 
 
         //constructors
+        public CD() : base()
+        {
+            annualCDIntRate = 0.0;
+        }
+        public CD(int newAcctID, double newAcctBal, string newAcctType, double newAnnualCDIntRate) : base (newAcctID, newAcctBal, newAcctType)
+        {
+            annualCDIntRate = newAnnualCDIntRate;
+        }   
 
 
         // Withdrawal method
@@ -26,6 +34,10 @@ namespace ccpw4
 
 
         // to string
+        public override string ToString()
+        {
+            return base.ToString() + "  |  Annual CD Interest Rate: " + annualCDIntRate;
+        }
 
 
     }

@@ -37,7 +37,7 @@ namespace ccpw4
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  |  Interest Rate: " + sIntRate;
+            return base.ToString() + "  |  Annual Interest Rate: " + sIntRate;
         }
 
 
