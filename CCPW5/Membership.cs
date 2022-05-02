@@ -3,7 +3,7 @@
 namespace CCPW5
 {
 
-    /* abstract  */class Membership
+    abstract class Membership
     {
         // define properties
         public int memberID
@@ -39,10 +39,16 @@ namespace CCPW5
 
 
         // methods
-        /* public double Purchase(); */
+        /* public double Purchase();
+        {
+            
+        } */
 
 
         /* public double Return(); */
+        // *** Return - A return of an item will include the membership id and the amount of the purchase returned 
+                /// (which must be > 0).  All four accounts handle a return in the same way. If the membership ID 
+                // exists, the current amount of purchases is decreased by the purchase amount.
 
 
         /* public abstract double ApplyCBR(); */ // apply cash-back rewards
