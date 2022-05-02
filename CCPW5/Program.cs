@@ -85,7 +85,7 @@ namespace CCPW5
 
 
 // Administrative Options ************************************************************************************
-                    // -- C --  Create a new membership and add to the membership list.  Be sure you don't duplicate the membership ID.  It needs to be unique.
+                    // -- C -- Create a new membership and add to the membership list.  Be sure you don't duplicate the membership ID.  It needs to be unique.
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
                         Console.WriteLine("User Choice -- C");
@@ -111,7 +111,7 @@ namespace CCPW5
                     } // ends user choice R section
 
 
-                    // -- U --  Update an existing membership based on membership ID.
+                    // -- U -- Update an existing member's email address based on membership ID.
                     if (userChoiceString=="U" || userChoiceString=="u")
                     {
                         Console.WriteLine("User Choice -- U");
@@ -122,7 +122,43 @@ namespace CCPW5
                         {
                             if (regularList[index].memberID == findMemberID)
                             {
-                                Console.WriteLine(findMemberID + " found in regularList");
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                Console.Write("Please enter the new email address: ");
+                                string newEmail = Console.ReadLine();
+                                Console.Write("Are you sure you want to change the email address from ");
+                                Console.Write(regularList[index].email + " to " + newEmail + "? (Y/N) ");
+                                string confirmUpdate = Console.ReadLine();
+                                if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                {
+                                    regularList[index].email = newEmail;
+                                    Console.WriteLine("The email address has been updated to " + regularList[index].email);
+                                }
+                                else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                {
+                                    Console.WriteLine("The email address will not be updated.");
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    Console.Write("Are you sure you want to change the email address from ");
+                                    Console.Write(regularList[index].email + " to " + newEmail + "? (Y/N) ");
+                                    confirmUpdate = Console.ReadLine();
+                                    if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                    {
+                                        regularList[index].email = newEmail;
+                                        Console.WriteLine("The email address has been updated to " + regularList[index].email);
+                                    }
+                                    else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                    {
+                                        Console.WriteLine("The email address will not be updated.");
+                                    }
+                                    else 
+                                    {
+                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    }
+                                }
+                                
+                                found = true;
                             }  
                         }
                         for (int index = 0; index <executiveList.Count; index++)
@@ -130,6 +166,7 @@ namespace CCPW5
                             if (executiveList[index].memberID == findMemberID)
                             {
                                 Console.WriteLine(findMemberID + " found in executiveList");
+                                found = true; 
                             }  
                         }
                         for (int index = 0; index <nonprofitList.Count; index++)
@@ -137,6 +174,7 @@ namespace CCPW5
                             if (nonprofitList[index].memberID == findMemberID)
                             {
                                 Console.WriteLine(findMemberID + " found in nonprofitList");
+                                found = true; 
                             }  
                         }
                         for (int index = 0; index <corporateList.Count; index++)
@@ -144,6 +182,7 @@ namespace CCPW5
                             if (corporateList[index].memberID == findMemberID)
                             {
                                 Console.WriteLine(findMemberID + " found in corporateList");
+                                found = true; 
                             }  
                         }
                         
@@ -157,7 +196,7 @@ namespace CCPW5
                     } // ends user choice U section
 
 
-                    // -- D --  Delete an existing membership based on membership ID.
+                    // -- D -- Delete an existing membership based on membership ID.
                     if (userChoiceString=="D" || userChoiceString=="d")
                     {
                         Console.WriteLine("User Choice -- D");
