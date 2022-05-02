@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ccpw5.exe
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ccpw5.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ccpw5.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ccpw5.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ref\ccpw5.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\bin\Debug\net6.0\ccpw5.pdb
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ref\ccpw5.dll
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.pdb
+C:\Users\MFreemyer\Desktop\NeDL\ccpw5\obj\Debug\net6.0\ccpw5.genruntimeconfig.cache
