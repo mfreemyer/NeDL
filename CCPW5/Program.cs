@@ -525,11 +525,11 @@ namespace CCPW5
                                 Console.Write("Current Purchase Per Month Total: " + corporateList[index].currentPFM);
                             }
                         }
-                        
-                        if (found == false)
+
+                        /* if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }  
+                        } */  
                         
 
                     } // ends user choice P section
@@ -540,6 +540,53 @@ namespace CCPW5
                     if (userChoiceString=="T" || userChoiceString=="t")
                     {
                         Console.WriteLine("User Choice -- T");
+                        Console.Write("Please enter the Member ID for the return: ");
+                        int findMemberID = Int32.Parse(Console.ReadLine());
+                        bool found = false;
+                        for (int index = 0; index <regularList.Count; index++)
+                        {
+                            if (regularList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                regularList[index].Return(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + regularList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <executiveList.Count; index++)
+                        {
+                            if (executiveList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Executive member " + findMemberID + " found! ");
+                                executiveList[index].Return(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + executiveList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <nonprofitList.Count; index++)
+                        {
+                            if (nonprofitList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Nonprofit member " + findMemberID + " found! ");
+                                nonprofitList[index].Return(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + nonprofitList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <corporateList.Count; index++)
+                        {
+                            if (corporateList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Corporate member " + findMemberID + " found! ");
+                                corporateList[index].Return(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + corporateList[index].currentPFM);
+                            }
+                        }
+                        
+                        /* if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }  */ 
 
                     } // ends user choice T section
 
