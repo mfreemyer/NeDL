@@ -483,6 +483,53 @@ namespace CCPW5
                     if (userChoiceString=="P" || userChoiceString=="p")
                     {
                         Console.WriteLine("User Choice -- P");
+                        Console.Write("Please enter the Member ID for the purchase: ");
+                        int findMemberID = Int32.Parse(Console.ReadLine());
+                        bool found = false;
+                        for (int index = 0; index <regularList.Count; index++)
+                        {
+                            if (regularList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                regularList[index].Purchase(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + regularList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <executiveList.Count; index++)
+                        {
+                            if (executiveList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Executive member " + findMemberID + " found! ");
+                                executiveList[index].Purchase(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + executiveList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <nonprofitList.Count; index++)
+                        {
+                            if (nonprofitList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Nonprofit member " + findMemberID + " found! ");
+                                nonprofitList[index].Purchase(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + nonprofitList[index].currentPFM);
+                            }
+                        }
+
+                        for (int index = 0; index <corporateList.Count; index++)
+                        {
+                            if (corporateList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Corporate member " + findMemberID + " found! ");
+                                corporateList[index].Purchase(); // calling method here
+                                Console.Write("Current Purchase Per Month Total: " + corporateList[index].currentPFM);
+                            }
+                        }
+                        
+                        if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }  
                         
 
                     } // ends user choice P section
@@ -512,8 +559,6 @@ namespace CCPW5
             {
                 Console.WriteLine("Have a nice day!");
             } // ends user choice A section
-            
-
 
         }
     }
