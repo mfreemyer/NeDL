@@ -22,11 +22,14 @@ namespace CCPW5
             rCBP = newRCBP;
         }
 
-        // implementation of methods
+        // methods
         /* public override double ApplyCBR()
         {
 
         } */
+
+        
+
 
         // to string
         public override string ToString()

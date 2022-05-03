@@ -51,16 +51,16 @@ namespace CCPW5
                     Console.WriteLine(); // for user-friendliness in console
                     Console.WriteLine("WHAT WOULD YOU LIKE TO DO?");
                     Console.WriteLine("Administrative Options: ");
-                    Console.WriteLine("C: Create a new membership");
-                    Console.WriteLine("R: Read all of the memberships");
-                    Console.WriteLine("U: Update member information");
-                    Console.WriteLine("D: Delete an existing membership");
+                    Console.WriteLine("  C: Create a new membership");
+                    Console.WriteLine("  R: Read all of the memberships");
+                    Console.WriteLine("  U: Update member information");
+                    Console.WriteLine("  D: Delete an existing membership");
                     Console.WriteLine("User Options: ");
-                    Console.WriteLine("L: List all of the memberships in the list");
-                    Console.WriteLine("P: Make a purchase");
-                    Console.WriteLine("T: Return an item");
-                    Console.WriteLine("A: Apply cash-back rewards");
-                    Console.WriteLine("Q: Quit");
+                    Console.WriteLine("  L: List all of the memberships in the list");
+                    Console.WriteLine("  P: Make a purchase");
+                    Console.WriteLine("  T: Return an item");
+                    Console.WriteLine("  A: Apply cash-back rewards");
+                    Console.WriteLine("  Q: Quit");
                     Console.WriteLine(); // for user-friendliness in console
 
                     // get valid option from user
@@ -78,14 +78,15 @@ namespace CCPW5
 
                     if (!userChoice)
                     {
-                        Console.WriteLine("Please enter a valid option from the list.");
+                        Console.WriteLine("Please enter a valid option from the menu of actions.");
                     }
                     
                 } while (!userChoice);
 
 
 // Administrative Options ************************************************************************************
-                    // -- C -- Create a new membership and add to the membership list.  Be sure you don't duplicate the membership ID.  It needs to be unique.
+                    // -- C -- Create a new membership and add to the membership list.  
+                    // *** Be sure you don't duplicate the membership ID.  It needs to be unique.
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
                         Console.WriteLine("User Choice -- C");
@@ -112,6 +113,7 @@ namespace CCPW5
 
 
                     // -- U -- Update an existing member's email address based on membership ID.
+                                // ~~~ need to make much more concise
                     if (userChoiceString=="U" || userChoiceString=="u")
                     {
                         Console.WriteLine("User Choice -- U");
@@ -154,7 +156,7 @@ namespace CCPW5
                                     }
                                     else 
                                     {
-                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                        Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm.");
                                     }
                                 }
                                 found = true;
@@ -197,11 +199,10 @@ namespace CCPW5
                                     }
                                     else 
                                     {
-                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                        Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm.");
                                     }
                                 }
                                 found = true;
-
                             }  
                         }
 
@@ -241,7 +242,7 @@ namespace CCPW5
                                     }
                                     else 
                                     {
-                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                        Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm.");
                                     }
                                 }
                                 found = true;
@@ -284,36 +285,187 @@ namespace CCPW5
                                     }
                                     else 
                                     {
-                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                        Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm.");
                                     }
                                 }
                                 found = true;
                             }  
                         }
-                        
-
+                        if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }
                     } // ends user choice U section
 
 
 
                     // -- D -- Delete an existing membership based on membership ID.
+                                // ~~~ need to make much more concise                    
                     if (userChoiceString=="D" || userChoiceString=="d")
                     {
                         Console.WriteLine("User Choice -- D");
-
-                        //////// attempting a more concise way of searching multiple lists at once ////////
-                        /* Console.Write("Please enter the member number: ");
+                        Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
-                        // var exist = list1.Exists(i=>i==elementToPush) || list2.Exists(j=>j==elementToPush); 
-                        
-                        
-                        string exist = regularList.memberID.Exists(i=>i==findMemberID) || executiveList.Exists(j=>j==findMemberID); */
+                        bool found = false;
+                        for (int index = 0; index <regularList.Count; index++)
+                        {
+                            if (regularList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                Console.Write("Are you sure you want to delete this member? ('Y'/'N/) ");
+                                string confirmDelete = Console.ReadLine();
+                                if (confirmDelete == "Y" || confirmDelete == "y")
+                                {
+                                    Console.WriteLine("Member " + regularList[index].memberID + " has been deleted. ");
+                                    regularList.RemoveAt(index);
+                                    found = true;
+                                }
+                                else if (confirmDelete == "N" || confirmDelete == "n")
+                                {
+                                    Console.WriteLine("Got it. The member will not be deleted. ");
+                                }
+                                else 
+                                {
+                                    Console.Write("Please enter either 'Y' for yes, or 'N' for no. Do you want to delete the member?");
+                                    confirmDelete = Console.ReadLine();
+                                    if (confirmDelete == "Y" || confirmDelete == "y")
+                                    {
+                                        regularList.RemoveAt(index);
+                                        Console.WriteLine("Member " + regularList[index].memberID + " has been deleted. ");
+                                        found = true;
+                                    }
+                                    else if (confirmDelete == "N" || confirmDelete == "n")
+                                    {
+                                        Console.WriteLine("Got it. The member will not be deleted. ");
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                    }
+                                }
+                            }
+                        }
 
-                        
+                        for (int index = 0; index <executiveList.Count; index++)
+                        {
+                            if (executiveList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Executive member " + findMemberID + " found! ");
+                                Console.Write("Are you sure you want to delete this member? ('Y'/'N/) ");
+                                string confirmDelete = Console.ReadLine();
+                                if (confirmDelete == "Y" || confirmDelete == "y")
+                                {
+                                    Console.WriteLine("Member " + executiveList[index].memberID + " has been deleted. ");
+                                    executiveList.RemoveAt(index);
+                                    found = true;
+                                }
+                                else if (confirmDelete == "N" || confirmDelete == "n")
+                                {
+                                    Console.WriteLine("Got it. The member will not be deleted. ");
+                                }
+                                else 
+                                {
+                                    Console.Write("Please enter either 'Y' for yes, or 'N' for no. Do you want to delete the member?");
+                                    confirmDelete = Console.ReadLine();
+                                    if (confirmDelete == "Y" || confirmDelete == "y")
+                                    {
+                                        executiveList.RemoveAt(index);
+                                        Console.WriteLine("Member " + executiveList[index].memberID + " has been deleted. ");
+                                        found = true;
+                                    }
+                                    else if (confirmDelete == "N" || confirmDelete == "n")
+                                    {
+                                        Console.WriteLine("Got it. The member will not be deleted. ");
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                    }
+                                }
+                            }
+                        }
 
+                        for (int index = 0; index <nonprofitList.Count; index++)
+                        {
+                            if (nonprofitList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Nonprofit member " + findMemberID + " found! ");
+                                Console.Write("Are you sure you want to delete this member? ('Y'/'N/) ");
+                                string confirmDelete = Console.ReadLine();
+                                if (confirmDelete == "Y" || confirmDelete == "y")
+                                {
+                                    Console.WriteLine("Member " + nonprofitList[index].memberID + " has been deleted. ");
+                                    nonprofitList.RemoveAt(index);
+                                    found = true;
+                                }
+                                else if (confirmDelete == "N" || confirmDelete == "n")
+                                {
+                                    Console.WriteLine("Got it. The member will not be deleted. ");
+                                }
+                                else 
+                                {
+                                    Console.Write("Please enter either 'Y' for yes, or 'N' for no. Do you want to delete the member?");
+                                    confirmDelete = Console.ReadLine();
+                                    if (confirmDelete == "Y" || confirmDelete == "y")
+                                    {
+                                        nonprofitList.RemoveAt(index);
+                                        Console.WriteLine("Member " + nonprofitList[index].memberID + " has been deleted. ");
+                                        found = true;
+                                    }
+                                    else if (confirmDelete == "N" || confirmDelete == "n")
+                                    {
+                                        Console.WriteLine("Got it. The member will not be deleted. ");
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                    }
+                                }
+                            }
+                        }
 
-                    
-
+                        for (int index = 0; index <nonprofitList.Count; index++)
+                        {    
+                            if (corporateList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Corporate member " + findMemberID + " found! ");
+                                Console.Write("Are you sure you want to delete this member? ('Y'/'N/) ");
+                                string confirmDelete = Console.ReadLine();
+                                if (confirmDelete == "Y" || confirmDelete == "y")
+                                {
+                                    Console.WriteLine("Member " + corporateList[index].memberID + " has been deleted. ");
+                                    corporateList.RemoveAt(index);
+                                    found = true;
+                                }
+                                else if (confirmDelete == "N" || confirmDelete == "n")
+                                {
+                                    Console.WriteLine("Got it. The member will not be deleted. ");
+                                }
+                                else 
+                                {
+                                    Console.Write("Please enter either 'Y' for yes, or 'N' for no. Do you want to delete the member?");
+                                    confirmDelete = Console.ReadLine();
+                                    if (confirmDelete == "Y" || confirmDelete == "y")
+                                    {
+                                        corporateList.RemoveAt(index);
+                                        Console.WriteLine("Member " + corporateList[index].memberID + " has been deleted. ");
+                                        found = true;
+                                    }
+                                    else if (confirmDelete == "N" || confirmDelete == "n")
+                                    {
+                                        Console.WriteLine("Got it. The member will not be deleted. ");
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                    }
+                                }
+                            }
+                        }
+                        if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }                        
                     } // ends user choice D section
 
 
@@ -331,6 +483,7 @@ namespace CCPW5
                     if (userChoiceString=="P" || userChoiceString=="p")
                     {
                         Console.WriteLine("User Choice -- P");
+                        
 
                     } // ends user choice P section
 

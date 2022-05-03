@@ -27,11 +27,14 @@ namespace CCPW5
             eCBP2 = newECBP2;
         }
 
-        // implementation of methods
+        // methods
         /* public override double ApplyCBR()
         {
 
         } */
+
+
+        
 
         // to string
         public override string ToString()

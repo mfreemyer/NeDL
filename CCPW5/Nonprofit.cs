@@ -27,12 +27,14 @@ namespace CCPW5
             milOrEd = newMilOrEd;
         }
 
-        // implementation of methods
+        // methods
         /* public override double ApplyCBR()
         {
 
         } */
 
+        
+        
         // to string
         public override string ToString()
         {

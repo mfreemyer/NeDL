@@ -40,10 +40,32 @@ namespace CCPW5
 
         // methods*************************************************************
         // Purchase method
-        /* public double Purchase();
+            // *** A purchase will include the membership id and the amount of the purchase (which must be > 0). 
+                    // All four accounts handle a purchase in the same way.  
+                    // If the membership ID exists, the current amount of purchases is increased by the purchase amount.
+        public double Purchase()
         {
-            
-        } */
+            Console.Write("Please enter the purchase amount.");
+            double purchaseAmount = Convert.ToDouble(Console.ReadLine());
+            if (purchaseAmount > 0)
+            {
+                return currentPFM = currentPFM + purchaseAmount;
+            }
+            else
+            {
+                Console.Write("The purchase amount must be greater than $0. ");
+                Console.Write("Please enter the purchase amount.");
+                purchaseAmount = Convert.ToDouble(Console.ReadLine());
+                if (purchaseAmount > 0)
+                {
+                    return currentPFM = currentPFM + purchaseAmount;
+                }
+                else 
+                {
+                    return currentPFM;
+                }
+            }
+        }
 
 
         // Return method
@@ -57,15 +79,8 @@ namespace CCPW5
         /* public abstract double ApplyCBR(); */ // apply cash-back rewards
 
 
-        // Email Update
-        /* public void FindMemberGetNewEmail()
-        {
-            Console.Write("Member found! ");
-            Console.Write("Please enter the new email address: ");
-            string newEmail = Console.ReadLine();
-            Console.Write("Are you sure you want to change the email address to " + newEmail + "? (Y/N) ");
-            
-        } */
+        
+
 
 
 
