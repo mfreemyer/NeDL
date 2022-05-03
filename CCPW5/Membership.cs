@@ -38,20 +38,36 @@ namespace CCPW5
         }
 
 
-        // methods
+        // methods*************************************************************
+        // Purchase method
         /* public double Purchase();
         {
             
         } */
 
 
+        // Return method
         /* public double Return(); */
         // *** Return - A return of an item will include the membership id and the amount of the purchase returned 
                 /// (which must be > 0).  All four accounts handle a return in the same way. If the membership ID 
                 // exists, the current amount of purchases is decreased by the purchase amount.
 
 
+        // ApplyCBR method
         /* public abstract double ApplyCBR(); */ // apply cash-back rewards
+
+
+        // Email Update
+        /* public void FindMemberGetNewEmail()
+        {
+            Console.Write("Member found! ");
+            Console.Write("Please enter the new email address: ");
+            string newEmail = Console.ReadLine();
+            Console.Write("Are you sure you want to change the email address to " + newEmail + "? (Y/N) ");
+            
+        } */
+
+
 
 
         // to string

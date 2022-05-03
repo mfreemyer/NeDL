@@ -115,7 +115,7 @@ namespace CCPW5
                     if (userChoiceString=="U" || userChoiceString=="u")
                     {
                         Console.WriteLine("User Choice -- U");
-                        Console.Write("Please enter the member number: ");
+                        Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
                         for (int index = 0; index <regularList.Count; index++)
@@ -157,49 +157,162 @@ namespace CCPW5
                                         Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
                                     }
                                 }
-                                
                                 found = true;
                             }  
                         }
+
                         for (int index = 0; index <executiveList.Count; index++)
                         {
                             if (executiveList[index].memberID == findMemberID)
                             {
-                                Console.WriteLine(findMemberID + " found in executiveList");
-                                found = true; 
+                                Console.Write("Executive member " + findMemberID + " found! ");
+                                Console.Write("Please enter the new email address: ");
+                                string newEmail = Console.ReadLine();
+                                Console.Write("Are you sure you want to change the email address from ");
+                                Console.Write(executiveList[index].email + " to " + newEmail + "? (Y/N) ");
+                                string confirmUpdate = Console.ReadLine();
+                                if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                {
+                                    executiveList[index].email = newEmail;
+                                    Console.WriteLine("The email address has been updated to " + executiveList[index].email);
+                                }
+                                else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                {
+                                    Console.WriteLine("The email address will not be updated.");
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    Console.Write("Are you sure you want to change the email address from ");
+                                    Console.Write(executiveList[index].email + " to " + newEmail + "? (Y/N) ");
+                                    confirmUpdate = Console.ReadLine();
+                                    if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                    {
+                                        executiveList[index].email = newEmail;
+                                        Console.WriteLine("The email address has been updated to " + executiveList[index].email);
+                                    }
+                                    else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                    {
+                                        Console.WriteLine("The email address will not be updated.");
+                                    }
+                                    else 
+                                    {
+                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    }
+                                }
+                                found = true;
+
                             }  
                         }
+
                         for (int index = 0; index <nonprofitList.Count; index++)
                         {
                             if (nonprofitList[index].memberID == findMemberID)
                             {
-                                Console.WriteLine(findMemberID + " found in nonprofitList");
-                                found = true; 
+                                Console.Write("Nonprofit member " + findMemberID + " found! ");
+                                Console.Write("Please enter the new email address: ");
+                                string newEmail = Console.ReadLine();
+                                Console.Write("Are you sure you want to change the email address from ");
+                                Console.Write(nonprofitList[index].email + " to " + newEmail + "? (Y/N) ");
+                                string confirmUpdate = Console.ReadLine();
+                                if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                {
+                                    nonprofitList[index].email = newEmail;
+                                    Console.WriteLine("The email address has been updated to " + nonprofitList[index].email);
+                                }
+                                else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                {
+                                    Console.WriteLine("The email address will not be updated.");
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    Console.Write("Are you sure you want to change the email address from ");
+                                    Console.Write(nonprofitList[index].email + " to " + newEmail + "? (Y/N) ");
+                                    confirmUpdate = Console.ReadLine();
+                                    if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                    {
+                                        nonprofitList[index].email = newEmail;
+                                        Console.WriteLine("The email address has been updated to " + nonprofitList[index].email);
+                                    }
+                                    else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                    {
+                                        Console.WriteLine("The email address will not be updated.");
+                                    }
+                                    else 
+                                    {
+                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    }
+                                }
+                                found = true;
                             }  
                         }
+
                         for (int index = 0; index <corporateList.Count; index++)
                         {
                             if (corporateList[index].memberID == findMemberID)
                             {
-                                Console.WriteLine(findMemberID + " found in corporateList");
-                                found = true; 
+                                Console.Write("Corporate member " + findMemberID + " found! ");
+                                Console.Write("Please enter the new email address: ");
+                                string newEmail = Console.ReadLine();
+                                Console.Write("Are you sure you want to change the email address from ");
+                                Console.Write(corporateList[index].email + " to " + newEmail + "? (Y/N) ");
+                                string confirmUpdate = Console.ReadLine();
+                                if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                {
+                                    corporateList[index].email = newEmail;
+                                    Console.WriteLine("The email address has been updated to " + corporateList[index].email);
+                                }
+                                else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                {
+                                    Console.WriteLine("The email address will not be updated.");
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    Console.Write("Are you sure you want to change the email address from ");
+                                    Console.Write(corporateList[index].email + " to " + newEmail + "? (Y/N) ");
+                                    confirmUpdate = Console.ReadLine();
+                                    if (confirmUpdate == "Y" || confirmUpdate == "y")
+                                    {
+                                        corporateList[index].email = newEmail;
+                                        Console.WriteLine("The email address has been updated to " + corporateList[index].email);
+                                    }
+                                    else if (confirmUpdate == "N" || confirmUpdate == "n")
+                                    {
+                                        Console.WriteLine("The email address will not be updated.");
+                                    }
+                                    else 
+                                    {
+                                        Console.WriteLine("Please enter either 'Y' for yes, or 'N' for no.");
+                                    }
+                                }
+                                found = true;
                             }  
                         }
                         
-                        
-                        // Console.WriteLine(regularList.First(Membership.memberID == findMemberID)); -- not working
-                        
-                        
-
-
 
                     } // ends user choice U section
+
 
 
                     // -- D -- Delete an existing membership based on membership ID.
                     if (userChoiceString=="D" || userChoiceString=="d")
                     {
                         Console.WriteLine("User Choice -- D");
+
+                        //////// attempting a more concise way of searching multiple lists at once ////////
+                        /* Console.Write("Please enter the member number: ");
+                        int findMemberID = Int32.Parse(Console.ReadLine());
+                        // var exist = list1.Exists(i=>i==elementToPush) || list2.Exists(j=>j==elementToPush); 
+                        
+                        
+                        string exist = regularList.memberID.Exists(i=>i==findMemberID) || executiveList.Exists(j=>j==findMemberID); */
+
+                        
+
+
+                    
 
                     } // ends user choice D section
 
