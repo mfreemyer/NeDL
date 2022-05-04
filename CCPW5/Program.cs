@@ -474,6 +474,17 @@ namespace CCPW5
                     if (userChoiceString=="L" || userChoiceString=="l")
                     {
                         Console.WriteLine("User Choice -- L");
+                        foreach (Regular aRegular in regularList)
+                        { Console.WriteLine(aRegular); }
+
+                        foreach (Executive anExecutive in executiveList)
+                        { Console.WriteLine(anExecutive); }
+
+                        foreach (Nonprofit aNonprofit in nonprofitList)
+                        { Console.WriteLine(aNonprofit); }
+
+                        foreach (Corporate aCorporate in corporateList)
+                        { Console.WriteLine(aCorporate); }
 
                     } // ends user choice L section
 
@@ -493,6 +504,7 @@ namespace CCPW5
                                 Console.Write("Regular member " + findMemberID + " found! ");
                                 regularList[index].Purchase(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + regularList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -503,6 +515,7 @@ namespace CCPW5
                                 Console.Write("Executive member " + findMemberID + " found! ");
                                 executiveList[index].Purchase(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + executiveList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -513,6 +526,7 @@ namespace CCPW5
                                 Console.Write("Nonprofit member " + findMemberID + " found! ");
                                 nonprofitList[index].Purchase(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + nonprofitList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -523,13 +537,14 @@ namespace CCPW5
                                 Console.Write("Corporate member " + findMemberID + " found! ");
                                 corporateList[index].Purchase(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + corporateList[index].currentPFM);
+                                found = true;
                             }
                         }
 
-                        /* if (found == false)
+                        if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        } */  
+                        }
                         
 
                     } // ends user choice P section
@@ -550,6 +565,7 @@ namespace CCPW5
                                 Console.Write("Regular member " + findMemberID + " found! ");
                                 regularList[index].Return(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + regularList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -560,6 +576,7 @@ namespace CCPW5
                                 Console.Write("Executive member " + findMemberID + " found! ");
                                 executiveList[index].Return(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + executiveList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -570,6 +587,7 @@ namespace CCPW5
                                 Console.Write("Nonprofit member " + findMemberID + " found! ");
                                 nonprofitList[index].Return(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + nonprofitList[index].currentPFM);
+                                found = true;
                             }
                         }
 
@@ -580,13 +598,14 @@ namespace CCPW5
                                 Console.Write("Corporate member " + findMemberID + " found! ");
                                 corporateList[index].Return(); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + corporateList[index].currentPFM);
+                                found = true;
                             }
                         }
                         
-                        /* if (found == false)
+                        if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }  */ 
+                        }  
 
                     } // ends user choice T section
 
@@ -595,6 +614,7 @@ namespace CCPW5
                     if (userChoiceString=="A" || userChoiceString=="a")
                     {
                         Console.WriteLine("User Choice -- A");
+
 
                     } // ends user choice A section
 

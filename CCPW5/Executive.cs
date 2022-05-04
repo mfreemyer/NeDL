@@ -39,7 +39,7 @@ namespace CCPW5
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  | Cash Back Reward Percentage: " + eCBP1 + " (" + eCBP1 + " above $1000)";
+            return base.ToString() + "  | Cash Back Reward Percentage: " + eCBP1 + " (" + eCBP2 + " above $1000)";
         }
 
 
