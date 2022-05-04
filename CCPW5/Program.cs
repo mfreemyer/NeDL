@@ -90,6 +90,65 @@ namespace CCPW5
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
                         Console.WriteLine("User Choice -- C");
+                        Console.Write("Please enter the new Member ID: ");
+                        int newMemberID = Int32.Parse(Console.ReadLine());
+                        bool found = false;
+                        for (int index = 0; index <regularList.Count; index++)
+                        {
+                            if (regularList[index].memberID == newMemberID 
+                               || executiveList[index].memberID == newMemberID
+                               || executiveList[index].memberID == newMemberID
+                               || nonprofitList[index].memberID == newMemberID                                                
+                               || corporateList[index].memberID == newMemberID)
+                            {
+                                Console.WriteLine("This member ID is already taken. Please select C again to try another number. ");
+                                found = true;
+                            }
+                            
+                            else if (regularList[index].memberID != newMemberID 
+                               && executiveList[index].memberID != newMemberID
+                               && executiveList[index].memberID != newMemberID
+                               && nonprofitList[index].memberID != newMemberID                                                
+                               && corporateList[index].memberID != newMemberID)
+                            {
+                                Console.WriteLine("What type of member is being added? Please enter one of the following: ");
+                                Console.WriteLine("  'R' for a regular membership. ");
+                                Console.WriteLine("  'E' for an executive membership. ");
+                                Console.WriteLine("  'N' for a non-profit membership. ");
+                                Console.Write("  'C' for a corporate membership. ");
+                                char newMemberType = Convert.ToChar(Console.ReadLine());
+                                switch (newMemberType)
+                                {
+                                    case 'R':
+                                    case 'r':
+                                        Console.WriteLine("R was selected.");
+                                    break;
+                                    case 'E':
+                                    case 'e':
+                                        Console.WriteLine("E was selected.");
+                                    break;
+                                    case 'N':
+                                    case 'n':
+                                        Console.WriteLine("N was selected.");
+                                    break;
+                                    case 'C':
+                                    case 'c':
+                                        Console.WriteLine("C was selected.");
+                                    break;
+                                    default:
+                                        Console.WriteLine("That option is invalid. Please select one of the above-listed options.");
+                                        newMemberType = Convert.ToChar(Console.ReadLine());
+                                    break;
+                                    found = false;
+                                }
+
+                            }
+
+                        }
+
+                        
+
+                        
 
                     } // ends user choice C section
 
