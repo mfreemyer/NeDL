@@ -614,7 +614,52 @@ namespace CCPW5
                     if (userChoiceString=="A" || userChoiceString=="a")
                     {
                         Console.WriteLine("User Choice -- A");
+                        Console.Write("Please enter the Member ID for the return: ");
+                        int findMemberID = Int32.Parse(Console.ReadLine());
+                        bool found = false;
+                        for (int index = 0; index <regularList.Count; index++)
+                        {
+                            if (regularList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                regularList[index].ApplyCBR(); // calling method here
+                                found = true;
+                            }
+                        }
 
+                        for (int index = 0; index <executiveList.Count; index++)
+                        {
+                            if (executiveList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Executive member " + findMemberID + " found! ");
+                                executiveList[index].ApplyCBR(); // calling method here
+                                found = true;
+                            }
+                        }
+
+                        for (int index = 0; index <nonprofitList.Count; index++)
+                        {
+                            if (nonprofitList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Nonprofit member " + findMemberID + " found! ");
+                                nonprofitList[index].ApplyCBR(); // calling method here
+                                found = true;
+                            }
+                        }
+
+                        for (int index = 0; index <corporateList.Count; index++)
+                        {
+                            if (corporateList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Corporate member " + findMemberID + " found! ");
+                                corporateList[index].ApplyCBR(); // calling method here
+                                found = true;
+                            }
+                        }
+                        if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }  
 
                     } // ends user choice A section
 

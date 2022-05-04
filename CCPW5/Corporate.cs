@@ -23,10 +23,14 @@ namespace CCPW5
         }
 
         // methods
-        /* public override double ApplyCBR()
+        public override double ApplyCBR() // print to console, then zero out the balance. 
         {
-
-        } */
+            Console.WriteLine("Cash-back reward request for membership " + memberID + " in the amount of " + String.Format("${0:n}",((currentPFM * cCBP))) + " has been made. " );
+            Console.Write("The Purchases For Month (PFM) balance has been updated from " + String.Format("${0:n}",(currentPFM)));
+            currentPFM = 0.0;
+            Console.WriteLine(" to " + String.Format("${0:n}",(currentPFM)) + ".");
+            return currentPFM;
+        }
 
         
 

@@ -130,10 +130,6 @@ namespace CCPW5
 
 
         // Return method
-        /* public double Return(); */
-        // *** Return - A return of an item will include the membership id and the amount of the purchase returned 
-                /// (which must be > 0).  All four accounts handle a return in the same way. If the membership ID 
-                // exists, the current amount of purchases is decreased by the purchase amount.
         public double Return()
         {
             Console.Write("Please enter the return amount: ");
@@ -221,7 +217,7 @@ namespace CCPW5
 
 
         // ApplyCBR method
-        /* public abstract double ApplyCBR(); */ // apply cash-back rewards
+        public abstract double ApplyCBR(); // apply cash-back rewards abstract method
 
 
         
