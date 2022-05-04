@@ -63,7 +63,7 @@ namespace CCPW5
         // to string
         public override string ToString()
         {
-            return base.ToString() + " (Special Offer: " + String.Format("${0:n}",(SpecialOffer())) + ")" + "  | CBR *: " + eCBP1 * 100 + " %" + " (" + eCBP2 * 100 + " % when PFM above $1000)";
+            return base.ToString() + " (Special Offer: " + String.Format("${0:n}",(SpecialOffer())) + ")" + "  | CBR *: " + eCBP1 * 100 + " %" + " (" + eCBP2 * 100 + " % when PFM above $1,000)";
         }
 
 

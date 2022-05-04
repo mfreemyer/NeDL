@@ -229,7 +229,7 @@ namespace CCPW5
         // to string
         public override string ToString()
         {
-            return "Member ID: " + memberID + "  | Email: " + email + "  | CPFM *: " + currentPFM + "  | Member Type: " + memberType + "  | Annual Cost: " + String.Format("${0:n}",(annualCost));
+            return "Member ID: " + memberID + "  | Email: " + email + "  | CPFM *: " + String.Format("${0:n}",(currentPFM)) + "  | Member Type: " + memberType + "  | Annual Cost: " + String.Format("${0:n}",(annualCost));
         }
 
     }
