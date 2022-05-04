@@ -4,12 +4,13 @@ namespace CCPW5
 // *** the regular membership has a flat percent for cash-back rewards on all purchases
 {
 
-    class Regular : Membership/* , ISpecialOffer */
+    class Regular : Membership, ISpecialOffer
     {
         // define properties
         public double rCBP // Regular Cash-Back Percentage
             { get; set; }
 
+        
         // default constructor
         public Regular() : base()
         {
@@ -32,13 +33,21 @@ namespace CCPW5
             return currentPFM;
         }
 
+        public double SpecialOffer() // return 25% of the annual membership cost
+        {
+            double rSODiscount = annualCost * .25;
+            return annualCost - rSODiscount; 
+        }
+        
+        
+
         
 
 
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  | Cash Back Reward Percentage: " + rCBP;
+            return base.ToString() + " (Special Offer: " + String.Format("${0:n}",(SpecialOffer())) + ")" + "  | CBR *: " + rCBP * 100 + " %";
         }
 
     }

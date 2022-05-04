@@ -37,7 +37,7 @@ namespace CCPW5
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  | Cash Back Reward Percentage: " + cCBP;
+            return base.ToString() + "  | CBR *: " + cCBP * 100 + " %";
         }
 
 

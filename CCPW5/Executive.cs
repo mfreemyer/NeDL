@@ -50,13 +50,20 @@ namespace CCPW5
             }
         }
 
+        // methods
+        public double SpecialOffer() // return 50% of the annual membership cost
+        {
+            double eSODiscount = annualCost * .5;
+            return annualCost - eSODiscount; 
+        }
+
 
         
 
         // to string
         public override string ToString()
         {
-            return base.ToString() + "  | Cash Back Reward Percentage: " + eCBP1 + " (" + eCBP2 + " above $1000)";
+            return base.ToString() + " (Special Offer: " + String.Format("${0:n}",(SpecialOffer())) + ")" + "  | CBR *: " + eCBP1 * 100 + " %" + " (" + eCBP2 * 100 + " % when PFM above $1000)";
         }
 
 

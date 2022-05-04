@@ -109,6 +109,8 @@ namespace CCPW5
                         foreach (Corporate aCorporate in corporateList)
                         { Console.WriteLine(aCorporate); }
 
+                        Console.WriteLine("* CPFM = Current Purchases For Month  |  * CBR = Cash-Back Reward");
+
                     } // ends user choice R section
 
 
@@ -485,6 +487,8 @@ namespace CCPW5
 
                         foreach (Corporate aCorporate in corporateList)
                         { Console.WriteLine(aCorporate); }
+
+                        Console.WriteLine("* CPFM = Current Purchases For Month  |  * CBR = Cash-Back Reward");
 
                     } // ends user choice L section
 
