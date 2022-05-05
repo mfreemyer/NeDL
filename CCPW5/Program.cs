@@ -320,8 +320,83 @@ namespace CCPW5
                         {
                             if (membershipList[index].memberID == findMemberID)
                             {
-                                Console.Write("Regular member " + findMemberID + " found! ");
-                                membershipList[index].Purchase(); // calling method here
+                                Console.Write("Member " + findMemberID + " found! ");
+                                //========================================================================================       
+                                Console.Write("Please enter the purchase amount: ");
+                                double newPurchaseAmount = Convert.ToDouble(Console.ReadLine());
+                                if (newPurchaseAmount > 0)
+                                {
+                                    Console.Write("Are you sure you want to make this purchase? Enter 'Y' to confirm, or 'N' to cancel: ");
+                                    string confirmPurchase = Console.ReadLine();
+                                    if (confirmPurchase == "Y" || confirmPurchase == "y")
+                                    {
+                                        Console.Write("The purchase was successful! ");
+                                        membershipList[index].Purchase(newPurchaseAmount);
+                                    }
+                                    else if (confirmPurchase == "N" || confirmPurchase == "n")
+                                    {
+                                        Console.WriteLine("Transaction cancelled. ");
+                                
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this purchase? ");
+                                        confirmPurchase = Console.ReadLine();
+                                        if (confirmPurchase == "Y" || confirmPurchase == "y")
+                                        {
+                                            Console.Write("The purchase was successful! ");
+                                            membershipList[index].Purchase(newPurchaseAmount);
+                                        }
+                                        else if (confirmPurchase == "N" || confirmPurchase == "n")
+                                        {
+                                            Console.WriteLine("Transaction cancelled. ");
+                                        }
+                                        else 
+                                        {
+                                            Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Console.Write("The purchase amount must be greater than $0. Please try again: ");
+                                    newPurchaseAmount = Convert.ToDouble(Console.ReadLine());
+                                    if (newPurchaseAmount > 0)
+                                    {
+                                        Console.Write("Are you sure you want to make this purchase? Enter 'Y' to confirm, or 'N' to cancel: ");
+                                        string confirmPurchase = Console.ReadLine();
+                                        if (confirmPurchase == "Y" || confirmPurchase == "y")
+                                        {
+                                            Console.Write("The purchase was successful! ");
+                                            membershipList[index].Purchase(newPurchaseAmount);
+                                        }
+                                        else if (confirmPurchase == "N" || confirmPurchase == "n")
+                                        {
+                                            Console.WriteLine("Transaction cancelled. ");
+                                        }
+                                        else 
+                                        {
+                                            Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this purchase? ");
+                                            confirmPurchase = Console.ReadLine();
+                                            if (confirmPurchase == "Y" || confirmPurchase == "y")
+                                            {
+                                                Console.Write("The purchase was successful! ");
+                                                membershipList[index].Purchase(newPurchaseAmount);
+                                            }
+                                            else if (confirmPurchase == "N" || confirmPurchase == "n")
+                                            {
+                                                Console.Write("Transaction cancelled. ");
+                                            }
+                                            else 
+                                            {
+                                                Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                //========================================================================================
+                                //membershipList[index].Purchase(newPurchaseAmount); // calling method here
                                 Console.Write("Current Purchase Per Month Total: " + membershipList[index].currentPFM);
                                 found = true;
                             }

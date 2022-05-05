@@ -43,89 +43,11 @@ namespace CCPW5
             // *** A purchase will include the membership id and the amount of the purchase (which must be > 0). 
                     // All four accounts handle a purchase in the same way.  
                     // If the membership ID exists, the current amount of purchases is increased by the purchase amount.
-        public double Purchase()
+        public void Purchase(double purchaseAmount)
         {
-            Console.Write("Please enter the purchase amount: ");
-            double purchaseAmount = Convert.ToDouble(Console.ReadLine());
-            if (purchaseAmount > 0)
-            {
-                Console.Write("Are you sure you want to make this purchase? Enter 'Y' to confirm, or 'N' to cancel: ");
-                string confirmPurchase = Console.ReadLine();
-                if (confirmPurchase == "Y" || confirmPurchase == "y")
-                {
-                    Console.Write("The purchase was successful! ");
-                    return currentPFM = currentPFM + purchaseAmount;
-                }
-                else if (confirmPurchase == "N" || confirmPurchase == "n")
-                {
-                    Console.WriteLine("Transaction cancelled. ");
-                    return currentPFM;
-                }
-                else 
-                {
-                    Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this purchase? ");
-                    confirmPurchase = Console.ReadLine();
-                    if (confirmPurchase == "Y" || confirmPurchase == "y")
-                    {
-                        Console.Write("The purchase was successful! ");
-                        return currentPFM = currentPFM + purchaseAmount;
-                    }
-                    else if (confirmPurchase == "N" || confirmPurchase == "n")
-                    {
-                        Console.WriteLine("Transaction cancelled. ");
-                        return currentPFM;
-                    }
-                    else 
-                    {
-                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
-                        return currentPFM;
-                    }
-                }
-            }
-            else
-            {
-                Console.Write("The purchase amount must be greater than $0. Please try again: ");
-                purchaseAmount = Convert.ToDouble(Console.ReadLine());
-                if (purchaseAmount > 0)
-                {
-                    Console.Write("Are you sure you want to make this purchase? Enter 'Y' to confirm, or 'N' to cancel: ");
-                    string confirmPurchase = Console.ReadLine();
-                    if (confirmPurchase == "Y" || confirmPurchase == "y")
-                    {
-                        Console.Write("The purchase was successful! ");
-                        return currentPFM = currentPFM + purchaseAmount;
-                    }
-                    else if (confirmPurchase == "N" || confirmPurchase == "n")
-                    {
-                        Console.WriteLine("Transaction cancelled. ");
-                        return currentPFM;
-                    }
-                    else 
-                    {
-                        Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this purchase? ");
-                        confirmPurchase = Console.ReadLine();
-                        if (confirmPurchase == "Y" || confirmPurchase == "y")
-                        {
-                            Console.Write("The purchase was successful! ");
-                            return currentPFM = currentPFM + purchaseAmount;
-                        }
-                        else if (confirmPurchase == "N" || confirmPurchase == "n")
-                        {
-                            Console.Write("Transaction cancelled. ");
-                            return currentPFM;
-                        }
-                        else 
-                        {
-                            Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
-                            return currentPFM;
-                        }
-                    }
-                }
-                else 
-                {
-                    return currentPFM;
-                }
-            }
+ 
+            currentPFM = currentPFM + purchaseAmount;
+            
         }
 
 
