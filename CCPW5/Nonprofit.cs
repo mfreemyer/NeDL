@@ -30,6 +30,7 @@ namespace CCPW5
         // methods
         public override double ApplyCBR() // print to console, then zero out the balance. 
         {
+            // mil or ed...
             Console.WriteLine("Cash-back reward request for membership " + memberID + " in the amount of " + String.Format("${0:n}",((currentPFM * nCBP))) + " has been made. " );
             Console.Write("The Purchases For Month (PFM) balance has been updated from " + String.Format("${0:n}",(currentPFM)));
             currentPFM = 0.0;

@@ -13,28 +13,29 @@ namespace CCPW5
             string userChoiceString;
             
             // create lists and list objects
-            List<Regular> regularList = new List<Regular>(); 
+            List<Membership> membershipList = new List<Membership>();
+            /* List<Regular> regularList = new List<Regular>(); 
             List<Executive> executiveList = new List<Executive>(); 
             List<Nonprofit> nonprofitList = new List<Nonprofit>(); 
-            List<Corporate> corporateList = new List<Corporate>(); 
+            List<Corporate> corporateList = new List<Corporate>();  */
 
 
             // hard code the test data into the lists
-            regularList.Add(new Regular (123, "123@gmail.com", 'R', 60, 162.73, .02));
-            regularList.Add(new Regular (456, "456@gmail.com", 'R', 60, 562.81, .02));
-            regularList.Add(new Regular (789, "789@gmail.com", 'R', 60, 1247.92, .02));
+            membershipList.Add(new Regular (123, "123@gmail.com", 'R', 60, 162.73, .02));
+            membershipList.Add(new Regular (456, "456@gmail.com", 'R', 60, 562.81, .02));
+            membershipList.Add(new Regular (789, "789@gmail.com", 'R', 60, 1247.92, .02));
             
-            executiveList.Add(new Executive (100, "100@gmail.com", 'E', 120, 2372.56, .03, .04));
-            executiveList.Add(new Executive (101, "101@gmail.com", 'E', 120, 417.06, .03, .04));
-            executiveList.Add(new Executive (102, "102@gmail.com", 'E', 120, 972.07, .03, .04));
+            membershipList.Add(new Executive (100, "100@gmail.com", 'E', 120, 2372.56, .03, .04));
+            membershipList.Add(new Executive (101, "101@gmail.com", 'E', 120, 417.06, .03, .04));
+            membershipList.Add(new Executive (102, "102@gmail.com", 'E', 120, 972.07, .03, .04));
 
-            nonprofitList.Add(new Nonprofit (200, "200@gmail.com", 'N', 90, 2248.01, .03, 'Y'));
-            nonprofitList.Add(new Nonprofit (201, "201@gmail.com", 'N', 90, 948.28, .03, 'N'));
-            nonprofitList.Add(new Nonprofit (202, "202@gmail.com", 'N', 90, 1725.92, .03, 'Y'));
+            membershipList.Add(new Nonprofit (200, "200@gmail.com", 'N', 90, 2248.01, .03, 'Y'));
+            membershipList.Add(new Nonprofit (201, "201@gmail.com", 'N', 90, 948.28, .03, 'N'));
+            membershipList.Add(new Nonprofit (202, "202@gmail.com", 'N', 90, 1725.92, .03, 'Y'));
 
-            corporateList.Add(new Corporate (300, "300@gmail.com", 'C', 50, 7062.93, .02)); 
-            corporateList.Add(new Corporate (301, "301@gmail.com", 'C', 50, 10123.81, .02)); 
-            corporateList.Add(new Corporate (302, "302@gmail.com", 'C', 50, 5962.05, .02)); 
+            membershipList.Add(new Corporate (300, "300@gmail.com", 'C', 50, 7062.93, .02)); 
+            membershipList.Add(new Corporate (301, "301@gmail.com", 'C', 50, 10123.81, .02)); 
+            membershipList.Add(new Corporate (302, "302@gmail.com", 'C', 50, 5962.05, .02)); 
 
 
 
@@ -89,62 +90,67 @@ namespace CCPW5
                     // *** Be sure you don't duplicate the membership ID.  It needs to be unique.
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
-                        Console.WriteLine("User Choice -- C");
-                        Console.Write("Please enter the new Member ID: ");
-                        int newMemberID = Int32.Parse(Console.ReadLine());
+                        /* Console.WriteLine("User Choice -- C");
                         bool found = false;
-                        for (int index = 0; index <regularList.Count; index++)
+
+                        do 
                         {
-                            if (regularList[index].memberID == newMemberID 
-                               || executiveList[index].memberID == newMemberID
-                               || executiveList[index].memberID == newMemberID
-                               || nonprofitList[index].memberID == newMemberID                                                
-                               || corporateList[index].memberID == newMemberID)
+                            Console.Write("Please enter the new Member ID: ");
+                            int newMemberID = Int32.Parse(Console.ReadLine());
+                            found = false;
+                            for (int index = 0; index <regularList.Count; index++)
                             {
-                                Console.WriteLine("This member ID is already taken. Please select C again to try another number. ");
-                                found = true;
-                            }
-                            
-                            else if (regularList[index].memberID != newMemberID 
-                               && executiveList[index].memberID != newMemberID
-                               && executiveList[index].memberID != newMemberID
-                               && nonprofitList[index].memberID != newMemberID                                                
-                               && corporateList[index].memberID != newMemberID)
-                            {
-                                Console.WriteLine("What type of member is being added? Please enter one of the following: ");
-                                Console.WriteLine("  'R' for a regular membership. ");
-                                Console.WriteLine("  'E' for an executive membership. ");
-                                Console.WriteLine("  'N' for a non-profit membership. ");
-                                Console.Write("  'C' for a corporate membership. ");
-                                char newMemberType = Convert.ToChar(Console.ReadLine());
-                                switch (newMemberType)
+                                if (regularList[index].memberID == newMemberID 
+                                || executiveList[index].memberID == newMemberID
+                                || executiveList[index].memberID == newMemberID
+                                || nonprofitList[index].memberID == newMemberID                                                
+                                || corporateList[index].memberID == newMemberID)
                                 {
-                                    case 'R':
-                                    case 'r':
-                                        Console.WriteLine("R was selected.");
-                                    break;
-                                    case 'E':
-                                    case 'e':
-                                        Console.WriteLine("E was selected.");
-                                    break;
-                                    case 'N':
-                                    case 'n':
-                                        Console.WriteLine("N was selected.");
-                                    break;
-                                    case 'C':
-                                    case 'c':
-                                        Console.WriteLine("C was selected.");
-                                    break;
-                                    default:
-                                        Console.WriteLine("That option is invalid. Please select one of the above-listed options.");
-                                        newMemberType = Convert.ToChar(Console.ReadLine());
-                                    break;
-                                    found = false;
+                                    Console.WriteLine("This member ID is already taken. Please select C again to try another number. ");
+                                    found = true;
                                 }
-
                             }
 
-                        }
+
+                        } while (found);
+                        
+
+                        
+                            
+                            Console.WriteLine("What type of member is being added? Please enter one of the following: ");
+                            Console.WriteLine("  'R' for a regular membership. ");
+                            Console.WriteLine("  'E' for an executive membership. ");
+                            Console.WriteLine("  'N' for a non-profit membership. ");
+                            Console.Write("  'C' for a corporate membership. ");
+                            char newMemberType = Convert.ToChar(Console.ReadLine());
+                            switch (newMemberType)
+                            {
+                                case 'R':
+                                case 'r':
+                                    Console.WriteLine("R was selected.");
+                                break;
+                                case 'E':
+                                case 'e':
+                                    Console.WriteLine("E was selected.");
+                                break;
+                                case 'N':
+                                case 'n':
+                                    Console.WriteLine("N was selected.");
+                                break;
+                                case 'C':
+                                case 'c':
+                                    Console.WriteLine("C was selected.");
+                                break;
+                                default:
+                                    Console.WriteLine("That option is invalid. Please select one of the above-listed options.");
+                                    newMemberType = Convert.ToChar(Console.ReadLine());
+                                break;
+
+                                } */
+                        
+
+                            
+
 
                         
 
@@ -156,17 +162,17 @@ namespace CCPW5
                     // -- R -- Read all of the memberships in the membership list.
                     if (userChoiceString=="R" || userChoiceString=="r")
                     {
-                        foreach (Regular aRegular in regularList)
-                        { Console.WriteLine(aRegular); }
+                        foreach (Membership aMember in membershipList)
+                        { Console.WriteLine(aMember); }
 
-                        foreach (Executive anExecutive in executiveList)
+                        /* foreach (Executive anExecutive in executiveList)
                         { Console.WriteLine(anExecutive); }
 
                         foreach (Nonprofit aNonprofit in nonprofitList)
                         { Console.WriteLine(aNonprofit); }
 
                         foreach (Corporate aCorporate in corporateList)
-                        { Console.WriteLine(aCorporate); }
+                        { Console.WriteLine(aCorporate); } */
 
                         Console.WriteLine("* CPFM = Current Purchases For Month  |  * CBR = Cash-Back Reward");
 
@@ -177,7 +183,7 @@ namespace CCPW5
                                 // ~~~ need to make much more concise
                     if (userChoiceString=="U" || userChoiceString=="u")
                     {
-                        Console.WriteLine("User Choice -- U");
+                        /* Console.WriteLine("User Choice -- U");
                         Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -355,7 +361,7 @@ namespace CCPW5
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }
+                        } */
                     } // ends user choice U section
 
 
@@ -364,7 +370,7 @@ namespace CCPW5
                                 // ~~~ need to make much more concise                    
                     if (userChoiceString=="D" || userChoiceString=="d")
                     {
-                        Console.WriteLine("User Choice -- D");
+                        /* Console.WriteLine("User Choice -- D");
                         Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -526,7 +532,7 @@ namespace CCPW5
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }                        
+                        } */                        
                     } // ends user choice D section
 
 
@@ -535,17 +541,17 @@ namespace CCPW5
                     if (userChoiceString=="L" || userChoiceString=="l")
                     {
                         Console.WriteLine("User Choice -- L");
-                        foreach (Regular aRegular in regularList)
-                        { Console.WriteLine(aRegular); }
+                        foreach (Membership aMember in membershipList)
+                        { Console.WriteLine(aMember); }
 
-                        foreach (Executive anExecutive in executiveList)
+                        /* foreach (Executive anExecutive in executiveList)
                         { Console.WriteLine(anExecutive); }
 
                         foreach (Nonprofit aNonprofit in nonprofitList)
                         { Console.WriteLine(aNonprofit); }
 
                         foreach (Corporate aCorporate in corporateList)
-                        { Console.WriteLine(aCorporate); }
+                        { Console.WriteLine(aCorporate); } */
 
                         Console.WriteLine("* CPFM = Current Purchases For Month  |  * CBR = Cash-Back Reward");
 
@@ -556,7 +562,7 @@ namespace CCPW5
                                 // if membership exists, add the purchase amount to the monthly purchase total.)
                     if (userChoiceString=="P" || userChoiceString=="p")
                     {
-                        Console.WriteLine("User Choice -- P");
+                        /* Console.WriteLine("User Choice -- P");
                         Console.Write("Please enter the Member ID for the purchase: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -607,7 +613,7 @@ namespace CCPW5
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }
+                        } */
                         
 
                     } // ends user choice P section
@@ -617,7 +623,7 @@ namespace CCPW5
                                 // if membership exists, perform the return by subtracting the return amount for the monthly purchase total.
                     if (userChoiceString=="T" || userChoiceString=="t")
                     {
-                        Console.WriteLine("User Choice -- T");
+                        /* Console.WriteLine("User Choice -- T");
                         Console.Write("Please enter the Member ID for the return: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -669,14 +675,14 @@ namespace CCPW5
                         {
                             Console.WriteLine("The Member ID was not found. ");
                         }  
-
+ */
                     } // ends user choice T section
 
 
                     // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
                     if (userChoiceString=="A" || userChoiceString=="a")
                     {
-                        Console.WriteLine("User Choice -- A");
+                        /* Console.WriteLine("User Choice -- A");
                         Console.Write("Please enter the Member ID for the return: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -722,7 +728,7 @@ namespace CCPW5
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }  
+                        }   */
 
                     } // ends user choice A section
 
