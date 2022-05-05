@@ -40,102 +40,18 @@ namespace CCPW5
 
         // methods*************************************************************
         // Purchase method
-            // *** A purchase will include the membership id and the amount of the purchase (which must be > 0). 
-                    // All four accounts handle a purchase in the same way.  
-                    // If the membership ID exists, the current amount of purchases is increased by the purchase amount.
         public void Purchase(double purchaseAmount)
         {
- 
             currentPFM = currentPFM + purchaseAmount;
-            
         }
 
 
         // Return method
-        public double Return()
+        public void Return(double returnAmount)
         {
-            Console.Write("Please enter the return amount: ");
-            double returnAmount = Convert.ToDouble(Console.ReadLine());
-            if (returnAmount > 0)
-            {
-                Console.Write("Are you sure you want to return this item? Enter 'Y' to confirm, or 'N' to cancel: ");
-                string confirmReturn = Console.ReadLine();
-                if (confirmReturn == "Y" || confirmReturn == "y")
-                {
-                    Console.Write("The return was successful! ");
-                    return currentPFM = currentPFM - returnAmount;
-                }
-                else if (confirmReturn == "N" || confirmReturn == "n")
-                {
-                    Console.WriteLine("Return transaction cancelled. ");
-                    return currentPFM;
-                }
-                else 
-                {
-                    Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this return? ");
-                    confirmReturn = Console.ReadLine();
-                    if (confirmReturn == "Y" || confirmReturn == "y")
-                    {
-                        Console.Write("The return was successful! ");
-                        return currentPFM = currentPFM - returnAmount;
-                    }
-                    else if (confirmReturn == "N" || confirmReturn == "n")
-                    {
-                        Console.WriteLine("Return transaction cancelled. ");
-                        return currentPFM;
-                    }
-                    else 
-                    {
-                        Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
-                        return currentPFM;
-                    }
-                }
-            }
-            else
-            {
-                Console.Write("The return amount must be greater than $0. Please try again: ");
-                returnAmount = Convert.ToDouble(Console.ReadLine());
-                if (returnAmount > 0)
-                {
-                    Console.Write("Are you sure you want to return this item? Enter 'Y' to confirm, or 'N' to cancel: ");
-                    string confirmReturn = Console.ReadLine();
-                    if (confirmReturn == "Y" || confirmReturn == "y")
-                    {
-                        Console.Write("The return was successful! ");
-                        return currentPFM = currentPFM - returnAmount;
-                    }
-                    else if (confirmReturn == "N" || confirmReturn == "n")
-                    {
-                        Console.WriteLine("Return transaction cancelled. ");
-                        return currentPFM;
-                    }
-                    else 
-                    {
-                        Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this return? ");
-                        confirmReturn = Console.ReadLine();
-                        if (confirmReturn == "Y" || confirmReturn == "y")
-                        {
-                            Console.Write("The return was successful! ");
-                            return currentPFM = currentPFM - returnAmount;
-                        }
-                        else if (confirmReturn == "N" || confirmReturn == "n")
-                        {
-                            Console.Write("Return transaction cancelled. ");
-                            return currentPFM;
-                        }
-                        else 
-                        {
-                            Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
-                            return currentPFM;
-                        }
-                    }
-                }
-                else 
-                {
-                    return currentPFM;
-                }
-            }
+            currentPFM = currentPFM - returnAmount;
         }
+        
 
 
         // ApplyCBR method

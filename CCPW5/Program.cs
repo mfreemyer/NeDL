@@ -15,7 +15,6 @@ namespace CCPW5
             // create list and list objects
             List<Membership> membershipList = new List<Membership>();
 
-
             // hard code the test data into the list
             membershipList.Add(new Regular (123, "123@gmail.com", 'R', 60, 162.73, .02));
             membershipList.Add(new Regular (456, "456@gmail.com", 'R', 60, 562.81, .02));
@@ -32,8 +31,6 @@ namespace CCPW5
             membershipList.Add(new Corporate (300, "300@gmail.com", 'C', 80, 7062.93, .02)); 
             membershipList.Add(new Corporate (301, "301@gmail.com", 'C', 80, 10123.81, .02)); 
             membershipList.Add(new Corporate (302, "302@gmail.com", 'C', 80, 5962.05, .02)); 
-
-
 
 
 //************************************************************************************************************
@@ -161,10 +158,7 @@ namespace CCPW5
                                 newMemberType = Convert.ToChar(Console.ReadLine());
                             break;
 
-
                             }
-                        
-
  
 
                     } // ends user choice C section
@@ -309,7 +303,6 @@ namespace CCPW5
 
 
                     // -- P -- Perform a purchase transaction (get membership ID and purchase amount from user. 
-                                // if membership exists, add the purchase amount to the monthly purchase total.)
                     if (userChoiceString=="P" || userChoiceString=="p")
                     {
                         Console.WriteLine("User Choice -- P");
@@ -321,7 +314,6 @@ namespace CCPW5
                             if (membershipList[index].memberID == findMemberID)
                             {
                                 Console.Write("Member " + findMemberID + " found! ");
-                                //========================================================================================       
                                 Console.Write("Please enter the purchase amount: ");
                                 double newPurchaseAmount = Convert.ToDouble(Console.ReadLine());
                                 if (newPurchaseAmount > 0)
@@ -389,31 +381,26 @@ namespace CCPW5
                                             }
                                             else 
                                             {
-                                                Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                                Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm. ");
                                             }
                                         }
                                     }
                                 }
-        
-                                //========================================================================================
-                                //membershipList[index].Purchase(newPurchaseAmount); // calling method here
-                                Console.Write("Current Purchase Per Month Total: " + membershipList[index].currentPFM);
+
+                                Console.Write("Current Purchase Per Month Total: " + String.Format("${0:n}",(membershipList[index].currentPFM)));
                                 found = true;
                             }
                         }
-
 
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
                         } 
                         
-
                     } // ends user choice P section
 
 
                     // -- T -- Perform a return transaction (get member ID and return amount from the user. 
-                                // if membership exists, perform the return by subtracting the return amount for the monthly purchase total.
                     if (userChoiceString=="T" || userChoiceString=="t")
                     {
                         Console.WriteLine("User Choice -- T");
@@ -425,41 +412,88 @@ namespace CCPW5
                             if (membershipList[index].memberID == findMemberID)
                             {
                                 Console.Write("Member " + findMemberID + " found! ");
-                                membershipList[index].Return(); // calling method here
-                                Console.Write("Current Purchase Per Month Total: " + membershipList[index].currentPFM);
+                                Console.Write("Please enter the return amount: ");
+                                double newReturnAmount = Convert.ToDouble(Console.ReadLine());
+                                if (newReturnAmount > 0)
+                                {
+                                    Console.Write("Are you sure you want to return this item? Enter 'Y' to confirm, or 'N' to cancel: ");
+                                    string confirmReturn = Console.ReadLine();
+                                    if (confirmReturn == "Y" || confirmReturn == "y")
+                                    {
+                                        Console.Write("The return was successful! ");
+                                        membershipList[index].Return(newReturnAmount);
+                                    }
+                                    else if (confirmReturn == "N" || confirmReturn == "n")
+                                    {
+                                        Console.WriteLine("Return transaction cancelled. ");
+                                
+                                    }
+                                    else 
+                                    {
+                                        Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this return? ");
+                                        confirmReturn = Console.ReadLine();
+                                        if (confirmReturn == "Y" || confirmReturn == "y")
+                                        {
+                                            Console.Write("The return was successful! ");
+                                            membershipList[index].Return(newReturnAmount);
+                                        }
+                                        else if (confirmReturn == "N" || confirmReturn == "n")
+                                        {
+                                            Console.WriteLine("Return transaction cancelled. ");
+                                        }
+                                        else 
+                                        {
+                                            Console.Write("Please start over and enter either 'Y' or 'N' to confirm.");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Console.Write("The return amount must be greater than $0. Please try again: ");
+                                    newReturnAmount = Convert.ToDouble(Console.ReadLine());
+                                    if (newReturnAmount > 0)
+                                    {
+                                        Console.Write("Are you sure you want to return this item? Enter 'Y' to confirm, or 'N' to cancel: ");
+                                        string confirmReturn = Console.ReadLine();
+                                        if (confirmReturn == "Y" || confirmReturn == "y")
+                                        {
+                                            Console.Write("The return was successful! ");
+                                            membershipList[index].Return(newReturnAmount);
+                                        }
+                                        else if (confirmReturn == "N" || confirmReturn == "n")
+                                        {
+                                            Console.WriteLine("Return transaction cancelled. ");
+                                        }
+                                        else 
+                                        {
+                                            Console.Write("Please enter either 'Y' or 'N'. Do you want to confirm this return? ");
+                                            confirmReturn = Console.ReadLine();
+                                            if (confirmReturn == "Y" || confirmReturn == "y")
+                                            {
+                                                Console.Write("The return was successful! ");
+                                                membershipList[index].Return(newReturnAmount);
+                                            }
+                                            else if (confirmReturn == "N" || confirmReturn == "n")
+                                            {
+                                                Console.Write("Return transaction cancelled. ");
+                                            }
+                                            else 
+                                            {
+                                                Console.WriteLine("Please start over and enter either 'Y' or 'N' to confirm. ");
+                                            }
+                                        }
+                                    }
+                                }
+
+                                Console.Write("Current Purchase Per Month Total: " + String.Format("${0:n}",(membershipList[index].currentPFM)));
                                 found = true;
                             }
                         }
-                        
-                        if (found == false)
-                        {
-                            Console.WriteLine("The Member ID was not found. ");
-                        }  
-
-                    } // ends user choice T section
-
-
-                    // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
-                    if (userChoiceString=="A" || userChoiceString=="a")
-                    {
-                        Console.WriteLine("User Choice -- A");
-                        Console.Write("Please enter the Member ID for the return: ");
-                        int findMemberID = Int32.Parse(Console.ReadLine());
-                        bool found = false;
-                        for (int index = 0; index <membershipList.Count; index++)
-                        {
-                            if (membershipList[index].memberID == findMemberID)
-                            {
-                                Console.Write("Regular member " + findMemberID + " found! ");
-                                membershipList[index].ApplyCBR(); // calling method here
-                                found = true;
-                            }
-                        }
 
                         if (found == false)
                         {
                             Console.WriteLine("The Member ID was not found. ");
-                        }  
+                        } 
 
                     } // ends user choice A section
 
