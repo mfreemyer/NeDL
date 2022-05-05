@@ -25,13 +25,13 @@ namespace CCPW5
             membershipList.Add(new Executive (101, "101@gmail.com", 'E', 120, 417.06, .03, .04));
             membershipList.Add(new Executive (102, "102@gmail.com", 'E', 120, 972.07, .03, .04));
 
-            membershipList.Add(new Nonprofit (200, "200@gmail.com", 'N', 90, 2248.01, .03, 'Y'));
-            membershipList.Add(new Nonprofit (201, "201@gmail.com", 'N', 90, 948.28, .03, 'N'));
-            membershipList.Add(new Nonprofit (202, "202@gmail.com", 'N', 90, 1725.92, .03, 'Y'));
+            membershipList.Add(new Nonprofit (200, "200@gmail.com", 'N', 60, 2248.01, .03, 'Y'));
+            membershipList.Add(new Nonprofit (201, "201@gmail.com", 'N', 60, 948.28, .03, 'N'));
+            membershipList.Add(new Nonprofit (202, "202@gmail.com", 'N', 60, 1725.92, .03, 'Y'));
 
-            membershipList.Add(new Corporate (300, "300@gmail.com", 'C', 50, 7062.93, .02)); 
-            membershipList.Add(new Corporate (301, "301@gmail.com", 'C', 50, 10123.81, .02)); 
-            membershipList.Add(new Corporate (302, "302@gmail.com", 'C', 50, 5962.05, .02)); 
+            membershipList.Add(new Corporate (300, "300@gmail.com", 'C', 80, 7062.93, .02)); 
+            membershipList.Add(new Corporate (301, "301@gmail.com", 'C', 80, 10123.81, .02)); 
+            membershipList.Add(new Corporate (302, "302@gmail.com", 'C', 80, 5962.05, .02)); 
 
 
 
@@ -87,11 +87,12 @@ namespace CCPW5
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
                         Console.WriteLine("User Choice -- C");
+                        int newMemberID;
                         bool found = false;
                         do 
                         {
                             Console.Write("Please enter the new Member ID: ");
-                            int newMemberID = Int32.Parse(Console.ReadLine());
+                            newMemberID = Int32.Parse(Console.ReadLine());
                             found = false;
                             for (int index = 0; index <membershipList.Count; index++)
                             {
@@ -104,35 +105,62 @@ namespace CCPW5
 
                         } while (found);
                                                 
+                        // is there a way to get the newMemberID from the Do While loop's scope without having to ask for it again? 
                         Console.WriteLine("What type of member is being added? Please enter one of the following: ");
                         Console.WriteLine("  'R' for a regular membership. ");
                         Console.WriteLine("  'E' for an executive membership. ");
                         Console.WriteLine("  'N' for a non-profit membership. ");
-                        Console.Write("  'C' for a corporate membership. ");
+                        Console.WriteLine("  'C' for a corporate membership. ");
                         char newMemberType = Convert.ToChar(Console.ReadLine());
+                        Console.Write("What is the new member's email address: ");
+                        string newEmail = Console.ReadLine();
+                        double newCurrentPFM = 0;
+
                         switch (newMemberType)
                         {
                             case 'R':
                             case 'r':
                                 Console.WriteLine("R was selected.");
-                                string newEmail = Console.ReadLine();
+                                double newAnnualCost = 60;
+                                double newRCBP = .02;
+                                membershipList.Add(new Regular(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newRCBP));
+                                Console.WriteLine("The new member has been added. Select 'L' to view the list.");
+
                             break;
                             case 'E':
                             case 'e':
                                 Console.WriteLine("E was selected.");
+                                newAnnualCost = 120;
+                                double newECBP1 = .03;
+                                double newECBP2 = .04;
+                                membershipList.Add(new Executive(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newECBP1, newECBP2));
+                                Console.WriteLine("The new member has been added. Select 'L' to view the list.");
+
                             break;
                             case 'N':
                             case 'n':
                                 Console.WriteLine("N was selected.");
+                                newAnnualCost = 60;
+                                double newNCBP = .03;
+                                Console.Write("Is this organization a military or school? ('Y'/'N') ");
+                                char newMilOrEd = Convert.ToChar(Console.ReadLine());
+                                membershipList.Add(new Nonprofit(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newNCBP, newMilOrEd));
+                                Console.WriteLine("The new member has been added. Select 'L' to view the list.");
+
                             break;
                             case 'C':
                             case 'c':
                                 Console.WriteLine("C was selected.");
+                                newAnnualCost = 80;
+                                double newCCBP = .02;
+                                membershipList.Add(new Corporate(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newCCBP));
+                                Console.WriteLine("The new member has been added. Select 'L' to view the list.");
                             break;
                             default:
                                 Console.WriteLine("That option is invalid. Please select one of the above-listed options.");
                                 newMemberType = Convert.ToChar(Console.ReadLine());
                             break;
+
 
                             }
                         
