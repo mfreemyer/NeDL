@@ -26,7 +26,7 @@ namespace CCPW5
             membershipList.Add(new Executive (102, "102@gmail.com", 'E', 120, 972.07, .03, .04));
 
             membershipList.Add(new Nonprofit (200, "200@gmail.com", 'N', 60, 2248.01, .03, 'Y'));
-            membershipList.Add(new Nonprofit (201, "201@gmail.com", 'N', 60, 948.28, .03, 'N'));
+            membershipList.Add(new Nonprofit (201, "201@gmail.com", 'N', 60, 2248.01, .03, 'N'));
             membershipList.Add(new Nonprofit (202, "202@gmail.com", 'N', 60, 1725.92, .03, 'Y'));
 
             membershipList.Add(new Corporate (300, "300@gmail.com", 'C', 80, 7062.93, .02)); 
