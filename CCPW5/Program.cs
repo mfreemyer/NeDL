@@ -42,7 +42,7 @@ namespace CCPW5
                 do
                 {
                     // Menu of options
-                    Console.WriteLine(); // for user-friendliness in console
+                    Console.WriteLine("."); // for user-friendliness in console
                     Console.WriteLine("WHAT WOULD YOU LIKE TO DO?");
                     Console.WriteLine("Administrative Options: ");
                     Console.WriteLine("  C: Create a new membership");
@@ -117,7 +117,6 @@ namespace CCPW5
                         {
                             case 'R':
                             case 'r':
-                                Console.WriteLine("R was selected.");
                                 double newAnnualCost = 60;
                                 double newRCBP = .02;
                                 membershipList.Add(new Regular(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newRCBP));
@@ -126,7 +125,6 @@ namespace CCPW5
                             break;
                             case 'E':
                             case 'e':
-                                Console.WriteLine("E was selected.");
                                 newAnnualCost = 120;
                                 double newECBP1 = .03;
                                 double newECBP2 = .04;
@@ -136,7 +134,6 @@ namespace CCPW5
                             break;
                             case 'N':
                             case 'n':
-                                Console.WriteLine("N was selected.");
                                 newAnnualCost = 60;
                                 double newNCBP = .03;
                                 Console.Write("Is this organization a military or school? ('Y'/'N') ");
@@ -147,7 +144,6 @@ namespace CCPW5
                             break;
                             case 'C':
                             case 'c':
-                                Console.WriteLine("C was selected.");
                                 newAnnualCost = 80;
                                 double newCCBP = .02;
                                 membershipList.Add(new Corporate(newMemberID, newEmail, newMemberType, newAnnualCost, newCurrentPFM, newCCBP));
@@ -495,6 +491,32 @@ namespace CCPW5
                             Console.WriteLine("The Member ID was not found. ");
                         } 
 
+
+} // ends user choice T section
+
+
+                    // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
+                    // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
+                    if (userChoiceString=="A" || userChoiceString=="a")
+                    {
+                        Console.WriteLine("User Choice -- A");
+                        Console.Write("Please enter the Member ID: ");
+                        int findMemberID = Int32.Parse(Console.ReadLine());
+                        bool found = false;
+                        for (int index = 0; index <membershipList.Count; index++)
+                        {
+                            if (membershipList[index].memberID == findMemberID)
+                            {
+                                Console.Write("Regular member " + findMemberID + " found! ");
+                                membershipList[index].ApplyCBR(); // calling method here
+                                found = true;
+                            }
+                        }
+                        
+                        if (found == false)
+                        {
+                            Console.WriteLine("The Member ID was not found. ");
+                        }  
                     } // ends user choice A section
 
 
@@ -504,6 +526,9 @@ namespace CCPW5
             } while (!(userChoiceString=="Q") && !(userChoiceString=="q")); // bracket ends 'repeat main loop'
             {
                 Console.WriteLine("Have a nice day!");
+
+
+
             } // ends user choice A section
 
         }
