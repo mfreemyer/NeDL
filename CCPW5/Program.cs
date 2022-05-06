@@ -83,7 +83,6 @@ namespace CCPW5
                     // *** Be sure you don't duplicate the membership ID.  It needs to be unique.
                     if (userChoiceString=="C" || userChoiceString=="c")
                     {
-                        Console.WriteLine("User Choice -- C");
                         int newMemberID;
                         bool found = false;
                         do 
@@ -174,7 +173,6 @@ namespace CCPW5
                     // -- U -- Update an existing member's email address based on membership ID.
                     if (userChoiceString=="U" || userChoiceString=="u")
                     {
-                        Console.WriteLine("User Choice -- U");
                         Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -233,7 +231,6 @@ namespace CCPW5
                     // -- D -- Delete an existing membership based on membership ID.              
                     if (userChoiceString=="D" || userChoiceString=="d")
                     {
-                        Console.WriteLine("User Choice -- D");
                         Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -290,7 +287,6 @@ namespace CCPW5
                     // -- L -- List all of the memberships in the list including all of the information for each account type.
                     if (userChoiceString=="L" || userChoiceString=="l")
                     {
-                        Console.WriteLine("User Choice -- L");
                         foreach (Membership aMember in membershipList)
                         { Console.WriteLine(aMember); }
                         Console.WriteLine("* CPFM = Current Purchases For Month  |  * CBR = Cash-Back Reward");
@@ -301,7 +297,6 @@ namespace CCPW5
                     // -- P -- Perform a purchase transaction (get membership ID and purchase amount from user. 
                     if (userChoiceString=="P" || userChoiceString=="p")
                     {
-                        Console.WriteLine("User Choice -- P");
                         Console.Write("Please enter the Member ID for the purchase: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -399,7 +394,6 @@ namespace CCPW5
                     // -- T -- Perform a return transaction (get member ID and return amount from the user. 
                     if (userChoiceString=="T" || userChoiceString=="t")
                     {
-                        Console.WriteLine("User Choice -- T");
                         Console.Write("Please enter the Member ID for the return: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -492,14 +486,12 @@ namespace CCPW5
                         } 
 
 
-} // ends user choice T section
+                    } // ends user choice T section
 
 
-                    // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
                     // -- A -- Apply cash-back rewards as described above by getting a membership number from the user.
                     if (userChoiceString=="A" || userChoiceString=="a")
                     {
-                        Console.WriteLine("User Choice -- A");
                         Console.Write("Please enter the Member ID: ");
                         int findMemberID = Int32.Parse(Console.ReadLine());
                         bool found = false;
@@ -527,9 +519,7 @@ namespace CCPW5
             {
                 Console.WriteLine("Have a nice day!");
 
-
-
-            } // ends user choice A section
+            } // ends user choice Q section
 
         }
     }
