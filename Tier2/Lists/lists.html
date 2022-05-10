@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSS List Exercise</title>
+
+    <link rel="stylesheet" href="lists.css">  <!-- this line references the css file. -->
+    <script src="lists.js"></script>  <!-- this line references the js file. -->
+</head>
+
+<body>  <!-- if i'm understanding correctly, there needs to be the two divs here so that they can each be told how to look/act individually. -->
+    <h1>List Builder</h1>
+    <div class="flexboxRow">  <!-- see flexbox info in CSS w3 tutorial -->
+        <div class="flexboxColumn">
+            <form name="myForm">
+                Word to list: <input type="text" name="newWord" value=""><br />
+                List 1 or 2?: <input type="number" name="newNumber" value=""><br /><br />  <!-- look into what the br stuff is doing here. -->
+                <input type="button" value="Add to List" onclick="validateAndAdd()">
+            </form>
+        </div>
+        <div class="flexboxColumn">
+            <h2>List 1</h2>
+            <table id="myList1">
+            </table>
+            <br /> <br />
+            <input type="button" value="Clear the List" onclick="clearList1()">
+        </div>
+        <div class="myflexboxColumn">
+            <h2>List 2</h2>
+            <table id="myList2">
+            </table>
+            <br /> <br />
+            <input type="button" value="Clear the List" onclick="clearList2()">
+        </div>
+    </div> 
+
+
+</div>    
+</body>
+</html>
