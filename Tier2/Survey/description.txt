@@ -1,0 +1,21 @@
+In-class exercise
+General description
+
+Design and develop the front end of a survey form.  The subject matter of your survey is up to you.
+
+User stories
+
+The user should enter a value in at least one text field in a form.
+The user should select a value in at least one dropdown list in a form.
+The user should select a value using radio buttons in a form.
+The user should select value(s) using check boxes in a form.
+The user should enter data in a text area of a form.
+The user should receive a message if a text box is not filled out when the form is submitted.
+If the form is submitted properly an alert should be provided to the user indicating the successful submission.
+
+Additional requirements
+
+Use VS Code for this challenge.
+A separate HTML file should be used to provide structure to the survey.
+A separate CSS file should be used to style the survey.
+A separate Javascript file should be used to provide behavior to the survey.

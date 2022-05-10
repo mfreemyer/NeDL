@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <!-- The HTML5 specification encourages web developers to use the UTF-8 character set, 
+        which covers almost all of the characters and symbols in the world! -->
+    <title>Parent Survey</title>
+
+    <link rel="stylesheet" href="survey.css">
+
+    <script>
+        function myFunction() {
+            var newname = document.getElementById("name").value;
+            alert ("Survey received! Thank you, " + newname + "!");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Parent Survey Form</h1>
+            <p id="description" class="description text-center">
+                The <abbr title="Nuevas Fronteras Spanish Immersion Parent Teacher Student Organization">NFSI PTSO</abbr> thanks you for taking the time to help us improve!
+            </p>
+        </header>
+
+        <div class="member-table">
+            <table id="members">
+                <caption><abbr title="Parent Teacher Student Organization">PTSO</abbr> Members</caption>
+                <tr>
+                    <th>Member Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+                <tr>
+                    <td>Rand Ackerman</td>
+                    <td>rackerman@gmail.com</td>
+                    <td>651-123-4567</td>
+                </tr>
+                <tr>
+                    <td>Maria Stolzman</td>
+                    <td>marias@gmail.com</td>
+                    <td>123-456-7891</td>
+                </tr>
+                <tr>
+                    <td>Willy Wonka</td>
+                    <td>wwonka@hotmail.com</td>
+                    <td>741-852-9639</td>
+                </tr>
+                <tr>
+                    <td>Jenny Jenny</td>
+                    <td>jenny@gmail.com</td>
+                    <td>867-5309</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <form id="survey-form" onsubmit="myFunction()">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+            />
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <p>In what grade is your child?</p>
+                <select id="dropdown" name="grade" class="form-control" required>
+                    <option disabled selected value>Select your child's grade level</option>
+                    <option value="Kinder">Kindergarten</option>
+                    <option value="First">First Grade</option>
+                    <option value="Second">Second Grade</option>
+                    <option value="Third">Third Grade</option>
+                    <option value="Fourth">Fourth Grade</option>
+                    <option value="Fifth">Fifth Grade</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Are you interested in becoming a parent volunteer?</p>
+                <label>
+                    <input
+                        name="volunteer-interest"
+                        value="yes"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                        />Yes!</label>
+                    
+                <label>
+                    <input
+                        name="volunteer-interest"
+                        value="possibly"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                        />Possibly, but need more information</label>
+                
+                <label>
+                    <input
+                        name="volunteer-interest"
+                        value="eveningsweekends"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                        />Only for evening and weekend events</label>  
+                
+                <label>
+                    <input
+                        name="volunteer-interest"
+                        value="no"
+                        type="radio"
+                        class="input-radio"
+                        checked
+                        />I'm unable to volunteer at this time</label>       
+
+            </div>
+
+            <div class="form-group">
+                <p>
+                    What type(s) of volunteer work do you prefer?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+
+                <label
+                ><input
+                    name="volunteertype"
+                    value="behindscenes"
+                    type="checkbox"
+                    class="input-checkbox"
+                />Behind-the-scenes work</label>
+            
+            <label>
+                <input
+                    name="volunteertype"
+                    value="Classroom activities"
+                    type="checkbox"
+                    class="input-checkbox"
+                />Assist with in-classroom activities</label>
+
+                <label>
+                    <input
+                        name="volunteertype"
+                        value="lunchrecess"
+                        type="checkbox"
+                        class="input-checkbox"
+                    />Lunchroom and recess monitor assistance</label>
+
+                    <label>
+                        <input
+                            name="volunteertype"
+                            value="fieldtrip"
+                            type="checkbox"
+                            class="input-checkbox"
+                        />Fieldtrip chaperone</label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea
+                  id="comments"
+                  class="input-textarea"
+                  name="comment"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
