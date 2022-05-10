@@ -17,8 +17,7 @@ function validateAndAdd() {
         // since we now have valid data, add it to the proper table
         if (theNewNumber == 1) {
             var tableRef = document.getElementById("myList1");
-            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord;
-            
+            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord + ': ' + PalindromeCheck1(theNewWord);
 
         }
         else {
@@ -40,4 +39,9 @@ function validateAndAdd() {
     function clearList2() {
         var tableRef = document.getElementById("myList2");
         tableRef.innerHTML = "";
+    }
+
+    function PalindromeCheck1(wordToCheck) {
+        var wordFlip = wordToCheck.split("").reverse().join("");
+        return wordToCheck === wordFlip;
     }
