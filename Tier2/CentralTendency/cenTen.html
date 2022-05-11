@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=""UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Central Tendency Exercise</title>
+
+        <link rel="stylesheet" href="cenTen.css">
+        <script src="cenTen.js"></script>
+    </head>
+
+    <body>
+        <h1>Central Tendency Calculator</h1>
+        <div class="myFlexboxRow">
+            <div class="myFlexboxColumn">
+                <h2>1. Enter the range of numbers<br/>2. Enter your numbers</h2>
+                <form name="myForm">
+                    Minimum value of numbers: <input type="number" id="minValue" name="minValue" value=""><br/>
+                    Maximum value of numbers: <input type="number" id="maxValue" name="maxValue" value=""><br/>
+                    <p id="numberPrompt">Enter a number: <input type="number" id="newNumber" name="newNumber" value="">
+                    <input id="btnAdd" type="button" value="Include" onclick="validateAndAdd()"></p>
+                </form>
+                <br/> <br/> <br/> <br/>
+                <div class="center-button">
+                    <input id="btnClear" type="button" value="Clear All" onclick="clearAll()">
+                </div>
+            </div>
+            <div class="myFlexboxColumn">
+                <h2>Numbers entered:</h2>
+                <table id="numberList">  <!-- we have to put the values into a table so that we can keep them to use them. data persistence? -->
+                </table>
+            </div>
+            <div class="myFlexboxColumn">
+                <h2>Central tendencies</h2>
+                <p>Mean: <label id="theMean">n/a</label></p>
+                <p>Median: <label id="theMedian">n/a</label></p>
+                <p>Mode(s): <label id="theMode">n/a</label></p>
+            </div>
+        </div>    
+    </body>
+    </html>

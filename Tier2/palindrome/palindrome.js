@@ -47,7 +47,7 @@ function validateAndAdd() {
     }
 
     function PalindromeCheck2(wordToCheck) {
-        // find the length of a string
+        // find the length of the string
         const len = wordToCheck.length;
         // loop through half of the string
         for (let i = 0; i < len / 2; i++) {

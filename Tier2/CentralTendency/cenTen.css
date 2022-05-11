@@ -1,0 +1,29 @@
+* { 
+    box-sizing: border-box;  /* need to better understand what's happening here. */ 
+  }
+
+  .center-button {
+    text-align: center;
+  }
+  
+  /* Container for flexboxes */
+  .myFlexboxRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal entries in myflexbox */
+  .myFlexboxColumn {
+    flex: 33%;
+    padding: 20px;
+    border-style: dotted;
+    border-color: rgb(185, 212, 203);
+
+  }
+  
+  /* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .myFlexboxRow {
+      flex-direction: column;
+    }
+  }
