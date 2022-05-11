@@ -48,11 +48,11 @@ function validateAndAdd() {
 
     function PalindromeCheck2(wordToCheck) {
         // find the length of a string
-        const len = string.length;
+        const len = wordToCheck.length;
         // loop through half of the string
         for (let i = 0; i < len / 2; i++) {
             // check if first and last string are same
-            if (string[i] !== string[len - 1 - i]) {
+            if (wordToCheck[i] !== wordToCheck[len - 1 - i]) {
                 return ' is not a palindrome';
             }
         }
