@@ -22,7 +22,7 @@ function validateAndAdd() {
         }
         else {
             var tableRef = document.getElementById("myList2");
-            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord;
+            (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewWord+ ': ' + PalindromeCheck2(theNewWord);
         }
         // erase the form fields
         document.forms["myForm"]["newWord"].value = "";
@@ -45,3 +45,19 @@ function validateAndAdd() {
         var wordFlip = wordToCheck.split("").reverse().join("");
         return wordToCheck === wordFlip;
     }
+
+    function PalindromeCheck2(wordToCheck) {
+        // find the length of a string
+        const len = string.length;
+        // loop through half of the string
+        for (let i = 0; i < len / 2; i++) {
+            // check if first and last string are same
+            if (string[i] !== string[len - 1 - i]) {
+                return ' is not a palindrome';
+            }
+        }
+        return ' is a palindrome';
+        }
+
+    
+
