@@ -7,9 +7,7 @@
     <title>CCP Tier 2 Week 1</title>
 
     <link rel="stylesheet" href="ccpt2w1.css">
-
     <script src="ccpt2w1.js"></script>
- 
 
 </head>
 
@@ -19,22 +17,22 @@
     </div>
     <div class="flexboxRow"> 
         <div class="flexboxColumn">
-            <form>
+            <form name="manageItems">
                 <h2>Manage My To-Dos</h2>
                 <br/>
                 <label for="toDoItem">To-Do Item : </label>
                 <input type="text" id="toDoItem" name="toDoItem"><br/> <br/>
-                <button type="addButton" onclick="addItem()">Add Item</button>
+                <button type="button" onclick="addItem()">Add Item</button>
                 <button type="deleteButton" onclick="deleteItem()">Delete Item</button>
                 <button type="checkButton" onclick="checkItem()">Mark Complete</button><br/>
             </form>
         </div>
         <div class="flexboxColumn">   
-            <form>
+            <!-- <form name="toDoList"> -->
                 <h2>My To-Dos</h2>
-                <table id="myToDos">
+                <table id="toDoTable">
                 </table>
-            </form> 
+            <!-- </form> --> 
         </div>       
     </div>
 </body>
