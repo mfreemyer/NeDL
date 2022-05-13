@@ -8,19 +8,32 @@ function addItem() {
     else {
         var tableRef = document.getElementById("toDoTable");
         (tableRef.insertRow(tableRef.rows.length)).innerHTML = newItem;
-        /* document.forms["manageItems"]["toDoItem"] = ""; */
-        document.forms["manageItems"]["toDoItem"].value = "";
+        document.forms["manageItems"]["toDoItem"].value = ""; // clears the input field after the value has been added to the list.
         /* return true; */
     }
 }
 function deleteItem() {
-    /* var tableRef = document.getElementById("toDoTable") as HTMLTableElement; */
+    var tableRef = document.getElementById("toDoTable");
     var itemToRemove = document.forms["manageItems"]["toDoItem"].value;
+    if (itemToRemove == "") {
+        alert("Please enter an item to delete.");
+        return false;
+    }
+    else {
+        /* function deleteRow(rowid)  {
+            var row = document.getElementById(rowid);
+            row.parentNode.removeChild(row);
+        } */
+        var deleted = "";
+        deleted = document.forms["manageItems"]["toDoItem"].value;
+        document.forms["manageItems"]["toDoItem"].value = ""; // clears the input field after the value has been added to the list.
+        alert("Keep trying. You'll get it figured out.");
+    }
     /* (tableRef.deleteRow(tableRef.rows.length)).innerHTML = newItem */
     /* document.getElementById("tableRef").deleteRow("itemToRemove"); */
     /* document.getElementById("tableRef").innerHTML = document.getElementById("tableRef").innerHTML.replace(itemToRemove,itemToRemove.strike()); */
     /* document.getElementById("tableRef").innerHTML.deleteRow(0); */ // trying to delete first row, just to see if i can...
-    alert("Whyyyyy can't I figure out the delete?!?!?!");
+    /* itemToRemove.value = ""; */
 }
 function clearList() {
     var tableRef = document.getElementById("toDoTable");
