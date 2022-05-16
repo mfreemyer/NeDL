@@ -1,4 +1,7 @@
 // addItem(), deleteItem(), checkItem()
+var createId = function (str) {
+    return "id_".concat(str.replace(/ /ig, '_'));
+};
 function addItem() {
     var newItem = document.forms["manageItems"]["toDoItem"].value;
     if (newItem == "") {
@@ -12,29 +15,29 @@ function addItem() {
         /* return true; */
     }
 }
+//==============================================
 function deleteItem() {
-    var tableRef = document.getElementById("toDoTable");
-    var itemToRemove = document.forms["manageItems"]["toDoItem"].value;
-    if (itemToRemove == "") {
-        alert("Please enter an item to delete.");
+    var tableRef = document.getElementById('toDoTable');
+    var itemToRemove = document.forms['manageItems']['toDoItem'].value;
+    if (itemToRemove == '') {
+        alert('Please enter an item to delete.');
         return false;
     }
     else {
-        /* function deleteRow(rowid)  {
-            var row = document.getElementById(rowid);
-            row.parentNode.removeChild(row);
-        } */
-        var deleted = "";
-        deleted = document.forms["manageItems"]["toDoItem"].value;
-        document.forms["manageItems"]["toDoItem"].value = ""; // clears the input field after the value has been added to the list.
-        alert("Keep trying. You'll get it figured out.");
+        /** search by attribute and delete */
+        var tr = document.querySelector("[data-id=\"".concat(createId(itemToRemove), "\"]"));
+        if (!tr) {
+            alert('This item was not found in the list.');
+            return false;
+        }
+        else {
+            tr.remove();
+            /* tableRef.value = ''; */
+            document.forms['manageItems']['toDoItem'].value = ''; // clears the input field after the value has been added to the list.
+        }
     }
-    /* (tableRef.deleteRow(tableRef.rows.length)).innerHTML = newItem */
-    /* document.getElementById("tableRef").deleteRow("itemToRemove"); */
-    /* document.getElementById("tableRef").innerHTML = document.getElementById("tableRef").innerHTML.replace(itemToRemove,itemToRemove.strike()); */
-    /* document.getElementById("tableRef").innerHTML.deleteRow(0); */ // trying to delete first row, just to see if i can...
-    /* itemToRemove.value = ""; */
 }
+//==============================================
 function clearList() {
     var tableRef = document.getElementById("toDoTable");
     tableRef.innerHTML = "";
