@@ -1,10 +1,11 @@
-async function getBaconipsum() {
+async function getBaconIpsum() {
     // first build the API call string by starting with the URL
     var apiString = "https://baconipsum.com/api/";
     // next add the parameters to the string using the drop down lists
     var theNewParagraphs = document.getElementById("newParagraphs").value;
-    apiString = apiString + "?type=meat&paras=" + theNewParagraphs; // REFRESH MEMORY ON WHAT THE QUESTION MARK DOES. 
-    // ALSO, DOES meat&paras COME FROM THE PAGE INSTRUCTIONS? LOOK INTO THAT. 
+    apiString = apiString + "?type=meat-and-filler&paras=" + theNewParagraphs; // ***Query parameters give you the option to modify your request 
+                                                                    //with key-value pairs. They always begin with a question mark (?). 
+                                                                    //Each parameter pair is then separated with an ampersand (&) 
     alert(apiString); // show the API string
 
     // now make the API call to the web service using the string and store what is returned in response
