@@ -40,7 +40,7 @@ function deleteItem() {
     }
     else {
       tr.remove();
-    /* tableRef.value = ''; */
+    /* tableRef.value = ''; */ 
     document.forms['manageItems']['toDoItem'].value = ''; // clears the input field after the value has been added to the list.
     }
   }
