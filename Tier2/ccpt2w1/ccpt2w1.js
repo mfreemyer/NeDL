@@ -1,7 +1,7 @@
 // addItem(), deleteItem(), checkItem()
-var createId = function (str) {
-    return "id_".concat(str.replace(/ /ig, '_'));
-};
+/* const createId = (str) => {
+    return `id_${str.replace(/ /ig, '_')}`;
+  } */
 function addItem() {
     var newItem = document.forms["manageItems"]["toDoItem"].value;
     if (newItem == "") {
@@ -17,23 +17,34 @@ function addItem() {
 }
 //==============================================
 function deleteItem() {
-    var tableRef = document.getElementById('toDoTable');
-    var itemToRemove = document.forms['manageItems']['toDoItem'].value;
-    if (itemToRemove == '') {
-        alert('Please enter an item to delete.');
+    // get word to delete from form
+    var wordToDelete = document.forms["manageItems"]["toDoItem"].value;
+    alert("aaarrrrgh!");
+    // validation
+    if (wordToDelete == "") {
+        alert("Please enter a value in the To-Do Item field.");
         return false;
     }
+    // once valid value has been entered
     else {
-        /** search by attribute and delete */
-        var tr = document.querySelector("[data-id=\"".concat(createId(itemToRemove), "\"]"));
-        if (!tr) {
-            alert('This item was not found in the list.');
-            return false;
+        // initialize variables
+        var found = false;
+        var tableRef = document.getElementById("toDoTable");
+        // loop through to-do list
+        for (var index = 0; index < tableRef.rows.length; index++) {
+            // if match is found
+            if ((tableRef.rows[index].innerHTML).toLowerCase() == (wordToDelete).toLowerCase()) {
+                // set to true
+                found = true;
+                // remove the first matching element from the list
+                tableRef.rows[index].remove();
+                // break out of the loop
+                break;
+            }
         }
-        else {
-            tr.remove();
-            /* tableRef.value = ''; */
-            document.forms['manageItems']['toDoItem'].value = ''; // clears the input field after the value has been added to the list.
+        // alert if no match found
+        if (found == false) {
+            alert("This value is not found in the list. Please try again.");
         }
     }
 }
