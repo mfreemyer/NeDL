@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang-"en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +21,13 @@
                 <br>
                 <label for="word">Word: </label>
                 <input type="text" id="word"><br><br>
-                <button type="button" onclick="getDefinition()">Look it up!</button>
+                <button type="button" value="fetch" onclick="getDefinitions()">Look it up!</button>
             </form>
         </div>
         <div class="flexboxColumn">
-            <h2>Definition</h2>
-            <p id="wordDefinition"></p>
+            <h2>Definitions</h2>
+            <p id="wordDefinitions">
+            </p>
 
         </div>
 

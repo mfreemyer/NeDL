@@ -1,7 +1,6 @@
-async function getDefinition() {
+async function getDefinitions() {
     // first build the API call string by starting with the URL
     var apiString = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-    
 
     // next add the parameters to the string using the drop down lists
     var theWord = document.getElementById("word").value;
@@ -13,21 +12,23 @@ async function getDefinition() {
     
     
     // fnally, print the response
-    document.getElementById("wordDefinition").innerHTML = ""; // clear what was previously shown
-    alert("so far so good!")
+    document.getElementById("wordDefinitions").innerHTML = ""; // clear what was previously shown
+    
 
     var jsonData = await response.json(); // read the response as JSON
 
+
+
     // stringify and print out the JSON object in the RawData section
-    document.getElementById("wordDefinition").innerHTML = JSON.stringify(jsonData);
+    document.getElementById("wordDefinitions").innerHTML = JSON.stringify(jsonData);
+
+    // loop through the JSON object one paragraph at a time and print each 
+    // LOOK INTO USING flatMap. 
+    for (var para in jsonData) {
+        document.getElementById("wordDefinitions").innerHTML += "<p>" + jsonData[para] + "</p?";
+    }
 
     return true;
-
-
-
-
-
-    // finally, have fun with the data
 
 
 
