@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang-"en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dictionary</title>
+    
+        <link rel="stylesheet" href="ccpt2w2.css">  
+        <script src="ccpt2w2.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="topOfPage">
+            <h1>Dictionary</h1><br/>
+        </div>
+        <div class="flexboxRow">
+            <form name="word">
+                <h2>Select a Word to Define: </h2>
+                <br>
+                <label for="wordToDefine">Word: </label>
+                <input type="text" id="wordToDefine"><br><br>
+                <button type="button" onclick="lookUpWord()">Look it up!</button>
+            </form>
+        </div>
+        <div class="flexboxColumn">
+            <h2>Definition</h2>
+            <p id="wordDefinition"></p>
+
+        </div>
+
+
+
+</html>

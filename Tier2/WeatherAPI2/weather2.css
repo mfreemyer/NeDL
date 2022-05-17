@@ -1,0 +1,41 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  @media (mid-width: 768px){
+    .bd-placeholder-img-lg{
+        font-size:3.5rem;
+    }
+  }
+
+  .py-5 {
+    background-color: rgb(125, 180, 180);
+  }
+
+  /* .container {
+    background-color: rgb(221, 216, 219);
+  }
+
+  .row {
+    background-color: rgb(145, 184, 184);
+  }
+
+  .col {
+    background-color: rgb(177, 171, 233);
+  }
+
+  .card {
+    background-color: aqua;
+  }
+
+  .fw-light {
+    background-color: rgb(110, 224, 139);
+  } */
+
+  .col-lg-6 {
+    background-color: rgb(211, 187, 233);
+  }
