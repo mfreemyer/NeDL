@@ -12,7 +12,7 @@ async function getAnotherUser() {
     // now, check the status property of the response object, 200-299 is valid
     if (response.status >= 200 && response.status <= 299) {  // valid status
 
-      var jsonData = await response.json();   // a json file will fetched
+      var jsonData = await response.json();   // a json file will be fetched
 
       // create the user feedback with the repos and links
       var theNewRepos = "";
