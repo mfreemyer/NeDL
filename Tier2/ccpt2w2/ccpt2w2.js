@@ -4,7 +4,7 @@ async function getDefinitions() {
 
     // next add the parameters to the string using the drop down lists
     var theWord = document.getElementById("word").value;
-    apiString = apiString + theWord/*  + "/" + "meanings" */;
+    apiString = apiString + theWord;
 
     // now make the API call to the web service using the string and store what is returned in response
     var response = await fetch(apiString);
@@ -12,6 +12,8 @@ async function getDefinitions() {
     // fnally, print the response
     document.getElementById("wordData").innerHTML = ""; // clear what was previously shown
     var jsonData = await response.json(); // read the response as JSON
+    var dataHeading = document.getElementById("dataHeading");
+    dataHeading.firstChild.nodeValue = "Definition(s) for " + theWord + ":";
 
     // loop through the JSON object one word, meaning, part of speech, definitions, and definition at a time and print each 
     // *** could do an if statement for printing keys that don't always have a value.
@@ -26,7 +28,9 @@ async function getDefinitions() {
             }
         }  
     }
-    document.getElementById("word").innerHTML = ""; // clear the value that was entered
-    /* alert("so far so good!"); */
-    return true;
+            document.forms["wordForm"]["word"].value = ""; // clear the value that was entered
+            /* alert("so far so good!"); */
+            return true;
 }
+    
+
