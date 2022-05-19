@@ -17,16 +17,18 @@
         </div>
         <div class="flexboxRow">
             <form name="wordForm">
-                <h2>Select a Word to Define: </h2>
+                <h2>What's the word??: </h2>
                 <br>
                 <label for="word">Word: </label>
                 <input type="text" id="word"><br><br>
-                <button type="button" value="fetch" onclick="getDefinitions()">Look it up!</button>
+                <button type="button" value="definitions" onclick="getDefinitions()">Look it up!</button>
+                <button type="button" value="synonyms" onclick="getSynonyms()">Synonyms</button>
+
             </form>
         </div>
         <div class="flexboxColumn">
             <h2>Definition(s)</h2>
-            <p id="wordDefinitions">
+            <p id="wordData">
             </p>
 
         </div>
