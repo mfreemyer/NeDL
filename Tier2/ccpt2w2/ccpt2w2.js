@@ -16,18 +16,28 @@ async function getDefinitions() {
     
 
     var jsonData = await response.json(); // read the response as JSON
-    /* word[0].meanings[0].definitions[0].definition */
+    
 
 
     // stringify and print out the JSON object in the RawData section
-    document.getElementById("wordDefinitions").innerHTML = JSON.stringify(jsonData);
+    /* document.getElementById("wordDefinitions").innerHTML = JSON.stringify(jsonData); */
 
     // loop through the JSON object one paragraph at a time and print each 
     // *** LOOK INTO USING flatMap. 
 
     
     for (var aDefinition in jsonData) {
-        document.getElementById("wordDefinitions").innerHTML += "<p>" + jsonData[aDefinition] + "</p>";
+        let numMeanings = jsonData[aDefinition].meanings.length;
+        for (var aMeaning  = 0; aMeaning < numMeanings; aMeaning++) {
+            document.getElementById("wordDefinitions").innerHTML += "<p>" + jsonData[aDefinition].meanings[aMeaning].partOfSpeech + "</p>";
+            document.getElementById("wordDefinitions").innerHTML += "<p>" + jsonData[aDefinition].meanings[aMeaning].definitions[0].definition + "</p>";
+            
+
+            // could do if statement for example, do for loop for multiple definitions
+
+
+        }
+        
     }
 
 
