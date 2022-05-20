@@ -18,6 +18,8 @@
     flex-wrap: wrap;
     background-color: rgb(98, 175, 199);
     padding-left: 2.5rem;
+    /* position: absolute;
+    top: .5; */
 }
 
 .spacer {
@@ -36,11 +38,11 @@
 .flexboxColumn1 {
     padding-top: 1;
     padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-right: 1.5rem;
     padding-bottom: 2.5rem;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1.15;
+    -ms-flex: 1.15;
+    flex: 1.15;
     background-color: rgb(165, 192, 201);
  }
 
