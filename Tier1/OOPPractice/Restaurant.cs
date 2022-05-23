@@ -21,6 +21,10 @@ namespace OOPPractice
 
         // This is the default constructor when no values are being passed. 
         public Restaurant ()
+        {
+            RName = "";
+        }
+        
 
     }
 }
