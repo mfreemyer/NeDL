@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\bin\Debug\net6.0\MVCExample_TipCalc.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\bin\Debug\net6.0\MVCExample_TipCalc.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\bin\Debug\net6.0\MVCExample_TipCalc.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\bin\Debug\net6.0\MVCExample_TipCalc.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\bin\Debug\net6.0\MVCExample_TipCalc.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\refint\MVCExample_TipCalc.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\MVCExample_TipCalc.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\MVCExample_TipCalc\MVCExample_TipCalc\obj\Debug\net6.0\ref\MVCExample_TipCalc.dll
