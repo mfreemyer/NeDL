@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\bin\Debug\net6.0\Calculator_MVC.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\bin\Debug\net6.0\Calculator_MVC.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\bin\Debug\net6.0\Calculator_MVC.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\bin\Debug\net6.0\Calculator_MVC.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\bin\Debug\net6.0\Calculator_MVC.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\refint\Calculator_MVC.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\Calculator_MVC.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Calculator_MVC\Calculator_MVC\obj\Debug\net6.0\ref\Calculator_MVC.dll
