@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\bin\Debug\net6.0\InterfaceAndDI.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\bin\Debug\net6.0\InterfaceAndDI.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\bin\Debug\net6.0\InterfaceAndDI.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\bin\Debug\net6.0\InterfaceAndDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\bin\Debug\net6.0\InterfaceAndDI.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\refint\InterfaceAndDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\InterfaceAndDI.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceAndDI\obj\Debug\net6.0\ref\InterfaceAndDI.dll

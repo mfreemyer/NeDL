@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\bin\Debug\net6.0\InterfaceNoDI.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\bin\Debug\net6.0\InterfaceNoDI.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\bin\Debug\net6.0\InterfaceNoDI.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\bin\Debug\net6.0\InterfaceNoDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\bin\Debug\net6.0\InterfaceNoDI.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\refint\InterfaceNoDI.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\InterfaceNoDI.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceNoDI\InterfaceNoDI\obj\Debug\net6.0\ref\InterfaceNoDI.dll
