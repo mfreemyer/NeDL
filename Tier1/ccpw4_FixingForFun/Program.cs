@@ -30,7 +30,6 @@ namespace ccpw4
             // repeat main looop
             do
             {
-
                 // get a valid input
                 do
                 {
@@ -85,24 +84,33 @@ namespace ccpw4
                             Console.WriteLine("  The current balance is " + String.Format("${0:n}",accountList[index].acctBal));
                             Console.Write("Please enter the amount you'd like to deposit: ");
                             double newDepositAmt = Convert.ToDouble(Console.ReadLine());
-                            accountList[index].Deposit(newDepositAmt);
+                            accountList[index].Deposit(newDepositAmt); // calling method here
                             Console.WriteLine(String.Format("${0:n}",(accountList[index].acctBal)));
                             Console.WriteLine();
                             found = true;
-                        }
-                        /* else 
-                        {
-                            while (accountList[index].acctID != findAcct)                                
-                            {
-                                Console.Write("The account number entered is invalid. Please try again: ");
-                                Console.WriteLine(accountList[index].acctID); // testing
-                                findAcct = Convert.ToInt32(Console.ReadLine());
-                                found = false;
-                            }
-                            break;
-                        } */
-                        
+                        } 
                     }
+
+                    while (found == false)
+                        {
+                            Console.Write("The account number entered is invalid. Please try again: ");
+                            findAcct = Convert.ToInt32(Console.ReadLine());
+                            found = false;
+                            for (int index = 0; index < accountList.Count; index++)
+                            {    
+                                if (accountList[index].acctID == findAcct)
+                                {
+                                    Console.Write("The account (" + accountList[index].acctID + ") was found!");  
+                                    Console.WriteLine("  The current balance is " + String.Format("${0:n}",accountList[index].acctBal));
+                                    Console.Write("Please enter the amount you'd like to deposit: ");
+                                    double newDepositAmt = Convert.ToDouble(Console.ReadLine());
+                                    accountList[index].Deposit(newDepositAmt); // calling method here
+                                    Console.WriteLine(String.Format("${0:n}",(accountList[index].acctBal)));
+                                    Console.WriteLine();
+                                    found = true;
+                                } 
+                            }
+                        }
                 } // ends user choice deposit section
 
 
@@ -119,12 +127,32 @@ namespace ccpw4
                         {
                             Console.Write("The account (" + accountList[index].acctID + ") was found!");  
                             Console.WriteLine("  The current balance is " + String.Format("${0:n}",(accountList[index].acctBal)));
-                            accountList[index].Withdrawal(); // calling method here
+                            accountList[index].Withdrawal(); // calling method (and the power of polymorphism!) here
                             Console.WriteLine(String.Format("${0:n}",(accountList[index].acctBal)));
                             Console.WriteLine();
                             found = true;
                         }
                     }
+
+                    while (found == false) 
+                    {
+                        Console.Write("The account number entered is invalid. Please try again: ");
+                        findAcct = Convert.ToInt32(Console.ReadLine());
+                        found = false; 
+                        for (int index = 0; index < accountList.Count; index++)
+                        {
+                            if (accountList[index].acctID == findAcct)
+                            {
+                                Console.Write("The account (" + accountList[index].acctID + ") was found!");  
+                                Console.WriteLine("  The current balance is " + String.Format("${0:n}",(accountList[index].acctBal)));
+                                accountList[index].Withdrawal(); // calling method (and the power of polymorphism!) here
+                                Console.WriteLine(String.Format("${0:n}",(accountList[index].acctBal)));
+                                Console.WriteLine();
+                                found = true;
+                            }
+                        }
+                    } 
+
                 } // ends user choice withdrawal section
         
             

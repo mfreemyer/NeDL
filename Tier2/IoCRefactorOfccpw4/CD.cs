@@ -51,13 +51,11 @@ namespace ccpw4
                     Console.Write("  Please try again. The balance remains unchanged: ");
                     return acctBal;
                 }
-
             }
             else
             {
                 Console.Write("Oops! Please start over and enter an amount greater than 0. The balance has not been updated: ");
                 return acctBal;
-                
             }
 
         }

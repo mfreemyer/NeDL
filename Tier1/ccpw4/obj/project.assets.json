@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw4\\ccpw4.csproj",
+      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\ccpw4\\ccpw4.csproj",
       "projectName": "ccpw4",
-      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw4\\ccpw4.csproj",
+      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\ccpw4\\ccpw4.csproj",
       "packagesPath": "C:\\Users\\MFreemyer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\ccpw4\\obj\\",
+      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\ccpw4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MFreemyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

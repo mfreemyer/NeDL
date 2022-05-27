@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\bin\Debug\net6.0\Bank.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\bin\Debug\net6.0\Bank.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\bin\Debug\net6.0\Bank.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\bin\Debug\net6.0\Bank.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\bin\Debug\net6.0\Bank.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\refint\Bank.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\Bank.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\Bank\Bank\obj\Debug\net6.0\ref\Bank.dll

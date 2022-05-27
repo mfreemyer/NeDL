@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\acandl\\acandl.csproj",
+      "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier1\\ACAndL\\acandl.csproj",
       "projectName": "acandl",
-      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\acandl\\acandl.csproj",
+      "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier1\\ACAndL\\acandl.csproj",
       "packagesPath": "C:\\Users\\MFreemyer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\acandl\\obj\\",
+      "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier1\\ACAndL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MFreemyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
