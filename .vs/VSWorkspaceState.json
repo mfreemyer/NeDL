@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Tier2",
-    "\\Tier2\\Calculator",
-    "\\Tier2\\Calculator\\Calculator"
+    "\\Tier2\\IOCRefactorOf_ccpw4_FFF",
+    "\\Tier2\\ProgressiveExample",
+    "\\Tier2\\ProgressiveExample\\InterfaceAndDI",
+    "\\Tier2\\ProgressiveExample\\InterfaceAndDI\\InterfaceDI_BankAccount"
   ],
-  "SelectedNode": "\\Tier2\\Calculator\\Calculator\\Program.cs",
+  "SelectedNode": "\\Tier2\\ProgressiveExample\\InterfaceAndDI\\InterfaceDI_BankAccount\\InterfaceDI_BankAccount.csproj",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,15 @@
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\bin\Debug\net6.0\InterfaceDI_BankAccount.exe
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\bin\Debug\net6.0\InterfaceDI_BankAccount.deps.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\bin\Debug\net6.0\InterfaceDI_BankAccount.runtimeconfig.json
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\bin\Debug\net6.0\InterfaceDI_BankAccount.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\bin\Debug\net6.0\InterfaceDI_BankAccount.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.csproj.AssemblyReference.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.AssemblyInfoInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.AssemblyInfo.cs
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.csproj.CoreCompileInputs.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\refint\InterfaceDI_BankAccount.dll
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.pdb
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\InterfaceDI_BankAccount.genruntimeconfig.cache
+C:\Users\MFreemyer\Desktop\NeDL\Tier2\ProgressiveExample\InterfaceAndDI\InterfaceDI_BankAccount\obj\Debug\net6.0\ref\InterfaceDI_BankAccount.dll
