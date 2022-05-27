@@ -8,7 +8,7 @@ namespace NoInterfaceOrDI
     {
         public void Log(string message)
         {
-            Console.WriteLine("Inside Log method of DatabaseLogger.");
+            Console.WriteLine("Inside the Log method of the DatabaseLogger class.");
             LogToDatabase(message);
         }
         private void LogToDatabase(string message)

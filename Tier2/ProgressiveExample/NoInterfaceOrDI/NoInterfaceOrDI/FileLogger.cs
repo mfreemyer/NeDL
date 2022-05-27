@@ -6,7 +6,7 @@ namespace NoInterfaceOrDI
     {
         public void Log(string message)
         {
-            Console.WriteLine("Inside Log method of FileLogger.");
+            Console.WriteLine("Inside the Log method of the FileLogger class.");
             LogToFile(message);
         }
         private void LogToFile(string message)
