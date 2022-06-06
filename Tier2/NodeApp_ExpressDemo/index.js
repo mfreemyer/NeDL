@@ -29,19 +29,8 @@ app.get('/api/courses/:id', (req, res) => {
 });
 
 app.post('/api/courses', (req, res) => {
-    const schema = Joi.object({
-        name: Joi.string()
-        .min(3)
-        .max(30)
-        .required()
-    });
-
-    const result = schema.validate(req.body);
-
-    /* Joi.validate(req.body, schema);
-    console.log(result); */
-
-    if (result.error) {
+    const { error } = validateCourse(req.body); // using object destructuring, instead of using result.error
+    if (error) {
         // 400 Bad Request
         res.status(400).send(result.error.details[0].message);
         return;
@@ -71,8 +60,8 @@ app.put('/api/courses/:1d'), (req, res) => {
         .required()
     });
 
-    const result = schema.validate(req.body);
-    if (result.error) {
+    const { error } = validateCourse(req.body); // using object destructuring, instead of using result.error
+    if (error) {
         // 400 Bad Request
         res.status(400).send(result.error.details[0].message);
         return;
@@ -85,7 +74,7 @@ app.put('/api/courses/:1d'), (req, res) => {
 
 }
 
-function validateCourse(course) {
+/* function validateCourse(course) {
     const schema = Joi.object({
         name: Joi.string()
         .min(3)
@@ -94,7 +83,16 @@ function validateCourse(course) {
     });
 
     return schema.validate(course, schema);
+} */
+
+function validateCourse(course){
+    const mySchema = {
+        name: Joi.string().min(3).required()
+    };
+
+    return Joi.validate(course, mySchema);
 }
+
 
 
 // PORT 
