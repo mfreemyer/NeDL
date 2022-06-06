@@ -1,6 +1,8 @@
 //as a best practice, put all require calls at the top of the file so the dependencies of the module can be easily identified. 
 const Joi = require('joi'); //the reason for the uppercase J is that what is returned from this module is a class. 
 const express = require('express');
+const { invalid } = require('joi');
+const { response } = require('express');
 const app = express();
 
 app.use(express.json()); //adding a piece of middleware. we call app.use to use that middleware in the request processing pipeline. 
@@ -34,15 +36,14 @@ app.post('/api/courses', (req, res) => {
         .required()
     });
 
-    const result =
-    schema.validate(req.body);
+    const result = schema.validate(req.body);
 
     /* Joi.validate(req.body, schema);
     console.log(result); */
 
     if (result.error) {
         // 400 Bad Request
-        res.status(400).send(result.error);
+        res.status(400).send(result.error.details[0].message);
         return;
     }
     
@@ -54,6 +55,46 @@ app.post('/api/courses', (req, res) => {
     res.send(course);
 });
 
+
+app.put('/api/courses/:1d'), (req, res) => {
+    // look up the course
+    // if not existing, return 404
+    const course = courses.find(c => c.id === parseInt(req.params.id)); //find is a method that's available on every array in js
+    if (!course) res.status(404).send('The course with the given ID was not found.')
+
+    // validate
+    // if invalid, return 400 - bad request
+    const schema = Joi.object({
+        name: Joi.string()
+        .min(3)
+        .max(30)
+        .required()
+    });
+
+    const result = schema.validate(req.body);
+    if (result.error) {
+        // 400 Bad Request
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    // update course
+    course.name = req.body.name; 
+    // return the updated course
+    response.send(course);
+
+}
+
+function validateCourse(course) {
+    const schema = Joi.object({
+        name: Joi.string()
+        .min(3)
+        .max(30)
+        .required()
+    });
+
+    return schema.validate(course, schema);
+}
 
 
 // PORT 
