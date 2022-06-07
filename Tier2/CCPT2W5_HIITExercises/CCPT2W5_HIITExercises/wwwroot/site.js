@@ -1,5 +1,5 @@
 ﻿const uri = 'api/hiitexercises';
-let exercises = [];
+let todos = [];
 
 function getItems() {
     fetch(uri)
@@ -9,11 +9,15 @@ function getItems() {
 }
 
 function addItem() {
-    const addNameTextbox = document.getElementById('add-Name');
+    const addNameTextbox = document.getElementById('add-name');
+    const addPmgTextbox = document.getElementById('add-pmg');
+    const addEquipmentTextbox = document.getElementById('add-equipment');
 
     const item = {
-        isComplete: false,
-        name: addNameTextbox.value.trim()
+        /*isComplete: false,*/
+        name: addNameTextbox.value.trim(),
+        pmg: addPmgTextbox.value.trim(),
+        equipment: addEquipmentTextbox.value.trim()
     };
 
     fetch(uri, {
@@ -28,6 +32,8 @@ function addItem() {
         .then(() => {
             getItems();
             addNameTextbox.value = '';
+            addPmgTextbox.value = '';
+            addEquipmentTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -41,22 +47,20 @@ function deleteItem(id) {
 }
 
 function displayEditForm(id) {
-    const item = exercises.find(item => item.id === id);
+    const item = todos.find(item => item.id === id);
 
-    document.getElementById('edit-Name').value = item.name;
-    document.getElementById('edit-Id').value = item.Id;
-    //accidentally deleted code for checkbox instead of commenting it out. refer to TodoApi if adding new checkbox.
-    document.getElementById('edit-PMG').value = item.PMG;
-    document.getElementById('edit-Equipment').value = item.Equipment;
+    document.getElementById('edit-name').value = item.name;
+    document.getElementById('edit-id').value = item.id;
+    document.getElementById('edit-isComplete').checked = item.isComplete;
     document.getElementById('editForm').style.display = 'block';
 }
 
 function updateItem() {
-    const itemId = document.getElementById('edit-Id').value;
+    const itemId = document.getElementById('edit-id').value;
     const item = {
         id: parseInt(itemId, 10),
-        /*isComplete: document.getElementById('edit-isComplete').checked,*/
-        name: document.getElementById('edit-Name').value.trim()
+        isComplete: document.getElementById('edit-isComplete').checked,
+        name: document.getElementById('edit-name').value.trim()
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -86,7 +90,7 @@ function _displayCount(itemCount) {
 }
 
 function _displayItems(data) {
-    const tBody = document.getElementById('exercises');
+    const tBody = document.getElementById('todos');
     tBody.innerHTML = '';
 
     _displayCount(data.length);
@@ -123,5 +127,5 @@ function _displayItems(data) {
         td4.appendChild(deleteButton);
     });
 
-    exercises = data;
+    todos = data;
 }
