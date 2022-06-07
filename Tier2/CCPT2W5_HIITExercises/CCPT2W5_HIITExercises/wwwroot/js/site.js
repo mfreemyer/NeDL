@@ -50,8 +50,10 @@ function displayEditForm(id) {
     const item = exercises.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
+    document.getElementById('edit-pmg').value = item.pmg;
+    document.getElementById('edit-equipment').value = item.equipment;
     document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-isComplete').checked = item.isComplete;
+    /*document.getElementById('edit-isComplete').checked = item.isComplete;*/
     document.getElementById('editForm').style.display = 'block';
 }
 
@@ -59,8 +61,10 @@ function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
         id: parseInt(itemId, 10),
-        isComplete: document.getElementById('edit-isComplete').checked,
-        name: document.getElementById('edit-name').value.trim()
+        /*isComplete: document.getElementById('edit-isComplete').checked,*/
+        name: document.getElementById('edit-name').value.trim(),
+        pmg: document.getElementById('edit-pmg').value.trim(),
+        equipment: document.getElementById('edit-equipment').value.trim()
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -84,7 +88,7 @@ function closeInput() {
 }
 
 function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'to-do' : 'to-dos';
+    const name = (itemCount === 1) ? 'exercise' : 'exercises';
 
     document.getElementById('counter').innerText = `${itemCount} ${name}`;
 }
