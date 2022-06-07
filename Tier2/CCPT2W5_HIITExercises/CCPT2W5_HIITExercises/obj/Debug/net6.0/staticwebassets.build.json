@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Sy4caX/7Fn9JUQ+gBC0kvxtS40T6+ZXxfeTVkH4247U=",
+  "Hash": "Jbdj9mmvkNQiuNhMqh9U1qclq4V7/nQrC6C/e1NwjH4=",
   "Source": "CCPT2W5_HIITExercises",
   "BasePath": "_content/CCPT2W5_HIITExercises",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\css\\site.css",
+      "SourceId": "CCPT2W5_HIITExercises",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\",
+      "BasePath": "_content/CCPT2W5_HIITExercises",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
     {
       "Identity": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\index.html",
       "SourceId": "CCPT2W5_HIITExercises",
@@ -34,12 +51,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\site.css",
+      "Identity": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\js\\site.js",
       "SourceId": "CCPT2W5_HIITExercises",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\",
       "BasePath": "_content/CCPT2W5_HIITExercises",
-      "RelativePath": "site.css",
+      "RelativePath": "js/site.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,24 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\site.js",
-      "SourceId": "CCPT2W5_HIITExercises",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\Tier2\\CCPT2W5_HIITExercises\\CCPT2W5_HIITExercises\\wwwroot\\",
-      "BasePath": "_content/CCPT2W5_HIITExercises",
-      "RelativePath": "site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ]
 }

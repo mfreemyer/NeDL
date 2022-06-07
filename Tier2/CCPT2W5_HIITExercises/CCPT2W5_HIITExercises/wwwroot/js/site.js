@@ -1,5 +1,5 @@
 ﻿const uri = 'api/hiitexercises';
-let todos = [];
+let exercises = [];
 
 function getItems() {
     fetch(uri)
@@ -47,7 +47,7 @@ function deleteItem(id) {
 }
 
 function displayEditForm(id) {
-    const item = todos.find(item => item.id === id);
+    const item = exercises.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-id').value = item.id;
@@ -90,7 +90,7 @@ function _displayCount(itemCount) {
 }
 
 function _displayItems(data) {
-    const tBody = document.getElementById('todos');
+    const tBody = document.getElementById('exercises');
     tBody.innerHTML = '';
 
     _displayCount(data.length);
@@ -98,10 +98,10 @@ function _displayItems(data) {
     const button = document.createElement('button');
 
     data.forEach(item => {
-        let isCompleteCheckbox = document.createElement('input');
-        isCompleteCheckbox.type = 'checkbox';
-        isCompleteCheckbox.disabled = true;
-        isCompleteCheckbox.checked = item.isComplete;
+        //let isCompleteCheckbox = document.createElement('input');
+        //isCompleteCheckbox.type = 'checkbox';
+        //isCompleteCheckbox.disabled = true;
+        //isCompleteCheckbox.checked = item.isComplete;
 
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';
@@ -113,19 +113,27 @@ function _displayItems(data) {
 
         let tr = tBody.insertRow();
 
+        //let td1 = tr.insertCell(0);
+        //td1.appendChild(isCompleteCheckbox);
+
         let td1 = tr.insertCell(0);
-        td1.appendChild(isCompleteCheckbox);
+        let textNode = document.createTextNode(item.name);
+        td1.appendChild(textNode);
 
         let td2 = tr.insertCell(1);
-        let textNode = document.createTextNode(item.name);
+        textNode = document.createTextNode(item.pmg);
         td2.appendChild(textNode);
 
         let td3 = tr.insertCell(2);
-        td3.appendChild(editButton);
+        textNode = document.createTextNode(item.equipment);
+        td3.appendChild(textNode);
 
         let td4 = tr.insertCell(3);
-        td4.appendChild(deleteButton);
+        td4.appendChild(editButton);
+
+        let td5 = tr.insertCell(4);
+        td5.appendChild(deleteButton);
     });
 
-    todos = data;
+    exercises = data;
 }
