@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MFreemyer\\desktop\\NeDL\\arrays\\arrays.csproj": {}
+    "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\arrays\\arrays.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MFreemyer\\desktop\\NeDL\\arrays\\arrays.csproj": {
+    "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\arrays\\arrays.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MFreemyer\\desktop\\NeDL\\arrays\\arrays.csproj",
+        "projectUniqueName": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\arrays\\arrays.csproj",
         "projectName": "arrays",
-        "projectPath": "C:\\Users\\MFreemyer\\desktop\\NeDL\\arrays\\arrays.csproj",
+        "projectPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\arrays\\arrays.csproj",
         "packagesPath": "C:\\Users\\MFreemyer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MFreemyer\\desktop\\NeDL\\arrays\\obj\\",
+        "outputPath": "C:\\Users\\MFreemyer\\Desktop\\NeDL\\tier1\\arrays\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MFreemyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
