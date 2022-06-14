@@ -1,22 +1,23 @@
-/* using System; 
+/* const exerciseArray = [];
 
-namespace ArrayPracticeCS
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string[] exercises = new string [20];
-            
-
-        
-        }
-    } 
+addExercise() {
+    exerciseArray = document.getElementById("addExercise").innerHTML
 } */
+    
+{
+    let exerciseArray = [];
+    
 
-const exerciseArray = [];
+    while(true){
+        let input = prompt("Add a HIIT Exerecise");
+        if(input === "q" || input === null){
+            break;
+        }
 
-addExercise() 
-    exerciseArray = document.getElementById("addItem").innerHTML
 
+        grades.push(input);
+        console.log(grades);
+
+    }
+}
 
