@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.angular",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\hero-detail",
     "\\src\\app\\heroes"
   ],
   "SelectedNode": "\\src\\app\\heroes\\heroes.component.html",

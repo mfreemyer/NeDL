@@ -9,15 +9,16 @@ addExercise() {
     
 
     while(true){
-        let input = prompt("Add a HIIT Exerecise");
+        let input = prompt("Add a HIIT Exercise");
         if(input === "q" || input === null){
             break;
         }
 
-
-        grades.push(input);
-        console.log(grades);
+        exerciseArray.push(Number(input));
+        console.log(exerciseArray);
 
     }
 }
+
+
 

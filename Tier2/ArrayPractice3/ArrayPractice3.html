@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array Practice</title>
+
+        <link rel="stylesheet" href="ArrayPractice2.css">
+        <script src="ArrayPractice2.js"></script>
+    </head>
+
+    <body>
+        <div class="addItem">
+            <h1>Array Practice</h1>
+            <input type="text" id="add-name" name="add-name">
+            <input type="text" id="add-pMG" name="add-pMG">-->
+ <!--pMG is Primary Muscle Groups-->
+<!--<input type="button" value="add-exercise" onclick="addExercise()">
+
+
+        </div>
+
+
+    </body>
+
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        How to get values from html input
+        array using JavaScript ?
+    </title>
+</head>
+
+<body style="text-align: center;">
+
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1>
+
+    <h3 id="po">Input Array Elements</h3>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <button type="button" name="button" onclick="Geeks()">
+            Submit
+        </button>
+    </form>
+    <br>
+
+    <p id="par"></p>
+
+    <script type="text/javascript">
+        var k = "The respective values are :";
+        function Geeks() {
+            var input = document.getElementsByName('array[]');
+
+            for (var i = 0; i < input.length; i++) {
+                var a = input[i];
+                k = k + "array[" + i + "].value= "
+                    + a.value + " ";
+            }
+
+            document.getElementById("par").innerHTML = k;
+            document.getElementById("po").innerHTML = "Output";
+        }
+    </script>
+</body>
+
+</html>

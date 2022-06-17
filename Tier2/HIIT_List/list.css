@@ -1,0 +1,28 @@
+* { /* what is the astrix for? */
+    box-sizing: border-box;  /* what does this line do?  */
+}
+
+/* container for flexboxes */   
+.flexboxRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create three equal entries in myflexbox */
+.flexboxColumn {
+    flex: 33%;
+    padding: 20px;
+}
+
+/* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+/* study the syntax of this.... */
+@media screen and (max-width: 600px) {
+    .flexboxRow {
+        flex-direction: column;
+    }
+    
+}
+
+
+
+
