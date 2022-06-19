@@ -7,6 +7,55 @@ namespace arrays
     {
         static void Main(string[] args)
         {
+            //
+            //establish array, get words from user
+            string[] wordArray = new string[10];
+            //iterate through the array
+            for(int newWordInt = 0;newWordInt<10;newWordInt++)
+            {
+                //displays newWord value + 1 (so that the count starts at 1 for user (instead of 0))
+                Console.WriteLine("Enter word " + (newWordInt+1) + ": ");
+                string word = Console.ReadLine();
+                wordArray[newWordInt] = word;
+            }
+            //output the number obtained from user
+            for(int newWordInt = 0;newWordInt<10;newWordInt++)
+            {
+                Console.WriteLine("the word " + newWordInt+": " + wordArray[newWordInt]);
+            }
+
+            // print each array value 
+            foreach (string word in wordArray)
+            {
+                Console.WriteLine(word);
+            }
+
+            
+
+
+            //=====================
+            //
+            /* //establish array, get words from user
+            string[] wordArray = new string[10];
+            //iterate through the array
+            for(int newWordInt = 0;newWordInt<10;newWordInt++)
+            {
+                //displays newWord value + 1 (so that the count starts at 1 for user (instead of 0))
+                Console.WriteLine("Enter word " + (newWordInt+1) + ": ");
+                string word = Console.ReadLine();
+                wordArray[newWordInt] = word;
+            }
+            //output the number obtained from user
+            for(int newWordInt = 0;newWordInt<10;newWordInt++)
+            {
+                Console.WriteLine("the word " + newWordInt+": " + wordArray[newWordInt]);
+            } */
+
+            //=====================
+
+
+            
+            
             //ask how many many numbers user wants to enter/how big the array should be
             Console.WriteLine("How many numbers do you want to add?");
             int numEntries = Convert.ToInt32(Console.ReadLine());
