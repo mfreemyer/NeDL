@@ -1,6 +1,4 @@
 <h1>Shopping List</h1>
-        <ol>
-            <li>Milk</li>
-            <li>Eggs</li>
-            <li>Stick of butter</li>
-        </ol>
+<ol>
+    <li *ngFor="let item of shoppingList">{{item.title}}</li>
+</ol> 
